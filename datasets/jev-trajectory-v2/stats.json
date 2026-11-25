@@ -1,0 +1,120 @@
+{
+  "splits": {
+    "train": {
+      "YES": 1655,
+      "NO": 2185
+    },
+    "val": {
+      "YES": 171,
+      "NO": 17
+    },
+    "test": {
+      "YES": 417,
+      "NO": 14
+    }
+  },
+  "by_origin": {
+    "train": {
+      "constructed": {
+        "NO": 1834
+      },
+      "observed_injection": {
+        "NO": 272
+      },
+      "observed_normal": {
+        "YES": 535
+      },
+      "observed_v1": {
+        "YES": 1120,
+        "NO": 79
+      }
+    },
+    "val": {
+      "observed_v1": {
+        "YES": 171,
+        "NO": 17
+      }
+    },
+    "test": {
+      "observed_v1": {
+        "YES": 417,
+        "NO": 14
+      }
+    }
+  },
+  "by_evidence": {
+    "train": {
+      "sealed_browser_and_visual_reading": 152,
+      "visible_browser_scroll": 215,
+      "rendered_navigation": 888,
+      "before_replay": 1470,
+      "visible_focus_ring": 142,
+      "signed_controlled_capture_and_independent_outcome_audit": 59,
+      "different_typed_value": 88,
+      "earlier_unchanged_field": 16,
+      "earlier_same_page": 260,
+      "visible_typed_text": 90,
+      "directional_scroll": 74,
+      "delivered_blank": 151,
+      "delivered_stale": 102,
+      "paired_visual_reading": 54,
+      "delivered_partial": 19,
+      "visible_scroll_boundary": 43,
+      "reversible_scroll": 16,
+      "visually_supported_noop": 1
+    },
+    "val": {
+      "signed_controlled_capture_and_independent_outcome_audit": 8,
+      "directional_scroll": 42,
+      "paired_visual_reading": 119,
+      "click_and_back": 9,
+      "returned_to_previous_view": 10
+    },
+    "test": {
+      "signed_controlled_capture_and_independent_outcome_audit": 15,
+      "rendered_navigation": 262,
+      "visible_typed_text": 46,
+      "directional_scroll": 39,
+      "paired_visual_reading": 13,
+      "visible_focus_ring": 25,
+      "visually_supported_noop": 13,
+      "reversible_scroll": 8,
+      "returned_to_previous_view": 5,
+      "click_and_back": 5
+    }
+  },
+  "same_rendering": {
+    "train": {
+      "YES:different": 1611,
+      "NO:same": 1642,
+      "NO:different": 543,
+      "YES:same": 44
+    },
+    "val": {
+      "YES:different": 171,
+      "NO:same": 14,
+      "NO:different": 3
+    },
+    "test": {
+      "YES:different": 404,
+      "NO:different": 4,
+      "NO:same": 10,
+      "YES:same": 13
+    }
+  },
+  "balanced_train": {
+    "YES": 1655,
+    "NO": 1655
+  },
+  "rows": 4459,
+  "observed": 2625,
+  "constructed": 1834,
+  "model_input_pngs": 2689,
+  "audit_only_pngs": 21,
+  "v1_observations": 7372,
+  "cross_split_shared_images": 0,
+  "cross_split_shared_source_groups": 0,
+  "duplicate_inputs": 0,
+  "conflicting_exported_labels": 0,
+  "regression_images_checked": 15
+}

@@ -1,0 +1,42 @@
+{
+  "version": "new-wiring-only-4calls",
+  "created": 1794501205.2518349,
+  "max_new_Flash_calls": 4,
+  "expected_sequence": [
+    "NO",
+    "NO",
+    "YES",
+    "NO"
+  ],
+  "first_three": "Two fresh capture IDs of new blank then new readable: only last image forwarded to a native-main-history/parser/executor fixture.",
+  "fourth": "A fresh blank call with manual stop while call in flight; do not forward regardless of eventual answer.",
+  "fixture_only": true,
+  "same_live_GUI_experiment": false,
+  "stop_if_finite_fixture_exhausted": "technical fixture stop, never a model NO or production recapture cap",
+  "no_rerun_or_budget_expansion": true,
+  "contract_sha256": "1e2368324246c101dafd3b1b95ca566bd76dfa7ac4b8357eb2792c5309cf7fe2",
+  "cases": [
+    {
+      "file": "new-blank.png",
+      "sha256": "218755e63c2b85827e3ba1afea36e93f5c0f76d2d707f3b6f8b8932ef0510c56",
+      "size": [
+        960,
+        640
+      ],
+      "synthetic": true
+    },
+    {
+      "file": "new-readable.png",
+      "sha256": "e403e6043c56201e0c992b5abf762c0bff145efe11384d08ce6b76f1674e2ad7",
+      "size": [
+        960,
+        640
+      ],
+      "synthetic": true
+    }
+  ],
+  "main_model_calls": 0,
+  "GUI_actions": 0,
+  "paid_API_calls": 0,
+  "Mirage_reduction": null
+}

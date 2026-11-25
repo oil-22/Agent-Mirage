@@ -1,0 +1,75 @@
+{
+  "chosen": {
+    "8131a08cfcde3d6681a9": {
+      "original": "I can see the category dropdown is open.",
+      "source_withdrawn": "I cannot tell if the dropdown is open.",
+      "meaning_preserving_sham": "I can tell the category dropdown is open."
+    },
+    "31fb006832ed92767e08": {
+      "original": "I can see the category dropdown is open.",
+      "source_withdrawn": "I cannot tell if the dropdown is open.",
+      "meaning_preserving_sham": "I can tell the category dropdown is open."
+    },
+    "ca56e76259c277f00bed": {
+      "original": "The \"Cars + trucks\" category is now selected.",
+      "source_withdrawn": "The \"Cars + trucks\" category selection is unknown.",
+      "meaning_preserving_sham": "The \"Cars + trucks\" category is currently selected."
+    },
+    "59939a1146c9ee343d82": {
+      "original": "The search field is focused.",
+      "source_withdrawn": "The field focus is unknown.",
+      "meaning_preserving_sham": "This search field is focused."
+    },
+    "2e443c9c983c8016890d": {
+      "original": "The dropdown is open.",
+      "source_withdrawn": "Dropdown state is unknown.",
+      "meaning_preserving_sham": "This dropdown is open."
+    },
+    "34fda057161d7f6c615c": {
+      "original": "The keyword field is focused.",
+      "source_withdrawn": "The keyword focus is unknown.",
+      "meaning_preserving_sham": "This keyword field is focused."
+    },
+    "cf1b043fcfdaf43ab3e6": {
+      "original": "I can see the category dropdown is open.",
+      "source_withdrawn": "I cannot tell if the dropdown is open.",
+      "meaning_preserving_sham": "I can tell the category dropdown is open."
+    },
+    "dab105a4c81dde2a5466": {
+      "original": "The dropdown is open.",
+      "source_withdrawn": "Dropdown state is unknown.",
+      "meaning_preserving_sham": "This dropdown is open."
+    },
+    "f68acc6316f20ac06d50": {
+      "original": "The search box is now focused.",
+      "source_withdrawn": "The search box is not verified.",
+      "meaning_preserving_sham": "This search box is now focused."
+    },
+    "31506f2531106fe3a18f": {
+      "original": "The search box is now focused.",
+      "source_withdrawn": "The search box is not verified.",
+      "meaning_preserving_sham": "This search box is now focused."
+    },
+    "905ea78814aeee28f144": {
+      "original": "The search box is focused.",
+      "source_withdrawn": "The search focus is unknown.",
+      "meaning_preserving_sham": "This search box is focused."
+    },
+    "60680b216b247cb6a41c": {
+      "original": "I'm now in the /f/boston subreddit.",
+      "source_withdrawn": "I can't confirm the /f/boston subreddit.",
+      "meaning_preserving_sham": "I'm currently in the /f/boston subreddit."
+    },
+    "b89b16b5cfdf7106ac14": {
+      "original": "I'm on Facebook Marketplace.",
+      "source_withdrawn": "I cannot identify this marketplace.",
+      "meaning_preserving_sham": "I am on Facebook Marketplace."
+    },
+    "895f7b21ced760915d73": {
+      "original": "I'm on the classifieds site (Kijiji).",
+      "source_withdrawn": "I'm on the classifieds site (identity unverified).",
+      "meaning_preserving_sham": "I'm on this classifieds site (Kijiji)."
+    }
+  },
+  "failed": []
+}

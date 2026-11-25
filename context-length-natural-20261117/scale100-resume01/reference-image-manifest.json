@@ -1,0 +1,530 @@
+[
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_44/input_0.png",
+    "local_path": "reference-images/T044-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_44/input_0.png",
+    "sha256": "355bfed3f13f491d27f0f07c20d450e6c4efef6c4c09c806c9951fd03e61ca43",
+    "bytes": 395956,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_45/input_0.png",
+    "local_path": "reference-images/T045-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_45/input_0.png",
+    "sha256": "1db5699dfdedcb47695a8ae74b6c87329ad857bab1a17c9d9d52bdb2194fb6ea",
+    "bytes": 182884,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_46/input_0.png",
+    "local_path": "reference-images/T046-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_46/input_0.png",
+    "sha256": "39dc09e3d257bfa92b22f58b309c69a1d6fd3700b14fa18f5ab0d0a9f7a65117",
+    "bytes": 426591,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_47/input_0.png",
+    "local_path": "reference-images/T047-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_47/input_0.png",
+    "sha256": "a5df55dcb3bcc73aa9a55b358288c6bdc692b057650e766d1bdec21275a99296",
+    "bytes": 231071,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_48/input_0.png",
+    "local_path": "reference-images/T048-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_48/input_0.png",
+    "sha256": "e47ee7a296d70b1a174b0859037a792543709e713cc3322ffba34c68fe8d3d32",
+    "bytes": 282151,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_51/input_0.png",
+    "local_path": "reference-images/T051-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_51/input_0.png",
+    "sha256": "66385c7d1b1ae5f56afe1adf31960dce22385180b8451bb092243dda6938853e",
+    "bytes": 481264,
+    "size": [
+      2384,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_52/input_0.png",
+    "local_path": "reference-images/T052-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_52/input_0.png",
+    "sha256": "51bec16308afcc6297fabb02dd38ada566720f7fb54bb6558cba12b27029e9db",
+    "bytes": 355577,
+    "size": [
+      2520,
+      1418
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_53/input_0.png",
+    "local_path": "reference-images/T053-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_53/input_0.png",
+    "sha256": "b16f65812e8b7e2fce4fe85f1c94d94c2bf1f7e4984484078395312ed7f8fc0c",
+    "bytes": 7036,
+    "size": [
+      250,
+      141
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_54/input_0.png",
+    "local_path": "reference-images/T054-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_54/input_0.png",
+    "sha256": "fd729226f00afe6a0ca494dfba108ff68661a32b46d0c794e9d4d4ad6f7e31d5",
+    "bytes": 7470,
+    "size": [
+      220,
+      192
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_55/input_0.png",
+    "local_path": "reference-images/T055-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_55/input_0.png",
+    "sha256": "7262ba8f10fe9abd16c293479d40e330121ec603bf716243b476bdcdb74c98d8",
+    "bytes": 11248,
+    "size": [
+      600,
+      389
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_59/input_0.png",
+    "local_path": "reference-images/T059-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_59/input_0.png",
+    "sha256": "9aab177619152c1a29d04d53796f7172546d17ed88d33039f061712032295168",
+    "bytes": 44018,
+    "size": [
+      1125,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_60/input_0.png",
+    "local_path": "reference-images/T060-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_60/input_0.png",
+    "sha256": "e2142520b51abb553e403923110b3944db414ad3811c771f3aa9522b5785c8d7",
+    "bytes": 52186,
+    "size": [
+      1125,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_61/input_0.png",
+    "local_path": "reference-images/T061-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_61/input_0.png",
+    "sha256": "37db646827d1c3bbe7bb45bcade80c4eadfe6741dac5cce3ffa08c1a578f74e7",
+    "bytes": 76668,
+    "size": [
+      1260,
+      709
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_62/input_0.png",
+    "local_path": "reference-images/T062-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_62/input_0.png",
+    "sha256": "a0d58db4ec1709237d165ba0d69c6e284e8890506f6dfd926fde9f37b7e794ab",
+    "bytes": 84113,
+    "size": [
+      600,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_63/input_0.png",
+    "local_path": "reference-images/T063-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_63/input_0.png",
+    "sha256": "dd4d86282fb0492966cf12f604548287f72a4323c2b20997af122028256194a0",
+    "bytes": 86693,
+    "size": [
+      1125,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_64/input_0.png",
+    "local_path": "reference-images/T064-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_64/input_0.png",
+    "sha256": "e2142520b51abb553e403923110b3944db414ad3811c771f3aa9522b5785c8d7",
+    "bytes": 52186,
+    "size": [
+      1125,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_65/input_0.png",
+    "local_path": "reference-images/T065-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_65/input_0.png",
+    "sha256": "1857a007e5c019a16727bd803edd7a1f3cba747d06da89380cfcf8af1130581a",
+    "bytes": 88134,
+    "size": [
+      1125,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_66/input_0.png",
+    "local_path": "reference-images/T066-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_66/input_0.png",
+    "sha256": "b03de23d035389b3f21e0b785d47fa637b4a35f833886f51278b71245270ca40",
+    "bytes": 99554,
+    "size": [
+      1015,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_67/input_0.png",
+    "local_path": "reference-images/T067-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_67/input_0.png",
+    "sha256": "5308146fab809418438d299e613fedcfdb3b9b6027076d79157ce7cafcc12774",
+    "bytes": 67645,
+    "size": [
+      500,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_69/input_0.png",
+    "local_path": "reference-images/T069-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_69/input_0.png",
+    "sha256": "1dccbd7872c54a319b6703c14f9aae3fcd1006b7e1544c092fc4ed4bbc112fd1",
+    "bytes": 50564,
+    "size": [
+      600,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_71/input_0.png",
+    "local_path": "reference-images/T071-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_71/input_0.png",
+    "sha256": "72b4bcdabc680866ec6947967c1aa06074688409f1c04a37da6e7e0a9370ba94",
+    "bytes": 59175,
+    "size": [
+      1179,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_72/input_0.png",
+    "local_path": "reference-images/T072-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_72/input_0.png",
+    "sha256": "83324e7aa982526b7fb2dc3907c9d8cf1dc16d8c4600f3c526ed8d462c162b14",
+    "bytes": 122301,
+    "size": [
+      1124,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_73/input_0.png",
+    "local_path": "reference-images/T073-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_73/input_0.png",
+    "sha256": "2ebe154a28d304f9deac7b42be0a678ffd4407377b892fd3ca909f049d3628e8",
+    "bytes": 20149,
+    "size": [
+      500,
+      750
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_78/input_0.png",
+    "local_path": "reference-images/T078-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_78/input_0.png",
+    "sha256": "5a94a45b49a40024a0a9fac4b537399c65ce0ff20f2ad8246c20adc99e0454f8",
+    "bytes": 166384,
+    "size": [
+      1060,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_79/input_0.png",
+    "local_path": "reference-images/T079-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_79/input_0.png",
+    "sha256": "5f652a1c663200a1b4375edadb0279549ac6956ce953b7dc423e8730cad1423d",
+    "bytes": 472671,
+    "size": [
+      3648,
+      2486
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_87/input_0.png",
+    "local_path": "reference-images/T087-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_87/input_0.png",
+    "sha256": "b1dcfc40d5055c12b00a794595a13644f1a8c6caeca21ed394b587be6227cc68",
+    "bytes": 410678,
+    "size": [
+      2236,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_93/input_0.png",
+    "local_path": "reference-images/T093-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_93/input_0.png",
+    "sha256": "440d02cac35f1b2cfbc70755e24d8bd5d60ab0cd2742e15cf18992a95bea01e7",
+    "bytes": 203988,
+    "size": [
+      2250,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_101/input_0.png",
+    "local_path": "reference-images/T101-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_101/input_0.png",
+    "sha256": "7537050e1b2a4924782800611daebf9cf5938b47de1343f81f7f0e842cf995a5",
+    "bytes": 366412,
+    "size": [
+      2289,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_103/input_0.png",
+    "local_path": "reference-images/T103-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_103/input_0.png",
+    "sha256": "64e98ef85f90a49e988a3ed40d772e73e779144ecbd250326b26076e2224e79a",
+    "bytes": 387412,
+    "size": [
+      2298,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_115/input_0.png",
+    "local_path": "reference-images/T115-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_115/input_0.png",
+    "sha256": "3a4411e6a692c2c1ed58c5731d560e75f3f606ac9cf06fc411d5946ade8eaed2",
+    "bytes": 79657,
+    "size": [
+      1500,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_116/input_0.png",
+    "local_path": "reference-images/T116-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_116/input_0.png",
+    "sha256": "4fdeb5c7a92e6380e0d2e46a78385d9896b69930e207a7b47e9fea2305ed69cd",
+    "bytes": 129552,
+    "size": [
+      2250,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_117/input_0.png",
+    "local_path": "reference-images/T117-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_117/input_0.png",
+    "sha256": "48a0a6996ff7e4d5d068476d2b771cfbd417f2941d00e98573f7f7e30dc049fb",
+    "bytes": 94080,
+    "size": [
+      800,
+      1199
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_123/input_0.png",
+    "local_path": "reference-images/T123-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_123/input_0.png",
+    "sha256": "1db29de628b361c0dbc47440fcbcffeb30f863cf12f42fb05e14ecaa024df943",
+    "bytes": 87146,
+    "size": [
+      1125,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_126/input_0.png",
+    "local_path": "reference-images/T126-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_126/input_0.png",
+    "sha256": "413e737734f673fb988b41dc0cc502fc804cd64d30b21babd93302229f449dce",
+    "bytes": 200004,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_134/input_0.png",
+    "local_path": "reference-images/T134-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_134/input_0.png",
+    "sha256": "d4a5b9eb5998a4c4dd9fc91fc1c5f7551e1bec66c904dce9d973a860b6f048d1",
+    "bytes": 339982,
+    "size": [
+      2265,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_139/input_0.png",
+    "local_path": "reference-images/T139-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_139/input_0.png",
+    "sha256": "686e5e80cc2857c26b654ac11c02d2ce0601ca61504aa3ef9fece3464fb7b1f7",
+    "bytes": 349770,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_141/input_0.png",
+    "local_path": "reference-images/T141-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_141/input_0.png",
+    "sha256": "5b9392f3a28a184623254a2fcc6cf8515c36220f9e2f8f7b4985f7cd81adb07f",
+    "bytes": 428040,
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_153/input_0.png",
+    "local_path": "reference-images/T153-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_153/input_0.png",
+    "sha256": "6027afe9eb6292ce8db47f0965ebb04ed2d8168175c54af06080c85556a150cf",
+    "bytes": 396901,
+    "size": [
+      2250,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_165/input_0.png",
+    "local_path": "reference-images/T165-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_165/input_0.png",
+    "sha256": "82974e363c91154e62e9308022e813fd4a09d556d56835638e45ccd24f18d297",
+    "bytes": 208270,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_166/input_0.png",
+    "local_path": "reference-images/T166-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_166/input_0.png",
+    "sha256": "fb3707771097b8bc9289517ca085361b749ac8071e06256e7f16403f8a334bcc",
+    "bytes": 639377,
+    "size": [
+      2267,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_168/input_0.png",
+    "local_path": "reference-images/T168-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_168/input_0.png",
+    "sha256": "822b111a0c0bcf09fb638ed083b25195a72e37b3e2ecb1d5ebaf5acf8afb369d",
+    "bytes": 191073,
+    "size": [
+      1194,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_170/input_0.png",
+    "local_path": "reference-images/T170-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_170/input_0.png",
+    "sha256": "b011c9ffed0d3a57b93a8d5e71eed845a32442de5943aba2753e4800aee80434",
+    "bytes": 165834,
+    "size": [
+      1126,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_177/input_0.png",
+    "local_path": "reference-images/T177-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_177/input_0.png",
+    "sha256": "73067279bff9f8c2e3c226cfc55b6ee7bd79dd267f27effafa59d8dce1cf854b",
+    "bytes": 444441,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_179/input_0.png",
+    "local_path": "reference-images/T179-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_179/input_0.png",
+    "sha256": "68286f4e2ae19bbce30e0f9bdbcec13d74c3a2494f8500536f3356a310d55576",
+    "bytes": 141473,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_181/input_0.png",
+    "local_path": "reference-images/T181-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_181/input_0.png",
+    "sha256": "6ac0133029a93e602b022474f37b8411aeb5ac4b4e9c23b9d0b7e23755ed44c4",
+    "bytes": 199475,
+    "size": [
+      909,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_183/input_0.png",
+    "local_path": "reference-images/T183-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_183/input_0.png",
+    "sha256": "e3b2875970ff0fcc69a45d54e24d0e396f23d4528acd687d114e991ada1cae07",
+    "bytes": 155513,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_184/input_0.png",
+    "local_path": "reference-images/T184-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_184/input_0.png",
+    "sha256": "b35627cb0ed9ae7e0ff2df4e627ed1d0614026b8825a2882d3406d7049443ca7",
+    "bytes": 90940,
+    "size": [
+      1000,
+      1500
+    ]
+  },
+  {
+    "source_path": "environment_docker/webarena-homepage/static/input_images/classifieds/task_185/input_0.png",
+    "local_path": "reference-images/T185-0.png",
+    "source_url": "https://cdn.jsdelivr.net/gh/web-arena-x/visualwebarena@89f5af29305c3d1e9f97ce4421462060a70c9a03/environment_docker/webarena-homepage/static/input_images/classifieds/task_185/input_0.png",
+    "sha256": "e8b5db796bf78e3c9592d8fdc97ceadf1e3fbaf9473bf1501e408c811413de63",
+    "bytes": 454243,
+    "size": [
+      2250,
+      1500
+    ]
+  }
+]

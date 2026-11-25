@@ -1,0 +1,22 @@
+import ast,json,secrets,shutil,sys,time
+from pathlib import Path
+from control import HERE,BASE,R3090,R4090,OUT,save,sha
+old=BASE/'remaining28-source-reference-gui-20261110-40/runtime-package';flash=BASE/'flash-binary-gate-framework-20261113';package=HERE/sys.argv[1];package.mkdir()
+for n in ['primary_server.py','launch_group.py','gui_outer.py','gui_experiment.py']:shutil.copyfile(HERE/n,package/n)
+for n in ['actor-template.json','primary-reference.json','native-bindings-public.json','native_environment.py','preflight_support.py','four_gpu_contract.py','native-parser-source.py']:shutil.copyfile(old/n,package/n)
+shutil.copytree(old/'release',package/'release')
+(package/'flash').mkdir()
+for n in ['gate_core.py','gate_client.py','wire_contract.py','resource_guard.py','flash_runtime.py','flash_service.py','service-config.json','gate-contract.json','flash-identity.json']:shutil.copyfile(flash/n,package/'flash'/n)
+prior=json.loads((old/'plan.json').read_bytes());tasks=prior['tasks']['vwa'];queue=[]
+for i,task in enumerate(tasks):
+ pairs=[('clean',True),('clean',False),('stale_replace',False),('stale_replace',True)]if i%2==0 else[('stale_replace',True),('stale_replace',False),('clean',False),('clean',True)]
+ for condition,gate in pairs:queue.append({'run_id':f'flash13-T{task["task_id"]:03}-{condition}-'+('gate'if gate else'baseline'),'task_id':task['task_id'],'condition':condition,'gate_enabled':gate})
+plan={'version':'Flash-single-image-gate-full-GUI-01','created':time.time(),'tasks':tasks,'queue':queue,'expected_trajectories':32,'matched_pairs':16,'datasets':['VisualWebArena classifieds'],'conditions':['clean','stale_replace'],'injection':'One replacement, first changed image following click/type/press/back/tab, then recapture same live environment without re-injecting. Same trigger in both arms.','gate':'Original fixed Flash question, one complete current image, no task/history/action/prior image; no cross-call KV.','NO':'continuous recapture until YES or manual stop','recapture_limit':None,'auxiliary_call_cap':None,'recapture_seconds':0.5,'max_steps':50,'max_actor_calls_per_trajectory':70,'actor_output_tokens':2048,'browser_seed':20261011,'actor_seed':42,'native_main_history':'complete original accepted exchanges and images; no extra Jev text','contextual_judge':False,'native_actor_parser_executor_scorer_unchanged':True,'all_inputs_and_histories_retained':True,'technical_failure':'preserve and stop affected queue; never model zero or automatic retry','native_action_contract_failure':'preserve terminal and continue other independent new trajectories, no automatic correction','formal_Mirage_reduction':None,'private_evaluator_never_supplied_to_models':True,'old_terminal_retries':False,'main_gpu_physical':[4,5,6],'Flash_gpu_physical':7,'new_deployment_condition':'Three-card balanced original27B native BF16/SDPA versus historical four-card/residency; separate pinned Flash environment. Both new arms identical primary placement. Long history fit and bitwise equivalence not assumed.'}
+save(package/'plan.json',plan)
+save(package/'user-launch-authorization.json',{'current_local_date':'2026-11-13','request':'启动完整的实验','prior_model_choice':'那你就用flash吧，按我的框架去搭建','prior_NO_policy':'持续复拍，直到 YES 或手动停止','scope':'new32 Flash gate versus native actor only;8 preselected public tasks;clean and stale; old terminals immutable','no_old_queue_resumed':True,'new_full_GUI_authorized':True,'paid_API':False})
+(package/'private.token').write_text(secrets.token_hex(32),encoding='utf8')
+files={str(p.relative_to(package)).replace('\\','/'):sha(p)for p in package.rglob('*')if p.is_file()and p.name!='private.token'and '__pycache__'not in p.parts}
+for n in files:
+ if n.endswith('.py'):ast.parse((package/n).read_text(encoding='utf8'))
+manifest={'version':plan['version'],'created':time.time(),'files':files,'auth_token_sha256':sha(package/'private.token'),'output3090':OUT,'package3090':R3090,'package4090':R4090,'trajectories':32,'main_url':'http://192.0.2.11:19201','source_prior_manifest_sha256':sha(old/'manifest.json'),'Flash_contract_sha256':sha(package/'flash/gate-contract.json'),'native_actor_template_sha256':sha(package/'actor-template.json'),'old_GUI_goal':'new launch authorized; old queue stays stopped'}
+save(package/'manifest.json',manifest);save(HERE/('frozen-'+package.name+'.json'),{'manifest_sha256':sha(package/'manifest.json'),'files':len(files),'new_model_calls':0,'new_GUI_trajectories':0});print(json.dumps({'files':len(files),'manifest_sha256':sha(package/'manifest.json'),'trajectories':32}))

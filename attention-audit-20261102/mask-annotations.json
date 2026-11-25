@@ -1,0 +1,25 @@
+{
+ "version":"visible-control-regions-v2",
+ "coordinates":"Rectangles in a normalized 0–1000 frame; floor lower and ceil upper pixel bounds, right and bottom exclusive.",
+ "annotation_method":"Assistant visual review of all 30 source screenshots before inspecting new generated outputs. Keep visible toolbar, dock, sidebar controls and dialog forms; white out the document or webpage content. This is a rectangular control-region mask, not a pixel-perfect button segmentation or the archived native masking implementation.",
+ "bases":{
+  "chrome":[[0,0,38,1000],[38,0,1000,110],[300,120,730,190],[300,310,730,460],[875,145,970,190],[220,630,300,680],[740,840,815,880],[930,920,990,990]],
+  "gimp":[[0,0,38,1000],[38,0,1000,90],[38,90,142,950],[900,90,1000,950],[142,90,900,132],[142,960,280,1000]],
+  "libreoffice_calc":[[0,0,38,1000],[38,0,1000,160],[38,160,195,195],[900,195,1000,265],[970,160,1000,950],[38,950,220,985],[800,970,1000,1000]],
+  "libreoffice_impress":[[0,0,38,1000],[38,0,1000,160],[790,160,1000,950],[38,970,1000,1000]]
+ },
+ "additional_rectangles":{
+  "T00-middle":[[140,920,300,965]],
+  "T00-late":[[140,920,300,965]],
+  "T01-early":[[345,265,690,825]],
+  "T01-middle":[[345,265,690,825]],
+  "T02-early":[[140,100,330,425]],
+  "T04-early":[[100,72,285,575]],
+  "T04-middle":[[275,290,770,735]],
+  "T04-late":[[275,290,770,735]],
+  "T07-middle":[[340,340,690,710]]
+ },
+ "replace_base_rectangles":{
+  "T01-late":[[0,0,38,1000],[38,0,1000,32],[430,43,610,85],[150,380,900,870]]
+ }
+}

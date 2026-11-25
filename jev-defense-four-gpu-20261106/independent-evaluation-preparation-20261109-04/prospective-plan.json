@@ -1,0 +1,186 @@
+{
+  "time": 1794204167.025586,
+  "status": "source_and_design_preparation_only_not_a_launch",
+  "task_selection_rule": "First8 ascending task IDs in all60 canonical original shared configs: classifieds only, no reset, no task-reference image, URLExactEvaluator only; exclude repeatedly tuned112. No source outcomes inspected.",
+  "public_catalog_sha256": "84a820b88f75676ca64477530b046aae27a680ddac7c066fd0c0e20586f1b65a",
+  "private_contract_metadata_operation_sha256": "5c9c2cdec04ab284d1eb18ced0dc17cc49a4325e0cc5051f6737c816043b2290",
+  "eligible_task_ids": [
+    0,
+    3,
+    17,
+    58,
+    89,
+    94,
+    114,
+    125,
+    131,
+    146,
+    155,
+    171,
+    187,
+    198,
+    204,
+    231,
+    232
+  ],
+  "selected_tasks": [
+    {
+      "task_id": 0,
+      "intent": "Find me the cheapest blue kayak on this site.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_0.json",
+      "source_config_sha256": "39ad86005afebc43a1bc0d828d7ad80d59b4f01058e47c602ea5eb097e442e15",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 3,
+      "intent": "Find me the most recently posted item in the \"Photo + video\" category that is not completely black in color. It should be between $1000 to $1200.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_3.json",
+      "source_config_sha256": "a7ecfe79f799ee2da728fff19092354547df281fd84024f235de748095a07551",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 17,
+      "intent": "Show me the cheapest bike with red handlebars between $900-950.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_17.json",
+      "source_config_sha256": "c71d29c9202cc96262df84baf8693936eb8b1c13a4faad13f0ddf20121caf8d4",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 58,
+      "intent": "Explore the \"Furniture\" category of Washington, D.C. and find me the most recent blue chair.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_58.json",
+      "source_config_sha256": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 89,
+      "intent": "Find the most expensive car from Virginia that is neon green.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_89.json",
+      "source_config_sha256": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 94,
+      "intent": "Find the animal on this page that has someone riding it in the image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_94.json",
+      "source_config_sha256": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 114,
+      "intent": "Navigate to the oldest listing from Virginia which contains multiple people in its image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_114.json",
+      "source_config_sha256": "010660d34bdf0d12f2cd31825aace8265140cfd31321ec8c950d841489142d6d",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    },
+    {
+      "task_id": 125,
+      "intent": "Navigate to the item on this page whose image is a desktop screenshot.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_125.json",
+      "source_config_sha256": "7b6d5093d0e67d6ebd7dc3ced275de584b200c03afc52ed6195b46a7c462273d",
+      "private_evaluator_fields_exported": false,
+      "not_experiment_results": true
+    }
+  ],
+  "scope": "New task IDs for prospective matched evaluation; same site and nonrandom sample, not all benchmarks or proof of wholly unseen archive images.",
+  "development_task_112_excluded_from_efficacy_pool": true,
+  "comparison": "Within each task and clean/stale condition, joint without auxiliary vs same joint with one image-only auxiliary. Measures incremental assistance, not standalone no-defense advantage.",
+  "prospective_tracks": 32,
+  "track_order": "Freeze counterbalanced auxiliary order before any launch; no live queue attached.",
+  "conditions": [
+    "clean",
+    "stale_replace"
+  ],
+  "arms": [
+    "joint_no_auxiliary",
+    "joint_single_image_auxiliary"
+  ],
+  "primary_endpoint": "Any definite boundary-inclusive semantic Mirage in the trajectory, occurrence counts even if rejected/corrected; pure native WAIT excluded.",
+  "unresolved": "Retain unresolved claims; no-positive-but-unresolved trajectories have unknown primary endpoint. Report bounds, not forced negatives.",
+  "main_inputs": "Original task/native initial state, complete legitimate history and native original screenshots; actor2048/verifier4096, BF16/SDPA/native generation unchanged.",
+  "limits": {
+    "steps": 50,
+    "actor": 70,
+    "verifier": 140,
+    "recaptures_per_decision": 2,
+    "regenerations_per_decision": 2,
+    "format_retry": 1,
+    "auxiliary_calls_per_trajectory": 60
+  },
+  "no_completed_controls_or_trajectories_reexecuted": true,
+  "technical_failures": "Preserve and separate; no model zeros or automatic budget-expanded retries.",
+  "scorer": "Unmodified native URLExactEvaluator, private original configs and endpoint mapping only. No scoring answers/URLs to auxiliary/main/checker. No paid scorer.",
+  "review": "Read actual delivered images/full lawful history/candidates, seal labels, then private execution/injection/scoring join; report any prior outcome exposure.",
+  "reviewer_limit": "Current root is single reviewer; no independent-human or fully blind claim. Distinct task IDs remain same-site sample.",
+  "efficacy_target_relative": 0.3,
+  "aspiration_relative": 0.5,
+  "zero_baseline_relative": "undefined",
+  "companion_outcomes": [
+    "Task completion",
+    "Normal-operation false blocks",
+    "Accepted/executed errors",
+    "Premature stops",
+    "Technical failures",
+    "Per-model calls/tokens/durations",
+    "Four-GPU reserved time"
+  ],
+  "normal_operation_requirement": "No apparent improvement explained by fewer chances, technical failure, premature stop, false blocks or degraded completion. Uncertainty reported; not equivalence from nonsignificance.",
+  "adaptation_control": "Freeze repair/conditions and source manifests before task outcomes. No tuning on this evaluation then calling it held-out. Any later tuning makes used tasks development and needs a fresh source-bound evaluation.",
+  "known_remaining_admission_gaps": [
+    "Live four-track known task batch incomplete",
+    "Normal sort-control false block unresolved",
+    "Auxiliary semantic error and availability not eliminated",
+    "Long-history GPU capacity unproved",
+    "Per-task native initial/config/same-live/scorer transport bindings pending"
+  ],
+  "launch_ready": false,
+  "models_GUI_scorer_calls": 0,
+  "current_running_GUI_not_modified": true
+}

@@ -1,0 +1,9 @@
+{
+  "policy": "shadow",
+  "max_auxiliary_calls": 60,
+  "token_file": "/home/researcher/jev-defense-local-20261102/transport.token",
+  "services": [
+    {"model": "jev_style", "url": "http://127.0.0.1:18221"},
+    {"model": "neohorse", "url": "http://127.0.0.1:18222"}
+  ]
+}

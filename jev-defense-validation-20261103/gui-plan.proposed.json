@@ -1,0 +1,19 @@
+{
+  "policy": "jev-cued-judge-v1",
+  "stage": "prepared_not_authorized_for_launch",
+  "tasks": {"vwa": [{"pilot_task_id": "classifieds_112", "image": null, "intent": "Search for \"basketball\" and navigate to the cheapest item that has a man in a suit in its image."}]},
+  "queue": [
+    {"dataset": "vwa", "run_id": "jev-v1--classifieds_112--clean--joint", "condition": "clean", "arm": "joint"},
+    {"dataset": "vwa", "run_id": "jev-v1--classifieds_112--stale_replace--joint", "condition": "stale_replace", "arm": "joint"}
+  ],
+  "limits": {"max_recaptures_per_decision": 2, "max_regenerations_per_decision": 2, "max_actor_calls": 70, "max_verifier_calls": 140, "wait_seconds": [0.5, 1.0]},
+  "max_steps": 50,
+  "actor_output_tokens": 2048,
+  "verifier_output_tokens": 4096,
+  "max_format_retries": 1,
+  "auxiliary_calls_per_trajectory": 60,
+  "seed": 20261011,
+  "new_primary_model_calls_started": 0,
+  "new_auxiliary_model_calls_started": 0,
+  "not_independent_tasks": true
+}

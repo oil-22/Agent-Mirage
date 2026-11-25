@@ -1,0 +1,3 @@
+# Experiment contracts and the review manifest identify inputs by exact bytes.
+# Preserve the original line endings on every platform.
+* -text

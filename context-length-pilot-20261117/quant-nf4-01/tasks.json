@@ -1,0 +1,114 @@
+[
+  {
+    "task_id": 0,
+    "intent": "Find me the cheapest blue kayak on this site.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_0.json",
+    "source_config_sha256": "39ad86005afebc43a1bc0d828d7ad80d59b4f01058e47c602ea5eb097e442e15",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_0"
+  },
+  {
+    "task_id": 3,
+    "intent": "Find me the most recently posted item in the \"Photo + video\" category that is not completely black in color. It should be between $1000 to $1200.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_3.json",
+    "source_config_sha256": "a7ecfe79f799ee2da728fff19092354547df281fd84024f235de748095a07551",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_3"
+  },
+  {
+    "task_id": 17,
+    "intent": "Show me the cheapest bike with red handlebars between $900-950.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_17.json",
+    "source_config_sha256": "c71d29c9202cc96262df84baf8693936eb8b1c13a4faad13f0ddf20121caf8d4",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_17"
+  },
+  {
+    "task_id": 58,
+    "intent": "Explore the \"Furniture\" category of Washington, D.C. and find me the most recent blue chair.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_58.json",
+    "source_config_sha256": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_58"
+  },
+  {
+    "task_id": 89,
+    "intent": "Find the most expensive car from Virginia that is neon green.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_89.json",
+    "source_config_sha256": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_89"
+  },
+  {
+    "task_id": 94,
+    "intent": "Find the animal on this page that has someone riding it in the image.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_94.json",
+    "source_config_sha256": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_94"
+  },
+  {
+    "task_id": 112,
+    "intent": "Search for \"basketball\" and navigate to the cheapest item that has a man in a suit in its image.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_112.json",
+    "source_config_sha256": "b2dd3cef7cc6357376b95ef8c64ae4fcad839fd7f705e55afbdeb4a3d6a83603",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_112"
+  },
+  {
+    "task_id": 131,
+    "intent": "Search for \"dogs\" and navigate to the listing whose image consists of puppies in a basket.",
+    "image": null,
+    "sites": [
+      "classifieds"
+    ],
+    "require_reset": false,
+    "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_131.json",
+    "source_config_sha256": "fe9b3b0d36a69c237a3b4f8adb38783e704de4464845b53c7bb906e116a7c9c0",
+    "private_evaluator_fields_exported": false,
+    "not_experiment_results": true,
+    "pilot_task_id": "classifieds_131"
+  }
+]

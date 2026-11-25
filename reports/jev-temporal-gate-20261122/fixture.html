@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Town Marketplace</title>
+<style>
+  * {box-sizing:border-box} body {margin:0;background:#f5f7fa;color:#172536;font:17px Arial,sans-serif}
+  header {height:76px;background:#162e45;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 64px}
+  header b {font-size:26px} header span {color:#d7e9ef;font-size:15px} main {max-width:1120px;margin:36px auto 64px}
+  h1 {font-size:30px;margin:0 0 18px} h2 {font-size:23px;margin:0 0 16px} p {line-height:1.45}
+  .panel, article {background:white;border:1px solid #ccd7df;border-radius:8px;padding:24px}
+  .fields {display:flex;align-items:end;gap:18px} label {display:block;font-weight:bold}
+  input {display:block;margin-top:8px;border:1px solid #758b99;border-radius:5px;background:white;color:#182b3c;padding:9px 12px;font-size:19px;width:320px;height:46px;caret-color:transparent}
+  input:focus {outline:3px solid #205fa1;outline-offset:1px} button {height:46px;padding:0 32px;border:0;border-radius:5px;background:#075b9e;color:white;font-size:19px;font-weight:bold;cursor:pointer}
+  button:focus:not(:focus-visible) {outline:none}
+  #content {margin-top:28px} #content p {margin:0 0 14px} .cards {display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  article {min-height:123px} article b {display:block;margin-bottom:10px;font-size:19px} article span {color:#425761}
+  .price {font-weight:bold;color:#085d35} footer {padding:25px 64px;background:#e5edf3;color:#294254}
+  body.boundary main {min-height:1350px} body.boundary article {margin-bottom:16px}
+</style>
+<body>
+<header><b>Town Marketplace</b><span>Local classifieds &nbsp; | &nbsp; Help</span></header>
+<main><div id="app"></div><section id="content"></section></main>
+<footer>Town Marketplace &nbsp; · &nbsp; Help &nbsp; · &nbsp; Contact</footer>
+<script>
+'use strict';
+const app = document.querySelector('#app'), content = document.querySelector('#content');
+const cfg = new URLSearchParams(location.search);
+const kind = cfg.get('kind'), delay = Number(cfg.get('delay'));
+if (!['search','type','boundary'].includes(kind) || ![0,3200].includes(delay)) throw Error('Bad fixture scenario');
+const events = [];
+const mark = (kind, extra = {}) => events.push({kind, ms:performance.now(), ...extra});
+const afterPaint = fn => requestAnimationFrame(() => requestAnimationFrame(fn));
+function schedule(event, requested, update) {
+  mark('input', {trusted:event.isTrusted, event_type:event.type, value:requested});
+  if (!event.isTrusted) return;
+  setTimeout(() => {
+    update(); mark('render_applied');
+    afterPaint(() => mark('render_painted'));
+  }, delay);
+}
+if (kind === 'search') {
+  app.innerHTML = '<h1>Marketplace listings</h1><div class="panel fields"><label>Keyword<input id="keyword" value="bicycle"></label><button id="search">Search</button></div>';
+  content.innerHTML = '<div class="panel"><h2>Browse categories</h2><div class="cards"><article><b>Home &amp; Garden</b><span>Furniture, tools and decor</span></article><article><b>Sports &amp; Outdoors</b><span>Equipment, gear and apparel</span></article><article><b>Electronics</b><span>Computers and accessories</span></article></div></div>';
+  document.querySelector('#search').addEventListener('click', event => {
+    const query = document.querySelector('#keyword').value;
+    schedule(event, query, () => {
+      const title = document.createElement('h2'); title.textContent = `Search results for “${query}”`;
+      const result = document.createElement('div'); result.className = 'panel'; result.append(title);
+      result.insertAdjacentHTML('beforeend', '<p>2 listings found</p><div class="cards"><article><b>Blue commuter bicycle</b><p>Used · 7 speeds</p><span class="price">$120</span></article><article><b>Road bicycle</b><p>Used · aluminum frame</p><span class="price">$165</span></article></div>');
+      content.replaceChildren(result);
+    });
+  });
+} else if (kind === 'type') {
+  app.innerHTML = '<h1>Listing location</h1><div class="panel"><h2>Location filters</h2><p>Enter a city to narrow the marketplace listings.</p><div class="fields"><label>City<input id="city" autocomplete="off" spellcheck="false"></label><button>Apply filters</button></div></div>';
+  content.innerHTML = '<div class="panel"><h2>Nearby categories</h2><p>Home &amp; Garden &nbsp; · &nbsp; Sports &amp; Outdoors &nbsp; · &nbsp; Electronics</p></div>';
+  const input = document.querySelector('#city'); input.focus();
+  input.addEventListener('beforeinput', event => {
+    if (event.inputType !== 'insertText' || typeof event.data !== 'string') return;
+    event.preventDefault();
+    const value = event.data;
+    schedule(event, value, () => {input.value += value;});
+  });
+} else {
+  document.body.classList.add('boundary');
+  app.innerHTML = '<h1>Marketplace listings</h1>';
+  content.innerHTML = Array.from({length:12}, (_,i) => `<article><b>Local listing ${i+1}</b><span>Available for pickup</span></article>`).join('');
+  document.addEventListener('wheel', event => mark('wheel', {trusted:event.isTrusted, delta_y:event.deltaY}), {passive:true});
+  window.scrollTo(0, document.scrollingElement.scrollHeight);
+}
+window.fixtureSnapshot = () => {
+  const el = document.scrollingElement;
+  return {kind, now_ms:performance.now(), events:events.map(e=>({...e})), city:document.querySelector('#city')?.value ?? null,
+          heading:content.querySelector('h2')?.textContent ?? null, active:document.activeElement?.id ?? null,
+          scroll_top:el.scrollTop, client_height:el.clientHeight, scroll_height:el.scrollHeight,
+          scroll_width:el.scrollWidth, client_width:el.clientWidth};
+};
+afterPaint(() => mark('initial_painted'));
+</script>
+</body>
+</html>

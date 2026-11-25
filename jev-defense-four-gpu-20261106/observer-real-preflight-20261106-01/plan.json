@@ -1,0 +1,440 @@
+{
+  "policy": "single-flash-image-observer-actor-v1",
+  "model": "pplx_flash",
+  "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+  "requests": [
+    {
+      "case_id": "original-01",
+      "wire": "wire/original-01.json",
+      "wire_sha256": "3b23251728fe5d47241baa3918547680ca6376879e667c8fb4f098a413233c93",
+      "fingerprint_excluding_request_id": "299ee5f4b7e6121149730ca373a42e0083c4caf131dbe6dc162ead84c161a12b",
+      "image_sha256": "564e7a79f977e2d647625301b9539e73027467dad75a59a85eda7bb8f6f66848",
+      "source_binding": {
+        "case_id": "original-01",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\564e7a79f977e2d647625301b9539e73027467dad75a59a85eda7bb8f6f66848.png",
+        "image_sha256": "564e7a79f977e2d647625301b9539e73027467dad75a59a85eda7bb8f6f66848",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "original-02",
+      "wire": "wire/original-02.json",
+      "wire_sha256": "34a09ad3deb160bc88c17c5038bac24c9c43881ff21d9c87682301feee395d0b",
+      "fingerprint_excluding_request_id": "c5bf9f4f286f1262d75a1fcd8bb952a68f30f7f32dc16e83c464b20580b4e365",
+      "image_sha256": "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d",
+      "source_binding": {
+        "case_id": "original-02",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d.png",
+        "image_sha256": "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [
+        {
+          "case_id": "fresh-home",
+          "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\fresh-home\\original.png",
+          "image_sha256": "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d",
+          "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\fresh-home\\source.json",
+          "source_receipt_sha256": "67422d9665ac7d37153e7079478ec5240ce05179c0980419de3729b31612b40c",
+          "scope": "fresh native original source preparation; not model action or defense trajectory"
+        }
+      ],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "original-03",
+      "wire": "wire/original-03.json",
+      "wire_sha256": "4fdf06a936876afbb9332911f9480945ce0f19c312296d1e588ea1dc01265115",
+      "fingerprint_excluding_request_id": "3cc9e8b1974daf75e4e6ed08abaf9a192b5b4cc2bcc44e6eb974f913729d37d8",
+      "image_sha256": "c4b3344c0140948b69d89b18ffd9f7f3c7517d71415595458dc3a82eb4f89b78",
+      "source_binding": {
+        "case_id": "original-03",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\c4b3344c0140948b69d89b18ffd9f7f3c7517d71415595458dc3a82eb4f89b78.png",
+        "image_sha256": "c4b3344c0140948b69d89b18ffd9f7f3c7517d71415595458dc3a82eb4f89b78",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "original-04",
+      "wire": "wire/original-04.json",
+      "wire_sha256": "ffedbd3dc1e2124581f2e33bdf32494bedc87061d9168724b0f771219d7181cb",
+      "fingerprint_excluding_request_id": "08c6510a4b4ff28cf15e2cd50ca12cfe29bbf640f82eeba8acbe95f73629442c",
+      "image_sha256": "3e254f50cd08f5798f0651523985f1bcd21a06ea85b6e88476cece3591b5910c",
+      "source_binding": {
+        "case_id": "original-04",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\3e254f50cd08f5798f0651523985f1bcd21a06ea85b6e88476cece3591b5910c.png",
+        "image_sha256": "3e254f50cd08f5798f0651523985f1bcd21a06ea85b6e88476cece3591b5910c",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "original-05",
+      "wire": "wire/original-05.json",
+      "wire_sha256": "72afe2855b85a9485af28e368d7e6664e58609a24d0b8075e10ff70ed1fcfbd7",
+      "fingerprint_excluding_request_id": "9ef8a239f42e46c22e59994a0268140e10c219075014b67eea5d510c74e37aa0",
+      "image_sha256": "b2cd327e62d841f9a96e811d2ea720aeae52074301749d1811aa595cbb453453",
+      "source_binding": {
+        "case_id": "original-05",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\b2cd327e62d841f9a96e811d2ea720aeae52074301749d1811aa595cbb453453.png",
+        "image_sha256": "b2cd327e62d841f9a96e811d2ea720aeae52074301749d1811aa595cbb453453",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "original-06",
+      "wire": "wire/original-06.json",
+      "wire_sha256": "87ae339824e53ddf532aa10b9c534e91ca843a5c051f76a4a1be166264cd6697",
+      "fingerprint_excluding_request_id": "4851c97ac655e5881fd1dcbc1a81720a006893619b574f7ec515a126887e8c00",
+      "image_sha256": "f010474ff8699d243ea1bf022f34a55f035f77693579d3f2a89a3adba56d99ab",
+      "source_binding": {
+        "case_id": "original-06",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\images\\f010474ff8699d243ea1bf022f34a55f035f77693579d3f2a89a3adba56d99ab.png",
+        "image_sha256": "f010474ff8699d243ea1bf022f34a55f035f77693579d3f2a89a3adba56d99ab",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\policy-preparation\\flash-preflight-frozen-02\\seal.json",
+        "source_receipt_sha256": "a99a5dafce6e9c8e661b227c3d41a12809759fb9f4ffdcc1c1e15e4cf2e9c554",
+        "scope": "previously seen original screenshot; new generic joint observer native input, nonblind development"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "normal-footer",
+      "wire": "wire/normal-footer.json",
+      "wire_sha256": "ec47dea7d42f03df5ee88e0b4e8d7f14a881c13f646b11b405ef040812029ac9",
+      "fingerprint_excluding_request_id": "33f16e3bafcd270c40accaf47f4e0faaedb6b1435f57a7963103320e64ed54f0",
+      "image_sha256": "ed54e5d77fd36997cb9d0b48d524254d267a1e3780f96be3f8b9c82717e42cac",
+      "source_binding": {
+        "case_id": "normal-footer",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\normal-footer\\original.png",
+        "image_sha256": "ed54e5d77fd36997cb9d0b48d524254d267a1e3780f96be3f8b9c82717e42cac",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\normal-footer\\source.json",
+        "source_receipt_sha256": "992701e3fb7f12169b61b1a357a7d1a8dad2515949611717b88eb4041aa0f234",
+        "scope": "fresh native original source preparation; not model action or defense trajectory"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "buttons-only-home",
+      "wire": "wire/buttons-only-home.json",
+      "wire_sha256": "5e1a755808149b79021966ddcb637b71b95ea2de29b4cc8160fbf8f325e3135a",
+      "fingerprint_excluding_request_id": "fc0215650d62fe518b2312f1135ffe1011e1fbd087517c237c67da3bd150674c",
+      "image_sha256": "3429b4468c6da9d2c02da900245a32ec0d5aa7ffdc880d60beaa9b9096d6cb4a",
+      "source_binding": {
+        "case_id": "buttons-only-home",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\buttons-only-home\\original.png",
+        "image_sha256": "3429b4468c6da9d2c02da900245a32ec0d5aa7ffdc880d60beaa9b9096d6cb4a",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\buttons-only-home\\source.json",
+        "source_receipt_sha256": "774b32aaca8f16583772fcb35fac245f0f8a837d7c4f2b5ac5178c7f9fe6134f",
+        "scope": "fresh native original source preparation; not model action or defense trajectory"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    },
+    {
+      "case_id": "native-no-results",
+      "wire": "wire/native-no-results.json",
+      "wire_sha256": "ab429b4a2fcc4c55b3b9ac71e8faa88e3125d331f8cdc586e6ac27f4ab12f6f4",
+      "fingerprint_excluding_request_id": "79b189fc3cfc21cbb7709d9116d83d1e33f58c6f5665b3cc385afa9a6f84e3fd",
+      "image_sha256": "dc30fae5c27841c3aa938b6ad120bc4059b9e4821f828b1008709bbb3005b0a2",
+      "source_binding": {
+        "case_id": "native-no-results",
+        "path": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\native-no-results\\original.png",
+        "image_sha256": "dc30fae5c27841c3aa938b6ad120bc4059b9e4821f828b1008709bbb3005b0a2",
+        "source_receipt": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\observer-source-controls-1793973885537637041\\native-no-results\\source.json",
+        "source_receipt_sha256": "e4a79616dc148513a240324c9b43be1ac5b51b35492297f3ffce793f6626d352",
+        "scope": "fresh native original source preparation; not model action or defense trajectory"
+      },
+      "additional_source_bindings": [],
+      "native_question_order": [
+        "frame_appearance",
+        "visible_layout",
+        "text_readability"
+      ],
+      "native_option_order": {
+        "frame_appearance": [
+          "readable_gui",
+          "blank_frame",
+          "explicit_loading",
+          "unreadable_frame",
+          "non_gui_or_unknown"
+        ],
+        "visible_layout": [
+          "list_or_cards",
+          "detail",
+          "form",
+          "navigation_or_footer",
+          "other",
+          "unknown"
+        ],
+        "text_readability": [
+          "clear",
+          "partial",
+          "unreadable",
+          "not_applicable",
+          "unknown"
+        ]
+      }
+    }
+  ],
+  "max_new_flash_calls": 9,
+  "new_joint_questions_per_image": 3,
+  "total_original_image_sources": 10,
+  "unique_native_image_inputs": 9,
+  "observer_contract_sha256": "98a3adb4ecb4939bb500603121e21587d454a99233ee14a32ddca8f68fa35054",
+  "semantic_scope": "selected previously known and fresh native-image development controls; not blinded or independent tasks",
+  "no_task_target_history_candidate_or_injection_in_native_input": true,
+  "screenshot_does_not_establish_freshness": true,
+  "coverage": [
+    "normal_footer",
+    "readable_no_results",
+    "buttons_only_sparse"
+  ],
+  "positive_explicit_loading_source": false,
+  "loading_coverage_caveat": "No genuine explicit positive loading source is available; blank is not a positive loading control.",
+  "new_main_27B_GUI_scorer_paid_calls": 0,
+  "automatic_retries": false,
+  "first_request_is_native_smoke_and_generic_control_not_extra_call": true,
+  "old_19_task_specific_requests": "superseded_UNSENT"
+}

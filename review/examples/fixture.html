@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Local Interface Suite</title>
+<style>
+* {box-sizing:border-box} body {margin:0;background:var(--surface);color:#192638;font:17px Arial,sans-serif}
+header {height:72px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:white}
+header b {font-size:25px} header small {font-size:15px;color:#fff} main {max-width:1120px;margin:32px auto 48px}
+h1 {font-size:30px;margin:0 0 16px} h2 {font-size:23px;margin:0 0 13px} p {line-height:1.4}
+.panel, article {background:#fff;border-radius:7px;border:1px solid #ccd6e0;padding:19px 22px}
+.row {display:flex;align-items:end;gap:14px} label {font-weight:bold} input {margin-top:7px;display:block;width:320px;height:44px;border:1px solid #73859b;border-radius:4px;padding:8px 11px;font:20px Arial;caret-color:transparent}
+input:focus {outline:3px solid var(--accent);outline-offset:1px} button {border-radius:5px;height:45px;padding:0 22px;border:0;background:var(--accent);color:#fff;font-weight:bold;font-size:17px;cursor:pointer}
+button:focus:not(:focus-visible) {outline:none} #content {margin-top:22px}
+.grid {display:grid;grid-template-columns:repeat(3,1fr);gap:12px} article {min-height:78px} article b {display:block;margin-bottom:8px}
+footer {background:var(--foot);padding:22px 56px;color:#29394d} nav {padding:9px 0 0;display:flex;align-items:center;gap:10px}
+.minor {background:#e9edf4;color:#25344a;border:1px solid #b5c0cc;padding:0 16px;height:36px} .current {background:var(--accent);color:#fff}
+.caption {font-size:16px;color:#31435b} .panel + .panel {margin-top:13px}
+dialog {width:495px;border:1px solid #768399;border-radius:9px;box-shadow:0 6px 25px #172a4933;padding:27px;background:white;color:#142036}
+dialog::backdrop {background:#1320346b} .status {font-weight:bold}
+body.family-library .grid {grid-template-columns:repeat(2,1fr)} body.family-library main {max-width:990px} body.family-library header {height:67px}
+body.family-inventory .grid {grid-template-columns:1fr} body.family-inventory article {min-height:59px;padding:12px 20px}
+body.family-inventory article b {display:inline-block;min-width:260px;margin-bottom:0} body.family-inventory main {max-width:1050px}
+body.family-service main {max-width:1055px;margin-top:46px} body.family-service .panel {border-radius:3px} body.family-service h1 {font-size:31px}
+body.boundary main {min-height:1410px} body.boundary article {margin-bottom:13px}
+body.sparse {background:#fff} body.sparse header,body.sparse footer,body.sparse #content {display:none}
+body.sparse main {margin:290px auto 0;display:flex;justify-content:center}
+#interim {position:fixed;inset:0;z-index:9;display:flex;align-items:center;justify-content:center;background:#fff}
+#interim[hidden] {display:none}
+</style>
+<body><header><b id="brand"></b><small id="bar"></small></header><main><div id="app"></div><section id="content"></section></main><footer id="foot"></footer><div id="interim" hidden></div>
+<script>
+'use strict';
+const q = new URLSearchParams(location.search), kind=q.get('kind'), family=q.get('family'), mode=q.get('mode'), delay=Number(q.get('delay'));
+const families = {
+  market: {name:'Town Marketplace', bar:'Listings   |   Help', heading:'Local listings', query:'camping lantern', typed:'Cedar Hill', field:'City', items:['Northwind Lantern','Trail Lantern','Camp Meter'], meta:'Pickup available', ink:'#172f47', accent:'#075b9e', surface:'#f5f7fa', foot:'#e4edf5'},
+  library: {name:'Maple Public Library', bar:'Catalogue   |   Library card', heading:'Library catalogue', query:'paper maps', typed:'Riverdale', field:'Branch', items:['Handbook of Trail Maps','Maps for Walking','Field Atlas'], meta:'Available for loan', ink:'#32402b', accent:'#456c3b', surface:'#f7f8f2', foot:'#e8ebde'},
+  inventory: {name:'Depot Inventory', bar:'Stock   |   Locations', heading:'Warehouse inventory', query:'hdmi adapter', typed:'Zone 14', field:'Location', items:['USB-C to HDMI','Compact HDMI Splitter','Display Adapter'], meta:'Stock confirmed', ink:'#263259', accent:'#4754a0', surface:'#f4f5fa', foot:'#e7e9f5'},
+  service: {name:'Civic Services Desk', bar:'Requests   |   Account', heading:'Service requests', query:'parking access', typed:'Oak Avenue', field:'Address', items:['Short-Term Permit','Visitor Permit','Accessible Parking'], meta:'Available in this area', ink:'#4b252d', accent:'#873d48', surface:'#fbf7f7', foot:'#f1e6e7'}
+};
+const f=families[family];
+if (!f || !['search','type','pagination','open','toggle','escape','boundary'].includes(kind) || !['plain','white','buttons','sparse','missing','replaced'].includes(mode) || ![0,2400,3100,3600,3800,4500].includes(delay)) throw Error('Invalid fixture configuration');
+const app=document.querySelector('#app'), content=document.querySelector('#content'), interim=document.querySelector('#interim');
+document.querySelector('#brand').textContent=f.name; document.querySelector('#bar').textContent=f.bar;
+document.querySelector('#foot').textContent=f.name+'  ·  Help  ·  Contact';
+for(const k of ['ink','accent','surface','foot']) document.body.style.setProperty('--'+k,f[k]);
+document.body.classList.add('family-'+family);
+const state={outcome:null, visual:'normal'}, events=[];
+const mark=(kind, extra={})=>events.push({kind,ms:performance.now(),...extra});
+const afterPaint=fn=>requestAnimationFrame(()=>requestAnimationFrame(fn));
+const head=()=>`<h1>${f.heading}</h1>`;
+const entries=(xs)=>'<div class="grid">'+xs.map(s=>`<article><b>${s}</b><span>${f.meta}</span></article>`).join('')+'</div>';
+const overview=()=>'<div class="panel"><h2>Browse categories</h2>'+entries(['Featured','Recently added','Browse all'])+'</div>';
+function setInterim(){
+  if (!['white','buttons'].includes(mode)) return;
+  state.visual=mode; interim.hidden=false;
+  if (mode==='buttons') interim.innerHTML='<button type="button">Search</button>';
+  mark('interim_shown',{mode});
+  afterPaint(()=>{if(state.visual===mode) mark('interim_painted',{mode});});
+}
+function schedule(ev, info, render) {
+  mark('input',{trusted:ev.isTrusted,event_type:ev.type,value:info});
+  if (!ev.isTrusted) return;
+  setInterim();
+  setTimeout(()=>{
+    render(); state.visual='normal'; interim.hidden=true; mark('render_applied');
+    afterPaint(()=>mark('render_painted'));
+  },delay);
+}
+if (kind==='search'){
+  app.innerHTML=head()+`<div class="panel row"><label>Keyword<input value="${f.query}"></label><button id="target">Search</button></div>`;
+  content.innerHTML=overview();
+  document.querySelector('#target').addEventListener('click',ev=>schedule(ev,f.query,()=>{
+    state.outcome='results'; content.innerHTML=`<div class="panel"><h2>Search results for “${f.query}”</h2><p>2 matches</p>${entries(f.items.slice(0,2))}</div>`;
+  }));
+} else if (kind==='type'){
+  app.innerHTML=head()+`<div class="panel"><h2>Filter results</h2><div class="row"><label>${f.field}<input id="target" autocomplete="off" spellcheck="false"></label><button>Apply filters</button></div></div>`;
+  content.innerHTML=overview();
+  const field=document.querySelector('#target'); field.focus();
+  field.addEventListener('beforeinput',ev=>{
+    if(ev.inputType!=='insertText'||typeof ev.data!=='string') return;
+    ev.preventDefault();const value=ev.data;
+    schedule(ev,value,()=>{field.value+=value;state.outcome='filled';});
+  });
+} else if (kind==='pagination'){
+  app.innerHTML=head();
+  const blocks=[f.items[0],f.items[1],f.items[2]], page=which=>`<div class="panel"><h2>All entries</h2>${entries(which===1?blocks:[f.items[1],f.items[2],'Recent additions'])}<p class="caption">Showing ${which===1?'1–3':'4–6'} of 12</p><nav><button class="minor ${which===1?'current':''}" type="button">1</button><button id="target" class="minor ${which===2?'current':''}" type="button">2</button><button class="minor" type="button">3</button></nav></div>`;
+  content.innerHTML=page(1);
+  document.querySelector('#target').addEventListener('click',ev=>schedule(ev,'page 2',()=>{content.innerHTML=page(2);state.outcome='page2';}));
+} else if (kind==='open'||kind==='escape'){
+  app.innerHTML=head()+`<div class="panel"><h2>Entry details</h2><p>${f.items[0]}</p><button id="target">Open details</button></div>`;
+  content.innerHTML=overview()+`<dialog><h2>${f.items[0]}</h2><p>${f.meta}</p><p>Record details and availability.</p><button>Done</button></dialog>`;
+  const dialog=document.querySelector('dialog');
+  if(kind==='open') document.querySelector('#target').addEventListener('click',ev=>schedule(ev,'open details',()=>{dialog.showModal();state.outcome='dialog_open';}));
+  else {
+    dialog.showModal();
+    dialog.addEventListener('cancel',ev=>{ev.preventDefault();schedule(ev,'Escape',()=>{dialog.close();state.outcome='dialog_closed';});});
+  }
+} else if (kind==='toggle'){
+  if(mode==='sparse') document.body.classList.add('sparse');
+  app.innerHTML=(mode==='sparse'?'':head()+'<div class="panel"><h2>Notifications</h2><p>Choose whether to receive update alerts.</p>')+
+    '<button id="target" type="button" aria-pressed="false">Notifications: Off</button>'+(mode==='sparse'?'':'</div>');
+  if(mode!=='sparse') content.innerHTML=overview();
+  const btn=document.querySelector('#target');
+  btn.addEventListener('click',ev=>schedule(ev,'enable alerts',()=>{btn.textContent='Notifications: On';btn.setAttribute('aria-pressed','true');state.outcome='enabled';}));
+} else {
+  document.body.classList.add('boundary'); app.innerHTML=head();
+  content.innerHTML=Array.from({length:14},(_,i)=>`<article><b>Entry ${i+1} · ${f.items[i%3]}</b><span>${f.meta}</span></article>`).join('');
+  document.addEventListener('wheel',ev=>mark('wheel',{trusted:ev.isTrusted,delta_y:ev.deltaY}),{passive:true});
+  window.scrollTo(0,document.scrollingElement.scrollHeight);
+}
+window.fixtureSnapshot=()=>{
+  const el=document.scrollingElement;
+  return {kind, family, mode, now_ms:performance.now(), events:events.map(e=>({...e})), visual:state.visual, outcome:state.outcome,
+          entered:document.querySelector('#target')?.value??null, allowed_text:f.typed, active:document.activeElement?.id??null,
+          scroll_top:el.scrollTop, client_height:el.clientHeight, scroll_height:el.scrollHeight,
+          scroll_width:el.scrollWidth, client_width:el.clientWidth};
+};
+afterPaint(()=>mark('initial_painted'));
+</script></body></html>

@@ -1,0 +1,220 @@
+[
+  {
+    "trajectory": "8131a08cfcde3d6681a9",
+    "claim": "I can see the category dropdown is open.",
+    "withdrawals": [
+      "I cannot tell if the dropdown is open.",
+      "I cannot verify the category dropdown state.",
+      "I cannot see if the dropdown is open.",
+      "I cannot confirm the dropdown is open.",
+      "I cannot verify that the dropdown is open."
+    ],
+    "shams": [
+      "I can tell the category dropdown is open.",
+      "I can see the category dropdown is expanded.",
+      "I can see this category dropdown is open."
+    ]
+  },
+  {
+    "trajectory": "31fb006832ed92767e08",
+    "claim": "I can see the category dropdown is open.",
+    "withdrawals": [
+      "I cannot tell if the dropdown is open.",
+      "I cannot verify the category dropdown state.",
+      "I cannot see if the dropdown is open.",
+      "I cannot confirm the dropdown is open.",
+      "I cannot verify that the dropdown is open."
+    ],
+    "shams": [
+      "I can tell the category dropdown is open.",
+      "I can see the category dropdown is expanded.",
+      "I can see this category dropdown is open."
+    ]
+  },
+  {
+    "trajectory": "ca56e76259c277f00bed",
+    "claim": "The \"Cars + trucks\" category is now selected.",
+    "withdrawals": [
+      "The \"Cars + trucks\" category selection is unknown.",
+      "The \"Cars + trucks\" category is not verified.",
+      "The \"Cars + trucks\" category selection remains unknown.",
+      "The \"Cars + trucks\" category is currently unverified."
+    ],
+    "shams": [
+      "The \"Cars + trucks\" category is currently selected.",
+      "This \"Cars + trucks\" category is now selected."
+    ]
+  },
+  {
+    "trajectory": "59939a1146c9ee343d82",
+    "claim": "The search field is focused.",
+    "withdrawals": [
+      "The search field is unverified.",
+      "The field focus is unknown.",
+      "The search focus is unknown.",
+      "Search field focus is unknown.",
+      "The search field focus is unknown."
+    ],
+    "shams": [
+      "This search field is focused.",
+      "The search field has focus."
+    ]
+  },
+  {
+    "trajectory": "2e443c9c983c8016890d",
+    "claim": "The dropdown is open.",
+    "withdrawals": [
+      "The dropdown is unverified.",
+      "The dropdown state is unknown.",
+      "The dropdown status is unknown.",
+      "Dropdown state is unknown.",
+      "The dropdown state is uncertain."
+    ],
+    "shams": [
+      "This dropdown is open.",
+      "The dropdown is expanded."
+    ]
+  },
+  {
+    "trajectory": "34fda057161d7f6c615c",
+    "claim": "The keyword field is focused.",
+    "withdrawals": [
+      "The keyword field is unverified.",
+      "The keyword focus is unknown.",
+      "The field focus is unknown.",
+      "Keyword field focus is unknown.",
+      "The keyword field focus is unknown."
+    ],
+    "shams": [
+      "This keyword field is focused.",
+      "The keyword field has focus."
+    ]
+  },
+  {
+    "trajectory": "cf1b043fcfdaf43ab3e6",
+    "claim": "I can see the category dropdown is open.",
+    "withdrawals": [
+      "I cannot tell if the dropdown is open.",
+      "I cannot verify the category dropdown state.",
+      "I cannot see if the dropdown is open.",
+      "I cannot confirm the dropdown is open.",
+      "I cannot verify that the dropdown is open."
+    ],
+    "shams": [
+      "I can tell the category dropdown is open.",
+      "I can see the category dropdown is expanded.",
+      "I can see this category dropdown is open."
+    ]
+  },
+  {
+    "trajectory": "dab105a4c81dde2a5466",
+    "claim": "The dropdown is open.",
+    "withdrawals": [
+      "The dropdown is unverified.",
+      "The dropdown state is unknown.",
+      "The dropdown status is unknown.",
+      "Dropdown state is unknown.",
+      "The dropdown state is uncertain."
+    ],
+    "shams": [
+      "This dropdown is open.",
+      "The dropdown is expanded."
+    ]
+  },
+  {
+    "trajectory": "f68acc6316f20ac06d50",
+    "claim": "The search box is now focused.",
+    "withdrawals": [
+      "The search box is not verified.",
+      "The search box state is unknown.",
+      "The search box focus is unknown.",
+      "The search box is still unverified.",
+      "The current search focus is unknown."
+    ],
+    "shams": [
+      "This search box is now focused.",
+      "The search box is currently focused."
+    ]
+  },
+  {
+    "trajectory": "31506f2531106fe3a18f",
+    "claim": "The search box is now focused.",
+    "withdrawals": [
+      "The search box is not verified.",
+      "The search box state is unknown.",
+      "The search box focus is unknown.",
+      "The search box is still unverified.",
+      "The current search focus is unknown."
+    ],
+    "shams": [
+      "This search box is now focused.",
+      "The search box is currently focused."
+    ]
+  },
+  {
+    "trajectory": "905ea78814aeee28f144",
+    "claim": "The search box is focused.",
+    "withdrawals": [
+      "The search box is unverified.",
+      "The search focus is unknown.",
+      "The box focus is unknown.",
+      "Search box focus is unknown.",
+      "The search box focus is unknown."
+    ],
+    "shams": [
+      "This search box is focused.",
+      "The search box has focus."
+    ]
+  },
+  {
+    "trajectory": "60680b216b247cb6a41c",
+    "claim": "I'm now in the /f/boston subreddit.",
+    "withdrawals": [
+      "I'm unsure of the current subreddit state.",
+      "I'm unsure about the current subreddit page.",
+      "I cannot verify the current subreddit state.",
+      "I'm unsure of my current subreddit location.",
+      "I'm uncertain about the current subreddit state.",
+      "I can't confirm the /f/boston subreddit.",
+      "I can't verify the /f/boston subreddit.",
+      "I'm unsure about the /f/boston subreddit.",
+      "Unsure I'm in the /f/boston subreddit.",
+      "I'm unsure about the current subreddit page state here."
+    ],
+    "shams": [
+      "I'm currently in the /f/boston subreddit.",
+      "I'm now on the /f/boston subreddit."
+    ]
+  },
+  {
+    "trajectory": "b89b16b5cfdf7106ac14",
+    "claim": "I'm on Facebook Marketplace.",
+    "withdrawals": [
+      "I'm unsure of this marketplace.",
+      "I cannot identify this marketplace.",
+      "The marketplace identity is unknown.",
+      "I'm on an unidentified marketplace.",
+      "I'm unsure about this marketplace."
+    ],
+    "shams": [
+      "I'm currently on Facebook Marketplace.",
+      "I am on Facebook Marketplace.",
+      "I'm browsing Facebook Marketplace."
+    ]
+  },
+  {
+    "trajectory": "895f7b21ced760915d73",
+    "claim": "I'm on the classifieds site (Kijiji).",
+    "withdrawals": [
+      "I'm on a classifieds site (identity unknown).",
+      "I'm on the classifieds site (identity unverified).",
+      "The current classifieds site identity is unknown.",
+      "I'm unsure of the current classifieds site's identity."
+    ],
+    "shams": [
+      "I'm on this classifieds site (Kijiji).",
+      "I am on the classifieds site (Kijiji).",
+      "I'm browsing the classifieds site (Kijiji)."
+    ]
+  }
+]

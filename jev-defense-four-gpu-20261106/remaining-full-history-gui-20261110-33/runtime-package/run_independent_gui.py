@@ -1,0 +1,224 @@
+"""Native27B read-only VWA pilot, independent contexts; genuine recapture callbacks."""
+import argparse,base64,copy,fcntl,io,json,os,pickle,signal,sys,time,traceback
+from dataclasses import replace
+from pathlib import Path
+from urllib.parse import urlsplit,parse_qs
+from PIL import Image
+sys.path.insert(0,str(Path(__file__).resolve().parent/'release'))
+from defense.core import PublicView,VisibleImage,Journal,Controller,digest,Limits,DEFENSE_VERSION
+from defense.http_backend import RemoteQwen
+from gui_transport import GUIQwen as OnlineQwen, BoundObserver, validate_launch_inputs
+from image_evidence import POLICY, ACTOR_BOUNDARY as SHARED_ACTOR_INSTRUCTIONS
+from complete_actor_history import CompleteAcceptedActorHistory
+import carryover_runtime as carryover
+
+OWNED_ROOT=None
+
+CSS='''body * { visibility: hidden !important; }
+button, button *, a.button, a.button *, a.btn, a.btn *, a.publish, a.publish *,
+[role="button"], [role="button"] *, input[type="submit"] { visibility: visible !important; }
+body img, body picture, body video, body canvas, body svg image { opacity: 0 !important; visibility: hidden !important; }'''
+def save(p,v):
+ t=p.with_suffix('.tmp');t.write_text(json.dumps(v,ensure_ascii=False,indent=2));t.replace(p)
+def block(raw):return {'type':'image_url','image_url':{'url':'data:image/png;base64,'+base64.b64encode(raw).decode()}}
+def detail(url):
+ u=urlsplit(url);q=parse_qs(u.query)
+ return u.hostname=='192.0.2.10' and u.port==29980 and u.path=='/index.php' and q.get('page')==['item'] and q.get('id',[''])[0].isdigit()
+def main():
+ global OWNED_ROOT
+ ap=argparse.ArgumentParser()
+ for name in ['root','plan','token-file','runtime','native-bindings','actor-template','auxiliary-config','readiness']:
+  ap.add_argument('--'+name,type=Path,required=True)
+ ap.add_argument('--model-url',required=True);a=ap.parse_args()
+ validate_launch_inputs(a)
+ # Old optional queue/diagnostic modes are not exposed in this new runner.
+ a.environment_preflight=False;a.priority_runs=[];a.only_runs=None;a.diagnostic_run=None;a.diagnostic_step_cap=None
+ a.root.mkdir(parents=True,exist_ok=False);OWNED_ROOT=a.root
+ lock=(a.root/'batch.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+ plan=json.loads(a.plan.read_text());tasks={t['task_id']:t for t in plan['tasks']['vwa']};assert sorted(tasks)==[0,3,17,58,89,94,114,125] and all(t['image']is None for t in tasks.values())
+ bindings=json.loads(a.native_bindings.read_bytes());native_tasks={t['task_id']:t for t in bindings['tasks']};assert sorted(native_tasks)==sorted(tasks)
+ queue=[q for q in plan['queue']if q['dataset']=='vwa'];assert len(queue)==32 and all(q['arm']=='joint'for q in queue)
+ for task_id in tasks:
+  subset=[q for q in queue if q['task_id']==task_id]
+  assert len(subset)==4 and {(q['observer_enabled'],q['condition'])for q in subset}=={(False,'clean'),(True,'clean'),(False,'stale_replace'),(True,'stale_replace')}
+ from continuation_manifest import remaining_queue
+ queue=remaining_queue(plan)
+ if a.only_runs:
+  assert len(a.only_runs)==len(set(a.only_runs)) and set(a.only_runs)<={q['run_id']for q in queue}
+  queue=[q for q in queue if q['run_id']in a.only_runs]
+ assert all(r in {q['run_id']for q in queue}for r in a.priority_runs)
+ queue.sort(key=lambda q:a.priority_runs.index(q['run_id'])if q['run_id']in a.priority_runs else len(a.priority_runs))
+ assert bool(a.diagnostic_run)==bool(a.diagnostic_step_cap),'Diagnostic must be explicitly identified and bounded'
+ if a.diagnostic_run:
+  queue=[q for q in queue if q['run_id']==a.diagnostic_run];assert len(queue)==1
+ step_cap=a.diagnostic_step_cap or 50
+ state={'pid':os.getpid(),'phase':'waiting_model_preflight','completed':0,'expected':len(queue),'started':time.time(),'semantic_mirage':None,'defense_version':DEFENSE_VERSION,'diagnostic_only':bool(a.diagnostic_run),'step_cap':step_cap};save(a.root/'status.json',state)
+ stopping={'requested':False}
+ signal.signal(signal.SIGUSR1,lambda *_:stopping.update(requested=True))
+ model=OnlineQwen(a.model_url,a.token_file)
+ # Readiness was validated before creating the once-only experiment root.
+ assert model.health()['phase']=='ready_gui','Main model is not ready; no GUI started'
+ base=a.runtime;source=base/'upstream'
+ sys.path[:0]=[str(base/'native'),str(source)]
+ from run_reddit_internvl_smoke import SYSTEM,parse,action,png
+ from browser_env import ScriptBrowserEnv
+ from browser_env.auto_login import renew_comb
+ from browser_env.actions import create_stop_action,create_page_focus_action
+ from playwright.sync_api import Page,sync_playwright
+ os.environ['OPENAI_API_KEY']='unused-local-url-evaluator';os.environ['OPENAI_BASE_URL']='http://127.0.0.1:1/v1'
+ from evaluation_harness.evaluators import evaluator_router
+ # Native27B actor template hash is taken from a legal archived request.
+ template=json.loads(a.actor_template.read_text())
+ assert template['messages'][0]['content']==SYSTEM+'\nYou may switch browser tabs using {"type":"tab","index":0}; indices start at 0. No URLs or tab titles are supplied.'
+ SYSTEM=template['messages'][0]['content']
+ assert {k:v for k,v in template.items()if k!='messages'}=={'model':'/opt/whz/llms/Qwen3.8-27B','temperature':0,'max_tokens':2048,'chat_template_kwargs':{'enable_thinking':False}}
+ original_goto=Page.goto
+ def goto(page,url,**kwargs):
+  if kwargs.get('timeout')is None:kwargs['timeout']=120000
+  return original_goto(page,url,**kwargs)
+ Page.goto=goto
+ # Isolated old27B site replica; no site reset or settings change.
+ auth=a.root/'.auth';auth.mkdir(exist_ok=True);renew_comb(['classifieds'],str(auth))
+ # Independent about:blank native screenshot, matching the earlier blank surrogate.
+ with sync_playwright()as pw:
+  browser=pw.chromium.launch(headless=True);page=browser.new_page(viewport={'width':1280,'height':720});page.goto('about:blank');blank=page.screenshot();browser.close()
+ (a.root/'blank-source.png').write_bytes(blank)
+ for item in queue:
+  task=tasks[item['task_id']];binding=native_tasks[item['task_id']]
+  original_config=Path(binding['original_private_path']);raw=original_config.read_bytes()
+  assert digest(raw)==binding['original_private_SHA']==task['source_config_sha256']
+  cfg=json.loads(raw.decode().replace('192.0.2.10:19980','192.0.2.10:29980'))
+  assert cfg['intent']==task['intent'] and cfg['require_reset']is False and cfg['eval']['eval_types']==['url_match']
+  cfg['storage_state']=str(auth/'classifieds_state.json')
+  if stopping['requested']:
+   state.update(phase='paused_at_run_boundary',updated=time.time());save(a.root/'status.json',state);return
+  run=a.root/'runs'/item['run_id']
+  assert not run.exists(),'Fresh finite queue only; no old completed or unfinished run is resumed'
+  attempt=run/('attempt-'+str(time.time_ns()));log=Journal(attempt);shots=attempt/'screenshots';shots.mkdir()
+  log.append('implementation',{'version':DEFENSE_VERSION,'code_directory':str(Path(__file__).resolve().parent),'code_sha256':{n:digest((Path(__file__).resolve().parent/n).read_bytes())for n in ['run_independent_gui.py','gui_transport.py','protocol.py','complete_actor_history.py','release/image_evidence.py','release/evidence_observer.py','release/defense/core.py','release/defense/prompts.py']},'plan_sha256':digest(a.plan.read_bytes()),'priority_runs':a.priority_runs})
+  private=attempt/'official_config.json';save(private,cfg)
+  log.append('protocol',{'run':item,'source_config_sha256':digest(raw),'mapped_config_sha256':digest(private.read_bytes()),'site_endpoint_mapping':'19980 -> isolated29980; no answer or rule changes','actor_parameters':{k:v for k,v in template.items()if k!='messages'},'actor_system_sha256':digest(SYSTEM.encode()),'seed':20261011,'browser_sleep_after_execution':0.5,'injection_three_target':'first changed screenshot after click/type/press/back/tab','buttons_target':'first item detail page, same CSS intervention as prior runner','model_access':'delivered public data only','all_images_native_resolution':True})
+  lim=plan['limits'];actor_observer=BoundObserver(model,item['observer_enabled']);controller=Controller(model.judge,log,item['arm'],Limits(max_recaptures=lim['max_recaptures_per_decision'],max_regenerations=lim['max_regenerations_per_decision'],max_actor_calls=lim['max_actor_calls'],max_verifier_calls=lim['max_verifier_calls'],wait_seconds=tuple(lim['wait_seconds']),probe_current_targets=True,probe_target_alignment=True,full_completion_history=True,probe_completion=True,probe_history_reports=True,probe_observation_readiness=True))
+  log.append('defense_configuration',{'limits':vars(controller.limits),'policy':POLICY,'observer_enabled':item['observer_enabled'],'shared_actor_instructions_sha256':digest(SHARED_ACTOR_INSTRUCTIONS.encode()),'auxiliary_calls_cap':60,'plan_sha256':digest(a.plan.read_bytes()),'readiness_sha256':digest(a.readiness.read_bytes())})
+  model.set_run(item['run_id'],log);model.begin_run()
+  if actor_observer.client is not None:actor_observer.client.online_context=model.context
+  env=ScriptBrowserEnv(headless=True,observation_type='image',current_viewport_only=True,viewport_size={'width':1280,'height':720},save_trace_enabled=True,sleep_after_execution=0.5)
+  state.update(phase='running',run=item['run_id'],attempt=str(attempt),updated=time.time());save(a.root/'status.json',state)
+  transcript=CompleteAcceptedActorHistory(SYSTEM);last_image=None;previous=None;fired=False;trigger_step=None;sequence=0;trajectory=[];execution_feedback='';outcome='step_cap';step=0;environment_actions=0;latest_public_raw=None;calls_start=len(model.calls);result={}
+  try:
+   obs,info=env.reset(seed=20261011,options={'config_file':str(private)});trajectory=[{'observation':obs,'info':info}]
+   package=Path(__file__).resolve().parent
+   linked=carryover.first_track(package,item['run_id'])
+   first_step=1
+   if linked:
+    recovered=carryover.hydrate_history(package,transcript,controller)
+    sequence=recovered['sequence'];previous=recovered['previous'];last_image=recovered['last_image'];execution_feedback=recovered['execution_feedback']
+    obs,info,trajectory=carryover.restore_native(package,env,png,attempt,log)
+    first_step=17;environment_actions=16
+   for step in range(first_step,step_cap+1):
+    model.set_decision(step)
+    if stopping['requested']:outcome='paused_at_decision_boundary';break
+    captured=png(obs);delivered=captured;injected=False
+    cond=item['condition']
+    eligible=not fired and last_image is not None and digest(captured)!=digest(last_image) and previous and previous['type']in {'click','type','press','back','tab'}
+    if cond=='buttons_only' and not fired and detail(env.page.url):
+     sheet=env.page.evaluate_handle('''css=>{const s=new CSSStyleSheet();s.replaceSync(css);document.adoptedStyleSheets=[...document.adoptedStyleSheets,s];return s;}''',CSS)
+     try:delivered=png(env._get_obs())
+     finally:sheet.evaluate('(s)=>{document.adoptedStyleSheets=document.adoptedStyleSheets.filter(x=>x!==s)}')
+     assert not sheet.evaluate('(s)=>document.adoptedStyleSheets.includes(s)');injected=True
+    elif cond in {'silent_drop','blank_replace','stale_replace'} and eligible:
+     delivered=None if cond=='silent_drop'else blank if cond=='blank_replace'else last_image;injected=True
+    if injected:fired=True;trigger_step=step
+    (shots/f'{step:03}-captured.png').write_bytes(captured)
+    if delivered is not None:(shots/f'{step:03}-delivered.png').write_bytes(delivered)
+    log.append('private_delivery_ledger',{'step':step,'condition':cond,'fired':injected,'capture_sha256':digest(captured),'delivered_sha256':None if delivered is None else digest(delivered),'not_in_verifier_input':True})
+    def public(raw):
+     nonlocal sequence,latest_public_raw
+     sequence+=1;latest_public_raw=raw;blocks=[{'type':'text','text':'Task: '+task['intent']},{'type':'text','text':f'Current browser screenshot follows. Available tab count: {len(env.context.pages)}.'}]
+     if execution_feedback:blocks.append({'type':'text','text':'Previous native execution feedback (execution alone does not confirm the visible result): '+execution_feedback})
+     if raw is not None:blocks.append(block(raw))
+     msgs=transcript.current_messages(blocks)
+     references=tuple(VisibleImage(past,'reference')for past in transcript.reference_image_bytes(raw))
+     current=()if raw is None else(VisibleImage(raw,'current'),)
+     return PublicView(f'{step:03}-obs{sequence:03}',msgs,current+references,json.dumps(previous)if previous else'',execution_feedback)
+    initial=public(delivered)
+    def actor(view,corrections):
+     msgs=copy.deepcopy(view.messages)
+     body={k:copy.deepcopy(v)for k,v in template.items()if k!='messages'};body['messages']=msgs
+     body=actor_observer.augment(body,view,log)
+     output=model.actor(body)
+     transcript.record_actual_reply(body,output)
+     return output
+    def parser(content):
+     payload=parse(content)
+     if payload['type']=='tab':
+      if not 0<=int(payload['index'])<len(env.context.pages):raise ValueError('Tab out of range')
+     else:action(payload) # native syntax/type/coordinate validation before acceptance
+     return {'name':payload['type'],'parsed':True,'executor_fallback_wait':False,'payload':payload,'coordinate_space':'normalized_1000'}
+    def recapture():
+     nonlocal obs
+     obs=env._get_obs();raw=png(obs);(shots/f'{step:03}-recapture-{sequence+1:03}.png').write_bytes(raw)
+     return public(raw)
+    result=carryover.pending_decision(package,controller,initial,transcript,parser,log,actor,recapture) if linked and step==17 else controller.decide(initial,actor,parser,recapture)
+    if result['status']!='accepted':outcome='blocked';break
+    payload=result['proposal']['payload'];native=create_page_focus_action(int(payload['index']))if payload['type']=='tab'else action(payload)
+    native['raw_prediction']=result['candidate'];trajectory.append(native)
+    log.append('accepted_actor_history_retained',transcript.commit_accepted(result))
+    last_image=latest_public_raw;previous=payload
+    if payload['type']=='stop':outcome='model_stop';break
+    if payload['type']=='wait':env.page.wait_for_timeout(1000)
+    obs,ok,_,_,info=env.step(native);environment_actions+=1;execution_feedback=json.dumps({'execution_returned':bool(ok),'error':info.get('fail_error',''),'result_state':'not confirmed by execution alone'})
+    controller.executed(result,execution_feedback);trajectory.append({'observation':obs,'info':info})
+    if not ok:raise RuntimeError('Native environment execution failed: '+info.get('fail_error',''))
+    state.update(step=step,updated=time.time());save(a.root/'status.json',state)
+   if outcome!='model_stop':trajectory.append(create_stop_action('Defense blocked'if outcome=='blocked'else'Step limit reached'))
+   (attempt/'private_trajectory.pkl').write_bytes(pickle.dumps(trajectory));(attempt/'final-actually-captured.png').write_bytes(png(env._get_obs()))
+   if a.diagnostic_run or outcome=='paused_at_decision_boundary':
+    reward=None;scoring='not_run_diagnostic'if a.diagnostic_run else'not_run_paused';error=None
+    if outcome=='step_cap':outcome='diagnostic_step_cap'
+   else:
+    try:reward=float(evaluator_router(private)(trajectory,private,env.page));scoring='complete';error=None
+    except Exception:reward=None;scoring='failed';error=traceback.format_exc()
+   result_reason=result.get('reason','')
+   result={'run':item,'outcome':outcome,'decisions':step,'environment_actions':environment_actions,'official_reward':reward,'scoring_status':scoring,'scoring_error':error,'injection_fired':fired,'trigger_step':trigger_step,'actor_calls':controller.actor_calls,'verifier_calls':controller.verifier_calls,'semantic_mirage':None,'repair_success':None,'calls':model.calls[calls_start:],'not_independent_mirage_labels':True,'blocked_reason':result_reason if outcome=='blocked'else None,'diagnostic_only':bool(a.diagnostic_run),'step_cap':step_cap}
+   result['technical_continuation_of_original23']=linked
+   result['original_prefix_actions_carried']=16 if linked else 0
+   result['original_prefix_actor_calls_carried']=17 if linked else 0
+   result['original_prefix_judge_calls_carried_including_OOM_and26_and31']=50 if linked else 0
+   result['placement_and_infrastructure_disruption_requires_sensitivity_analysis']=linked
+   result['auxiliary_calls']=actor_observer.calls
+   result['observer_enabled']=item['observer_enabled']
+   result['observer_technical_failures']=len(actor_observer.failures)
+   result['observer_condition_increment_only']=True
+   result['auxiliary_cap']=actor_observer.max_calls
+   from terminal_outcome_classification import classify_run_termination
+   result.update(classify_run_termination(outcome,result_reason,scoring,controller.verifier_calls,controller.limits.max_verifier_calls))
+   if outcome=='paused_at_decision_boundary':
+    save(attempt/'paused.json',result);state.update(phase=outcome,updated=time.time());save(a.root/'status.json',state);return
+   if result['technical_status']in {'verifier_failure','scoring_failure'}:
+    # A technical failure is an unfinished attempt, never a model zero or a
+    # completed run to skip forever. Preserve it and stop at this safe boundary.
+    save(attempt/'technical-failure.json',result);state.update(phase='technical_failure',attempt=str(attempt),updated=time.time());save(a.root/'status.json',state);return
+   save(attempt/'complete.json',result);run.mkdir(parents=True,exist_ok=True);save(run/'complete.json',{'attempt':str(attempt),'sha256':digest((attempt/'complete.json').read_bytes())});state['completed']+=1
+  except Exception:
+   save(attempt/'failure.json',{'traceback':traceback.format_exc(),'semantic_mirage':None});state.update(phase='failed',updated=time.time());save(a.root/'status.json',state);raise
+  finally:
+   try:env.save_trace(attempt/'browser_trace.zip')
+   finally:
+    env.close()
+    terminal=next((attempt/n for n in ['complete.json','technical-failure.json','failure.json','paused.json']if(attempt/n).exists()),None)
+    if terminal is None:
+     save(attempt/'cleanup-failure.json',{'semantic_mirage':None,'reason':'No run terminal existed at cleanup; no retry authorized'});terminal=attempt/'cleanup-failure.json'
+    terminal_status='completed'if terminal.name=='complete.json'else'stopped'if terminal.name=='paused.json'else'technical_failure'
+    model.end_run(terminal_status,digest(terminal.read_bytes()))
+  save(a.root/'status.json',state)
+ state.update(phase='completed',updated=time.time());save(a.root/'status.json',state)
+if __name__=='__main__':
+ try:main()
+ except Exception:
+  if OWNED_ROOT is not None:
+   root=OWNED_ROOT
+   failure={'traceback':traceback.format_exc(),'semantic_mirage':None,'time':time.time()};save(root/'uncaught-failure.json',failure)
+   state=json.loads((root/'status.json').read_text())if(root/'status.json').exists()else{}
+   state.update(phase='failed',error_file=str(root/'uncaught-failure.json'),updated=time.time());save(root/'status.json',state)
+  raise

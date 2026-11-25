@@ -1,0 +1,60 @@
+{
+  "model": "/data/llms/Qwen3.8-27B",
+  "bins": [
+    2000,
+    5000,
+    10000,
+    20000,
+    40000
+  ],
+  "tolerance": 0.1,
+  "task_ids": [
+    17,
+    0,
+    89
+  ],
+  "max_steps": 50,
+  "conditions": [
+    "clean_control",
+    "silent_drop",
+    "blank_replace",
+    "stale_replace",
+    "buttons_only"
+  ],
+  "stage": "small technical pilot; eligibility and Mirage labels require audit",
+  "physical_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "defense_enabled": false,
+  "date": "2026-11-17",
+  "attempt": "quant-nf4-02",
+  "prior_attempt": "quant-nf4-01 passed 26k/40k, OOM on 49,960-token upper-bound diagnostic; no GUI started",
+  "capture": "Playwright PNG, caret hidden consistently across all conditions",
+  "controls_mask": "copy original pixels inside visible button rectangles onto a white image; no page mutation",
+  "quantization": {
+    "backend": "bitsandbytes",
+    "bits": 4,
+    "type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16",
+    "skip_modules": [
+      "model.visual",
+      "lm_head"
+    ]
+  },
+  "placement_from": "/data/researcher/context-length-pilot-20261117/attempt02/model-output/loaded.json",
+  "normal_prefix_policy": "fresh quantized trajectories; never continue BF16 history as natural quantized history",
+  "capacity_probe_before_gui": true,
+  "placement_overrides": {
+    "model.language_model.layers.5": 1,
+    "model.language_model.layers.6": 1,
+    "model.language_model.layers.7": 1,
+    "model.language_model.layers.8": 1,
+    "model.language_model.layers.9": 1,
+    "model.language_model.layers.10": 1
+  },
+  "allocator": "expandable_segments:True"
+}

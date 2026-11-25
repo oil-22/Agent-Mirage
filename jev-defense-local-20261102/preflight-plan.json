@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "id": "p01",
+      "image_sha256": "564e7a79f977e2d647625301b9539e73027467dad75a59a85eda7bb8f6f66848"
+    },
+    {
+      "id": "p02",
+      "image_sha256": "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d"
+    },
+    {
+      "id": "p03",
+      "image_sha256": "c4b3344c0140948b69d89b18ffd9f7f3c7517d71415595458dc3a82eb4f89b78"
+    },
+    {
+      "id": "p04",
+      "image_sha256": "3e254f50cd08f5798f0651523985f1bcd21a06ea85b6e88476cece3591b5910c"
+    },
+    {
+      "id": "p05",
+      "image_sha256": "b2cd327e62d841f9a96e811d2ea720aeae52074301749d1811aa595cbb453453"
+    },
+    {
+      "id": "p06",
+      "image_sha256": "f010474ff8699d243ea1bf022f34a55f035f77693579d3f2a89a3adba56d99ab"
+    }
+  ],
+  "services": [
+    {
+      "model": "jev_style",
+      "url": "http://127.0.0.1:18221"
+    },
+    {
+      "model": "neohorse",
+      "url": "http://127.0.0.1:18222"
+    }
+  ],
+  "max_calls": 36,
+  "created": 1793619747.4164035,
+  "same_task_nonblind_development": true,
+  "questions_sha256": "f0dd6dcc0566346191dab3462ea41a46639a5fde86a2e54cc03781e61b74f546",
+  "GUI_actions": 0,
+  "original27B_calls": 0,
+  "note": "Only comparison journal added before any inference; questions/state/options unchanged",
+  "separate_smoke_calls": 2,
+  "aggregate_call_cap": 38
+}

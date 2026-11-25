@@ -1,0 +1,12 @@
+{
+  "primary_backend_sha256": "6dd0d491b80c0fae3a56a3e66f5cd04464f625417fe46a5be1e50e6ec60b14f6",
+  "primary_dependency_receipt": "/home/researcher/jev-defense-four-gpu-20261106/dependency-cpu-checks/1793975726799714627/receipt.json",
+  "primary_dependency_receipt_sha256": "711f6c45f763d2248cc1b623ce26c926675d2c39ade36f1639eafe95826ff989",
+  "primary_expected_runtime": "/home/researcher/jev-defense-four-gpu-20261106/original-runtime.json",
+  "primary_model": "/data/llms/Qwen3.8-27B",
+  "primary_native_layout_receipt": "/home/researcher/jev-defense-four-gpu-20261106/placement-header-linked/1793975022794954809/receipt.json",
+  "primary_native_layout_receipt_sha256": "bbeb9fcc8659fefcdc3e99196c283b469b073bcb66d80a47b6b14a45b0a0359c",
+  "primary_release": "/home/researcher/jev-defense-four-gpu-20261106/primary-release-01",
+  "previous_primary_backend_sha256": "11b6cd7a45a31c614b385909b3f43cc1484168fc6c2d2b0796face8495d359eb",
+  "new_backend_change": "verify-only source-reference schema dispatch; native generate AST unchanged"
+}

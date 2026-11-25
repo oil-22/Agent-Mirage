@@ -1,0 +1,12 @@
+{
+  "scope": "New isolated Chromium panel. 12 conditions, each executed once in each of 3 arms. No old-case reruns, no fine-tuning, no official scorer.",
+  "arms": {
+    "stock": "Original Flash argmax, unchanged existence, receipt, geometry, quality, main model and recapture.",
+    "global046": "Analysis comparator only: allow general temporal probability >=0.46 to continue to unchanged quality stage.",
+    "scoped": "Gray NO in [0.46,0.50) on two successive candidates after one real click. At most one extra stateless Flash call per click. Requires a signed same-hit browser control proof on the previous accepted and both new captures, bound to real click and exact PNGs. Pixel differences inside the fixed verified box are only an exclusion check. The model receives both full original images plus native click, not browser facts, DOM state, images of crops, task or history. Only a positive specialized reply proceeds to the original quality stage. Otherwise keep original recapture behavior."
+  },
+  "positive": "Independent browser source record plus original screenshot proves the clicked control visibly changed state. Delayed conditions first produce authentic early frames. A release counts only with real matching 27B first forward and response.",
+  "negative": "Old target state after the action, same neighboring toggle changed, unrelated status changed, no response, and normal non-toggle action. Their images and results are kept; an already existing stock leak does not authorize new ones.",
+  "qualification": "At least one stock-censored normal matched pair recovered by an actual scoped request, without a new delivered bad frame relative to stock in any comparable matched condition. Gray-branch non-exercise or unresolved comparison cannot qualify. Report small sample and baseline failures.",
+  "observation": "18-second research cutoff per gate stage; no fail-open and no change to continuous recapture outside the study."
+}

@@ -1,0 +1,168 @@
+{
+  "splits": {
+    "train": {
+      "total": 3312,
+      "NO": 1656,
+      "YES": 1656
+    },
+    "val": {
+      "total": 318,
+      "NO": 159,
+      "YES": 159
+    }
+  },
+  "tasks": {
+    "train": {
+      "blank_replace": {
+        "YES": 552,
+        "NO": 552
+      },
+      "stale_replace": {
+        "YES": 552,
+        "NO": 552
+      },
+      "buttons_only": {
+        "YES": 552,
+        "NO": 552
+      }
+    },
+    "val": {
+      "blank_replace": {
+        "YES": 53,
+        "NO": 53
+      },
+      "stale_replace": {
+        "YES": 53,
+        "NO": 53
+      },
+      "buttons_only": {
+        "YES": 53,
+        "NO": 53
+      }
+    }
+  },
+  "observed_vs_constructed": {
+    "train": {
+      "constructed": 1408,
+      "observed": 1904
+    },
+    "val": {
+      "constructed": 91,
+      "observed": 227
+    }
+  },
+  "roles": {
+    "train": {
+      "constructed_injection": 1408,
+      "observed_injection": 251,
+      "matched_control": 1491,
+      "audit_matched_control": 157,
+      "scenario_control": 5
+    },
+    "val": {
+      "constructed_injection": 91,
+      "matched_control": 91,
+      "audit_matched_control": 53,
+      "observed_injection": 74,
+      "scenario_control": 9
+    }
+  },
+  "matched_pairs": {
+    "train": 1491,
+    "val": 91
+  },
+  "by_task_and_origin": {
+    "train": {
+      "blank_replace": {
+        "YES": {
+          "audit_matched_control": 51,
+          "matched_control": 500,
+          "scenario_control": 1
+        },
+        "NO": {
+          "observed_injection": 117,
+          "constructed_injection": 435
+        }
+      },
+      "stale_replace": {
+        "YES": {
+          "matched_control": 446,
+          "audit_matched_control": 105,
+          "scenario_control": 1
+        },
+        "NO": {
+          "constructed_injection": 442,
+          "observed_injection": 110
+        }
+      },
+      "buttons_only": {
+        "YES": {
+          "matched_control": 545,
+          "observed_injection": 3,
+          "scenario_control": 3,
+          "audit_matched_control": 1
+        },
+        "NO": {
+          "constructed_injection": 531,
+          "observed_injection": 21
+        }
+      }
+    },
+    "val": {
+      "blank_replace": {
+        "YES": {
+          "matched_control": 11,
+          "audit_matched_control": 42
+        },
+        "NO": {
+          "constructed_injection": 11,
+          "observed_injection": 42
+        }
+      },
+      "stale_replace": {
+        "YES": {
+          "matched_control": 42,
+          "audit_matched_control": 11
+        },
+        "NO": {
+          "constructed_injection": 42,
+          "observed_injection": 11
+        }
+      },
+      "buttons_only": {
+        "YES": {
+          "matched_control": 38,
+          "scenario_control": 9,
+          "observed_injection": 6
+        },
+        "NO": {
+          "constructed_injection": 38,
+          "observed_injection": 15
+        }
+      }
+    }
+  },
+  "unique_buttons_only_NO_candidates": {
+    "train": 10,
+    "val": 13
+  },
+  "total_rows": 3630,
+  "unique_model_input_PNGs": 2298,
+  "audit_only_PNGs": 34,
+  "missing_images": 0,
+  "duplicate_inputs": 0,
+  "conflicting_labels": 0,
+  "cross_split_decoded_images": 0,
+  "cross_split_source_groups": 0,
+  "sha256": {
+    "train.jsonl": "d1862fe2495cbd93a58389394b6aa110c22c83914b2d25bb3a038e1480746520",
+    "val.jsonl": "90bde354dd8fd079a50cfbe64817389e201a0a55f4e11c1bf72759609e9df822",
+    "manifest.jsonl": "672de0a4372a49997d06d6cd62e24ea4e36dacc4b77f29076e44e8a4c93d6c6a",
+    "audit.jsonl": "184893613d2f5ee3f91f78ec8f56a3f0abffee82bb6cb2b93a21abb7325155c7",
+    "source-receipts.jsonl": "e0914a85d79504317ce1558d01ae93ef3bfee26a1a17d9740e891ad53c1fa07b",
+    "protocol.json": "83a8d7014fe7469ab99076b01ab9d58776553e09a2edf7628042627de2ba15bf",
+    "mask-templates.json": "f8c05b0399099837977690ad0923040be499dd01bc9a7382df0a1a97d40e1200",
+    "image-index.json": "3ae46e9b5469f4000b7dba37749a281a3e357a6a1496ef483be1e7d626f20239",
+    "split-guards.json": "6a2b1a478259973f29f497a6bd9a2d4e017cc023b68180eda03cc37e14d38cff"
+  }
+}

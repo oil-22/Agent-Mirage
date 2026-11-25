@@ -1,0 +1,151 @@
+{
+  "time": 1794649176.264978,
+  "source_root": "/data/researcher/jev-defense-four-gpu-20261106/flash-ample-memory-gui-20261114-linked10",
+  "source_actual_state_sha256": "f12f4187768f72a5a979ff4b69dc6c1ebe44cd24b0e0a755e7bcd7385f17db7c",
+  "source_postexit_seal_sha256": "d3a02c9982e63b3840ad450c441fb6a20675e6cd1422d629743149d420dc8906",
+  "source_tensor_count": 1184,
+  "source_total_weight_bytes": 54713457120,
+  "previous_placed_tensor_bytes": {
+    "cuda:0": 8041499296,
+    "cuda:1": 7599355968,
+    "cuda:2": 7621391872,
+    "cuda:3": 7599355968,
+    "cuda:4": 8387938240,
+    "cuda:5": 7599355968,
+    "cuda:6": 7864559808
+  },
+  "device_map": {
+    "model.visual": 0,
+    "model.language_model.embed_tokens": 0,
+    "model.language_model.norm": 6,
+    "lm_head": 6,
+    "model.language_model.rotary_emb": 0,
+    "model.language_model.layers.0": 0,
+    "model.language_model.layers.1": 0,
+    "model.language_model.layers.2": 0,
+    "model.language_model.layers.3": 0,
+    "model.language_model.layers.4": 1,
+    "model.language_model.layers.5": 1,
+    "model.language_model.layers.6": 1,
+    "model.language_model.layers.7": 1,
+    "model.language_model.layers.8": 1,
+    "model.language_model.layers.9": 1,
+    "model.language_model.layers.10": 1,
+    "model.language_model.layers.11": 1,
+    "model.language_model.layers.12": 1,
+    "model.language_model.layers.13": 1,
+    "model.language_model.layers.14": 2,
+    "model.language_model.layers.15": 2,
+    "model.language_model.layers.16": 2,
+    "model.language_model.layers.17": 2,
+    "model.language_model.layers.18": 2,
+    "model.language_model.layers.19": 2,
+    "model.language_model.layers.20": 2,
+    "model.language_model.layers.21": 2,
+    "model.language_model.layers.22": 2,
+    "model.language_model.layers.23": 2,
+    "model.language_model.layers.24": 3,
+    "model.language_model.layers.25": 3,
+    "model.language_model.layers.26": 3,
+    "model.language_model.layers.27": 3,
+    "model.language_model.layers.28": 3,
+    "model.language_model.layers.29": 3,
+    "model.language_model.layers.30": 3,
+    "model.language_model.layers.31": 3,
+    "model.language_model.layers.32": 3,
+    "model.language_model.layers.33": 3,
+    "model.language_model.layers.34": 3,
+    "model.language_model.layers.35": 4,
+    "model.language_model.layers.36": 4,
+    "model.language_model.layers.37": 4,
+    "model.language_model.layers.38": 4,
+    "model.language_model.layers.39": 4,
+    "model.language_model.layers.40": 4,
+    "model.language_model.layers.41": 4,
+    "model.language_model.layers.42": 4,
+    "model.language_model.layers.43": 4,
+    "model.language_model.layers.44": 4,
+    "model.language_model.layers.45": 4,
+    "model.language_model.layers.46": 5,
+    "model.language_model.layers.47": 5,
+    "model.language_model.layers.48": 5,
+    "model.language_model.layers.49": 5,
+    "model.language_model.layers.50": 5,
+    "model.language_model.layers.51": 5,
+    "model.language_model.layers.52": 5,
+    "model.language_model.layers.53": 5,
+    "model.language_model.layers.54": 5,
+    "model.language_model.layers.55": 5,
+    "model.language_model.layers.56": 5,
+    "model.language_model.layers.57": 6,
+    "model.language_model.layers.58": 6,
+    "model.language_model.layers.59": 6,
+    "model.language_model.layers.60": 6,
+    "model.language_model.layers.61": 6,
+    "model.language_model.layers.62": 6,
+    "model.language_model.layers.63": 6
+  },
+  "weight_bytes_by_device": {
+    "0": 6508406560,
+    "1": 7621391872,
+    "2": 7599355968,
+    "3": 8387938240,
+    "4": 8365902336,
+    "5": 8365902336,
+    "6": 7864559808
+  },
+  "layer_ranges_inclusive": {
+    "0": [
+      0,
+      3
+    ],
+    "1": [
+      4,
+      13
+    ],
+    "2": [
+      14,
+      23
+    ],
+    "3": [
+      24,
+      34
+    ],
+    "4": [
+      35,
+      45
+    ],
+    "5": [
+      46,
+      56
+    ],
+    "6": [
+      57,
+      63
+    ]
+  },
+  "estimated_weights_plus_53167_token_full_attention_KV_bytes": {
+    "0": 6726178592,
+    "1": 8056935936,
+    "2": 8252672064,
+    "3": 8823482304,
+    "4": 9019218432,
+    "5": 9019218432,
+    "6": 8300103872
+  },
+  "GPU0_additional_activation_planning_margin_bytes": 1610612736,
+  "planning_objective_bytes_by_device": {
+    "0": 8336791328,
+    "1": 8056935936,
+    "2": 8252672064,
+    "3": 8823482304,
+    "4": 9019218432,
+    "5": 9019218432,
+    "6": 8300103872
+  },
+  "planning_margin_is_not_weight_or_measured_fit": true,
+  "KV_estimate_not_runtime_fit_proof": true,
+  "optimizer": "contiguous whole decoder blocks; minimize maximum weights plus estimated KV plus 1.5GiB GPU0 activation planning margin",
+  "GPU_or_weights_loaded_by_planner": false,
+  "new_model_GUI_calls": 0
+}

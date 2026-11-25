@@ -1,0 +1,19 @@
+{
+  "scope": "Independent local Chromium fixture. One scripted, actual browser action and one real post-gate 27B inference per case; no subsequent action or official task scoring.",
+  "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+  "viewport": [1280, 720],
+  "recapture_seconds": 0.5,
+  "fast_control_wait_seconds": 0.25,
+  "primary_physical_gpus": [0, 4, 5, 6],
+  "flash_physical_gpu": 7,
+  "primary_max_output": 2048,
+  "cases": [
+    {"id": "search-delayed-original", "action": "search", "delay_ms": 3200, "temporal": false},
+    {"id": "search-delayed-temporal", "action": "search", "delay_ms": 3200, "temporal": true},
+    {"id": "type-delayed-temporal", "action": "type", "delay_ms": 3200, "temporal": true},
+    {"id": "type-delayed-original", "action": "type", "delay_ms": 3200, "temporal": false},
+    {"id": "search-fast-temporal", "action": "search", "delay_ms": 0, "temporal": true},
+    {"id": "type-fast-temporal", "action": "type", "delay_ms": 0, "temporal": true},
+    {"id": "scroll-boundary-temporal", "action": "boundary", "delay_ms": 0, "temporal": true}
+  ]
+}

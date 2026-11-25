@@ -1,0 +1,80 @@
+{
+  "policy": "single-flash-image-observer-actor-v1",
+  "stage": "prepared_not_launched",
+  "tasks": {
+    "vwa": [
+      {
+        "pilot_task_id": "classifieds_112",
+        "image": null,
+        "intent": "Search for \"basketball\" and navigate to the cheapest item that has a man in a suit in its image."
+      }
+    ]
+  },
+  "queue": [
+    {
+      "dataset": "vwa",
+      "run_id": "image-observer-v1--classifieds_112--clean--joint--no-observer",
+      "condition": "clean",
+      "arm": "joint",
+      "observer_enabled": false
+    },
+    {
+      "dataset": "vwa",
+      "run_id": "image-observer-v1--classifieds_112--clean--joint--observer",
+      "condition": "clean",
+      "arm": "joint",
+      "observer_enabled": true
+    },
+    {
+      "dataset": "vwa",
+      "run_id": "image-observer-v1--classifieds_112--stale_replace--joint--no-observer",
+      "condition": "stale_replace",
+      "arm": "joint",
+      "observer_enabled": false
+    },
+    {
+      "dataset": "vwa",
+      "run_id": "image-observer-v1--classifieds_112--stale_replace--joint--observer",
+      "condition": "stale_replace",
+      "arm": "joint",
+      "observer_enabled": true
+    }
+  ],
+  "limits": {
+    "max_recaptures_per_decision": 2,
+    "max_regenerations_per_decision": 2,
+    "max_actor_calls": 70,
+    "max_verifier_calls": 140,
+    "wait_seconds": [
+      0.5,
+      1.0
+    ]
+  },
+  "max_steps": 50,
+  "actor_output_tokens": 2048,
+  "verifier_output_tokens": 4096,
+  "max_format_retries": 1,
+  "auxiliary_calls_per_trajectory": 60,
+  "seed": 20261011,
+  "new_primary_model_calls_started": 0,
+  "new_auxiliary_model_calls_started": 0,
+  "not_independent_tasks": true,
+  "primary_endpoint": "trajectory_any_definite_boundary_inclusive_Mirage; once_counts_despite_recovery; pure_native_WAIT_excluded",
+  "relative_reduction_development_target": 0.3,
+  "relative_reduction_aspiration": 0.5,
+  "success_claim": "not_guaranteed; four known-task trajectories cannot establish a general trigger-rate reduction",
+  "required_companion_outcomes": [
+    "official_success",
+    "false_blocks",
+    "accepted_executed_errors",
+    "technical_failures",
+    "native_action_direction_target_errors",
+    "recovery",
+    "per_model_calls_tokens_seconds"
+  ],
+  "semantic_review_order": "original image/legal history/candidate first, blinded to arm where feasible, then PRIVATE execution join; detector labels never gold",
+  "same_shared_actor_instructions_in_all_runs": true,
+  "shared_actor_instructions_sha256": "357fbd83631e9e9e086b239c4b65b1242844537c6a47a32b4acac783cf3b4a43",
+  "observer_native_contract_sha256": "98a3adb4ecb4939bb500603121e21587d454a99233ee14a32ddca8f68fa35054",
+  "no_model_calls_during_preparation": true
+}

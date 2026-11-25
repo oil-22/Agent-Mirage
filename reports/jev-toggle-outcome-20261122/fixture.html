@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Local Controls Validation</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#eff3f6;color:#192634;font:17px Arial,sans-serif}
+header{height:70px;background:var(--ink);color:white;display:flex;justify-content:space-between;align-items:center;padding:0 54px}
+header strong{font-size:26px} main{max-width:1120px;margin:32px auto 0} h1{margin:0 0 20px;font-size:32px}
+.layout{display:grid;grid-template-columns:216px minmax(0,1fr);gap:18px} .stack{display:grid;gap:15px}
+.card,nav{background:white;border:1px solid #cfd9e1;border-radius:7px;padding:19px 22px}
+h2{font-size:22px;margin:0 0 12px} p{margin:0 0 12px} nav p{margin-top:14px}
+.row{display:flex;align-items:center;gap:29px;min-height:48px;white-space:nowrap}
+button,label.check{border-radius:5px;min-height:46px;min-width:205px;border:0;display:inline-flex;align-items:center;justify-content:center;padding:0 14px;background:var(--accent);color:white;font:bold 17px Arial}
+button:focus:not(:focus-visible),input:focus:not(:focus-visible){outline:none}.check input{width:22px;height:22px;margin-right:11px}
+.check{position:relative}.check input{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;opacity:.02;cursor:pointer}
+#message{height:42px;margin:8px 0 0;color:#922633;font-weight:bold;line-height:38px} #status{margin:7px 0 0}
+footer{margin-top:26px;background:#dce5ec;color:#293b4b;padding:16px 54px}
+.meadow main{max-width:1018px}.meadow .layout,.vista .layout{display:block}.meadow nav,.vista nav{display:none}
+.harbor main{max-width:1070px}.harbor .layout{grid-template-columns:185px minmax(0,1fr)}
+.vista main{max-width:940px}.vista .card{border-radius:3px;padding-left:35px}.vista header{height:88px}
+</style>
+<body><header><strong id="brand"></strong><small>Workspace settings · Help</small></header>
+<main><h1 id="heading"></h1><div class="layout"><nav><b>Settings</b><p>Workspace</p><p>Access and roles</p><p>Activity</p></nav>
+<div class="stack"><article class="card"><h2 id="section"></h2><p id="lead"></p>
+<div class="row" id="controls"></div><p id="message" role="status"></p></article>
+<article class="card"><h2>Workspace summary</h2><p>Current preferences are shown above.</p><p id="status">System status: Idle</p></article>
+</div></div></main><footer>Settings Console · Keyboard shortcuts · Support</footer>
+<script>
+'use strict';
+const params=new URLSearchParams(location.search), family=params.get('family'), mode=params.get('mode'), kind=params.get('kind'), delay=Number(params.get('delay'));
+const families={
+  forge:{brand:'Forge Operations',title:'Workstation controls',label:'Job alerts',lead:'Choose whether the console should report new jobs.',ink:'#351f31',accent:'#863f59',role:'pressed',starts:false},
+  meadow:{brand:'Meadow Records',title:'Record center preferences',label:'Weekly digest',lead:'Choose whether the workspace sends a weekly summary.',ink:'#224537',accent:'#29634f',role:'switch',starts:true},
+  harbor:{brand:'Harbor Inventory',title:'Inventory workspace',label:'Stock warnings',lead:'Choose whether supply levels trigger a warning.',ink:'#193953',accent:'#236386',role:'checkbox',starts:false},
+  vista:{brand:'Vista Archives',title:'Storage preferences',label:'Archive reminders',lead:'Choose whether the workspace displays archive reminders.',ink:'#302956',accent:'#5a4a9a',role:'pressed',starts:true}
+};
+const f=families[family], states=['quick','delayed','refusal','neighbor','elsewhere','unchanged','ordinary'];
+if(!f||kind!=='toggle'||!states.includes(mode)||!Number.isInteger(delay)||delay<0) throw Error('Invalid fixed scenario');
+const $=s=>document.querySelector(s);
+const ordinary=mode==='ordinary', term=on=>on?'On':'Off', control=$('#controls');
+document.body.classList.add(family);document.body.style.setProperty('--ink',f.ink);document.body.style.setProperty('--accent',f.accent);
+$('#brand').textContent=f.brand; $('#heading').textContent=f.title; $('#section').textContent=ordinary?'Report view':f.label; $('#lead').textContent=ordinary?'Refresh the visible workspace summary.':f.lead;
+let selected=f.starts;
+if(ordinary){control.innerHTML='<button type="button" id="target">Refresh summary</button>';}
+else if(f.role==='checkbox'){
+  // Trusted native click lands on the checkbox spanning the visible label.
+  // Render an explicit mark and text since an accessibility state is not a visible result.
+  control.innerHTML='<label class="check"><input id="target" type="checkbox"><span id="mark"></span></label>';
+}else{
+  let aria=f.role==='switch'?'role="switch" aria-checked':'aria-pressed';
+  control.innerHTML=`<button type="button" id="target" ${aria}="${selected}"></button>`;
+}
+if(mode==='neighbor')control.insertAdjacentHTML('beforeend','<button type="button" id="near" aria-pressed="false">Maintenance updates: Off</button>');
+const target=$('#target'), events=[];let outcome=null;
+function mark(k,more={}){events.push({kind:k,ms:performance.now(),...more});}
+function painted(fn){requestAnimationFrame(()=>requestAnimationFrame(fn));}
+function renderTarget(){
+  if(ordinary)return;
+  if(f.role==='checkbox'){target.checked=selected;$('#mark').textContent=(selected?'✓  ':'□  ')+f.label+': '+term(selected);}
+  else{target.setAttribute(f.role==='switch'?'aria-checked':'aria-pressed',String(selected));target.textContent=f.label+': '+term(selected);}
+}
+renderTarget();
+target.addEventListener('click', ev=>{
+  mark('input',{trusted:ev.isTrusted,event_type:ev.type});
+  if(f.role==='checkbox'&&!ordinary)ev.preventDefault();
+  if(!ev.isTrusted)return;
+  setTimeout(()=>{
+    if(mode==='quick'||mode==='delayed'){selected=!selected;renderTarget();outcome='switched';}
+    else if(mode==='refusal'){$('#message').textContent=`Could not change ${f.label}: permission denied.`;outcome='explicit_refusal';}
+    else if(mode==='elsewhere'){$('#status').textContent='System status: Synced';outcome='unrelated_status';}
+    else if(mode==='ordinary'){$('#status').textContent='Summary refreshed successfully';outcome='refresh_complete';}
+    else if(mode==='neighbor'){$('#near').textContent='Maintenance updates: On';$('#near').setAttribute('aria-pressed','true');outcome='neighbor_changed';}
+    else{outcome='no_feedback';}
+    mark('render_applied');painted(()=>mark('render_painted'));
+  },delay);
+});
+window.fixtureSnapshot=()=>({kind,family,mode,now_ms:performance.now(),events:events.map(e=>({...e})),visual:'normal',outcome,
+  target_text:ordinary?target.textContent:(f.role==='checkbox'?$('#mark').textContent:target.textContent),
+  target_state:ordinary?null:String(selected),target_initial_state:ordinary?null:String(f.starts),
+  neighbor_text:$('#near')?.textContent??null, elsewhere_text:$('#status').textContent, local_message:$('#message').textContent, target_label:f.label
+});
+painted(()=>mark('initial_painted'));
+</script></body></html>

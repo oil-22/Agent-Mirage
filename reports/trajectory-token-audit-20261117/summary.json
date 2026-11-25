@@ -1,0 +1,260 @@
+{
+  "scope": "Local Nov15-17 defense trajectory audit exports; primary model path Qwen3.8-27B. Not the complete 11-model benchmark.",
+  "count_source": "Actual generate input_ids.shape[-1], multimodal full input, not history-only tokens.",
+  "source_files": 36,
+  "duplicate_rows": 0,
+  "conflicts": [],
+  "primary_delivered": {
+    "n": 672,
+    "min": 1185,
+    "median": 14343.0,
+    "mean": 17552.434523809523,
+    "p25": 6239.0,
+    "p75": 26102.75,
+    "p90": 39766.89999999999,
+    "p95": 44150.39999999998,
+    "max": 49960,
+    "sum": 11795236
+  },
+  "primary_output": {
+    "n": 672,
+    "min": 26,
+    "median": 47.0,
+    "mean": 65.15922619047619,
+    "p25": 36.0,
+    "p75": 70.0,
+    "p90": 110.0,
+    "p95": 191.0,
+    "max": 500,
+    "sum": 43787
+  },
+  "trajectories": 36,
+  "per_trajectory_input": {
+    "n": 36,
+    "min": 1214,
+    "median": 195777.0,
+    "mean": 327645.44444444444,
+    "p25": 6630.0,
+    "p75": 251971.25,
+    "p90": 1203391.0,
+    "p95": 1281254.0,
+    "max": 1281254,
+    "sum": 11795236
+  },
+  "per_trajectory_output": {
+    "n": 36,
+    "min": 72,
+    "median": 1101.0,
+    "mean": 1216.3055555555557,
+    "p25": 214.0,
+    "p75": 1784.25,
+    "p90": 2551.0,
+    "p95": 2951.0,
+    "max": 3589,
+    "sum": 43787
+  },
+  "per_trajectory_calls": {
+    "n": 36,
+    "min": 1,
+    "median": 19.0,
+    "mean": 18.666666666666668,
+    "p25": 3.0,
+    "p75": 21.5,
+    "p90": 48.0,
+    "p95": 50.0,
+    "max": 50,
+    "sum": 672
+  },
+  "input_histogram": [
+    {
+      "lower": 0,
+      "upper": 1000,
+      "calls": 0
+    },
+    {
+      "lower": 1000,
+      "upper": 2000,
+      "calls": 36
+    },
+    {
+      "lower": 2000,
+      "upper": 5000,
+      "calls": 88
+    },
+    {
+      "lower": 5000,
+      "upper": 10000,
+      "calls": 120
+    },
+    {
+      "lower": 10000,
+      "upper": 20000,
+      "calls": 199
+    },
+    {
+      "lower": 20000,
+      "upper": 30000,
+      "calls": 92
+    },
+    {
+      "lower": 30000,
+      "upper": 50000,
+      "calls": 137
+    },
+    {
+      "lower": 50000,
+      "upper": null,
+      "calls": 0
+    }
+  ],
+  "threshold_coverage": [
+    {
+      "target": 1000,
+      "runs_reaching": 36,
+      "runs_within_10_percent": 0
+    },
+    {
+      "target": 2000,
+      "runs_reaching": 31,
+      "runs_within_10_percent": 20
+    },
+    {
+      "target": 5000,
+      "runs_reaching": 25,
+      "runs_within_10_percent": 25
+    },
+    {
+      "target": 10000,
+      "runs_reaching": 20,
+      "runs_within_10_percent": 20
+    },
+    {
+      "target": 20000,
+      "runs_reaching": 16,
+      "runs_within_10_percent": 20
+    },
+    {
+      "target": 30000,
+      "runs_reaching": 8,
+      "runs_within_10_percent": 8
+    },
+    {
+      "target": 40000,
+      "runs_reaching": 7,
+      "runs_within_10_percent": 7
+    },
+    {
+      "target": 50000,
+      "runs_reaching": 0,
+      "runs_within_10_percent": 6
+    }
+  ],
+  "campaigns": {
+    "buttons-native-trigger-supplement-20261116-05": {
+      "runs": 2,
+      "input": {
+        "n": 25,
+        "min": 1189,
+        "median": 9474,
+        "mean": 10102.44,
+        "p25": 4215.0,
+        "p75": 15650.0,
+        "p90": 19506.800000000003,
+        "p95": 20773.999999999996,
+        "max": 21971,
+        "sum": 252561
+      }
+    },
+    "flash-four-injection-defense-20261115-04": {
+      "runs": 8,
+      "input": {
+        "n": 244,
+        "min": 1187,
+        "median": 16215.5,
+        "mean": 19039.69262295082,
+        "p25": 8254.75,
+        "p75": 28110.25,
+        "p90": 40202.100000000006,
+        "p95": 44251.2,
+        "max": 49960,
+        "sum": 4645685
+      }
+    },
+    "flash-four-mode-scale10-20261116-12": {
+      "runs": 14,
+      "input": {
+        "n": 210,
+        "min": 1185,
+        "median": 15858.5,
+        "mean": 19247.042857142857,
+        "p25": 6192.0,
+        "p75": 31744.0,
+        "p90": 41939.09999999999,
+        "p95": 45972.0,
+        "max": 49159,
+        "sum": 4041879
+      }
+    },
+    "flash-native-source-loop-20261116-linked11": {
+      "runs": 10,
+      "input": {
+        "n": 124,
+        "min": 1189,
+        "median": 10484.0,
+        "mean": 11113.548387096775,
+        "p25": 4212.75,
+        "p75": 16672.0,
+        "p90": 20986.0,
+        "p95": 24920.849999999995,
+        "max": 31372,
+        "sum": 1378080
+      }
+    },
+    "flash-trusted-capture-protocol-20261116-06": {
+      "runs": 2,
+      "input": {
+        "n": 69,
+        "min": 1187,
+        "median": 18198,
+        "mean": 21406.246376811596,
+        "p25": 9264.0,
+        "p75": 33105.0,
+        "p90": 43246.600000000006,
+        "p95": 46604.2,
+        "max": 49960,
+        "sum": 1477031
+      }
+    }
+  },
+  "undelivered": [
+    {
+      "request_id": "34536913083947738f22fef00dfa0bbc",
+      "run_id": "scale10-T017-stale_replace-gate",
+      "decision": 22,
+      "input_tokens": 22515,
+      "output_tokens": 46,
+      "history_messages": 44,
+      "exact_full_history_preserved": true,
+      "actual_tensor_files_verified": true,
+      "role": "undelivered",
+      "campaign": "flash-four-mode-scale10-20261116-12",
+      "source": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\flash-four-mode-scale10-20261116-12\\interruption-audit-linked1-1794849263771495100\\request-results.json",
+      "remote_folder": "/data/researcher/jev-defense-four-gpu-20261106/flash-four-mode-scale10-20261116-12/model-attempt-01/primary/requests/00211",
+      "retained_image_count": 22
+    }
+  ],
+  "auxiliary_input": {
+    "n": 675,
+    "min": 1150,
+    "median": 1150,
+    "mean": 1161.911111111111,
+    "p25": 1150.0,
+    "p75": 1174.0,
+    "p90": 1174.0,
+    "p95": 1174.0,
+    "max": 1174,
+    "sum": 784290
+  },
+  "all_primary_full_history_verified": true,
+  "all_primary_tensor_files_verified": true
+}

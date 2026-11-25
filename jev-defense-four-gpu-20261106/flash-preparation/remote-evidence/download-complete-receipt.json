@@ -1,0 +1,185 @@
+{
+  "repository": "perplexity-ai/pplx-decider-flash-v1.2",
+  "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 1570,
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+      "expected_git_blob": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "expected_git_blob": "f938136e3adacfd92be087f6e113b5d6d97f678f",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "NOTICE",
+      "bytes": 132,
+      "sha256": "381fb81e814716a5ef8e5eae26a08607d052cf12f019dba9da9e81298ef5cb75",
+      "expected_git_blob": "85a3e92006957a9a8b8b9acbf2520f246341378c",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "README.md",
+      "bytes": 12521,
+      "sha256": "7428a155aa3484065fa97a43322a485e851f31e1eb6ea973dfec05ff224a71ad",
+      "expected_git_blob": "3e682cbe70a7c660e0834d441b447cda7954121f",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "chat_template.jinja",
+      "bytes": 7756,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "expected_git_blob": "a585dec894e63da457d9440ec6aa7caa16d20860",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "config.json",
+      "bytes": 2898,
+      "sha256": "1bdb718faa99e32673f1622ea2f536affe20867bcb4703888aac9a030ec59e22",
+      "expected_git_blob": "cc17ee553587bd774dd2d02415ea1ac0e0316104",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "decision_config.json",
+      "bytes": 5435,
+      "sha256": "6d59a4e66f459596cad6f3ff932c635e379f1dc1c49819357869de8abe01722f",
+      "expected_git_blob": "ea85c77edfaef03153a2e5e9aba1fd0ca68b9772",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "joint_config.json",
+      "bytes": 248,
+      "sha256": "ecc88efc2a8ebd81ddf93f7d722e35b2829fd7526b5ce754db53395aa49fb510",
+      "expected_git_blob": "8171835b924dcf3585aa614a8583727521dd8484",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "bytes": 4972946624,
+      "sha256": "1c1a0c1ab331c7aec1b4b7932eabf80593b56c694fe2b779209c0e0413df1cef",
+      "expected_git_blob": "6c56953acba182df1a6f1fcc4b833104262efcf2",
+      "expected_lfs_sha256": "1c1a0c1ab331c7aec1b4b7932eabf80593b56c694fe2b779209c0e0413df1cef"
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "bytes": 4105669472,
+      "sha256": "21ba8301660e066f5849b60b1a36a242fc54ca18dd9bd526fdcbc50889171b70",
+      "expected_git_blob": "c85cc1fb2eaee65a98e9a7b5f9ba29d4a5112b9f",
+      "expected_lfs_sha256": "21ba8301660e066f5849b60b1a36a242fc54ca18dd9bd526fdcbc50889171b70"
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "bytes": 61898,
+      "sha256": "0597ef32377f77ec490bbce02e5e3fd1d0b8e3b00b2ef500cd9306d445ab0f5c",
+      "expected_git_blob": "c3364a592a7dc0c512c416cc1a24a3986d2420d3",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "processor_config.json",
+      "bytes": 1219,
+      "sha256": "b4b905eee2d1cf96dcbdac1c68b35113c8151958a4c1f76667242b01168572cd",
+      "expected_git_blob": "424539fa61b2d9d23bf0e481ca3078e9ff404b12",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "readout.safetensors",
+      "bytes": 1305712,
+      "sha256": "6751578171026190d4db8078e97162b404fd984646e0e9aec13844e4dd5b1711",
+      "expected_git_blob": "712fa76532cc10160a3ee1774c325c4e3df68115",
+      "expected_lfs_sha256": "6751578171026190d4db8078e97162b404fd984646e0e9aec13844e4dd5b1711"
+    },
+    {
+      "file": "release-manifest.json",
+      "bytes": 4215,
+      "sha256": "b92d6898a1a0cebeec8573c3ba34cfbb810a2920fc49da60097f3a8e2de24ebc",
+      "expected_git_blob": "50c1e8b5b386adc0461e3b5fca3971ba8df6aabd",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "requirements-fast.txt",
+      "bytes": 50,
+      "sha256": "2c1d756f1be3b408ddacad3485f140a9099c066ec5ae83ecce9c916bd0046b3c",
+      "expected_git_blob": "f2543e91708102cacb270afe2b5337727eda0318",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 113,
+      "sha256": "ba5651e48af38608f3c43bbb8557a5b1a8b33082b8be86e6fb186332f0f7016d",
+      "expected_git_blob": "a5f1fc84deacbc8fe623d4903ab59ea3a8934eac",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/pyproject.toml",
+      "bytes": 583,
+      "sha256": "d89014942e02c01f0bbc3f4f2be4034cc6910f2efba91c5747947996a403ad78",
+      "expected_git_blob": "1708925e8f4d74f41bfe1673099ed71c4053ccbe",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/__init__.py",
+      "bytes": 569,
+      "sha256": "48c26c24432476f2e4a43486d60e24ee0a6e124093a38fb8803686e99fecb5b3",
+      "expected_git_blob": "ee593f964bdfd96680cb292888b67ef71e5e60c0",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/fast.py",
+      "bytes": 19003,
+      "sha256": "afef05e1935be967b6ab6015bea3c86933dd5a45b7f349b0ed2ab5788a66cdbc",
+      "expected_git_blob": "bc8b747134526654e2a94c087b9a32512716a7f7",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/model.py",
+      "bytes": 13460,
+      "sha256": "ab5f42bd051d9e04cb9266e378d96dd72684c7a7f074efd9fc5117508e3dee91",
+      "expected_git_blob": "bf6da5479bddcc6a0c08628af9db588a9ca83b54",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/protocol.py",
+      "bytes": 12572,
+      "sha256": "b29d7a50d7214bd42397f8d3ddd5b5706cb8da2b257e175bf89b5a8da455d6a0",
+      "expected_git_blob": "251ab7329ecdaa443918dc823ce749735c9c3ed9",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/py.typed",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "source/src/pplx_decider/types.py",
+      "bytes": 2550,
+      "sha256": "3de3e545d81692346f65c0f4ff9843952696a12f7b357cf6a5d0e8545badff8a",
+      "expected_git_blob": "b38d80b1719058205b45e8a979aae65cc821a5a3",
+      "expected_lfs_sha256": null
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 19989492,
+      "sha256": "6f32ce20dc35f57a7f9ad1eac03525bd7d30f9df8cea6507e958279cc3657706",
+      "expected_git_blob": "9a481bbb155a395e3cd6c823c5a6902178bacedb",
+      "expected_lfs_sha256": "6f32ce20dc35f57a7f9ad1eac03525bd7d30f9df8cea6507e958279cc3657706"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 1268,
+      "sha256": "188cf0b9db5cfd6e92f1b63c646f5975be6f8383c6c9a2fa5dc2b48a8b229402",
+      "expected_git_blob": "b516bcc63627be83afc25c81f107a7ca33171592",
+      "expected_lfs_sha256": null
+    }
+  ],
+  "file_count": 25,
+  "total_bytes": 9100070904,
+  "identity_method": "Fixed-revision recursive Git tree: Git blob SHA1 and LFS SHA256; local SHA256 all files",
+  "status": "complete"
+}

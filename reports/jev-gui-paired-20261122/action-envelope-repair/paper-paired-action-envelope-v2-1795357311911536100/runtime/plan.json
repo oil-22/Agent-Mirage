@@ -1,0 +1,906 @@
+{
+  "version": "jev-paper-paired-native-gui-v1",
+  "tasks": [
+    {
+      "task_id": 146,
+      "intent": "Navigate to the item on this page whose image has exactly 4 books.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_146.json",
+      "source_config_sha256": "71da9cbd1de0c60cd0cb5cfb77b7080690d914d0299051fbec222f0da9967f9e",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_146.PRIVATE.json",
+      "original_private_SHA": "71da9cbd1de0c60cd0cb5cfb77b7080690d914d0299051fbec222f0da9967f9e",
+      "public_intent_SHA": "dd6ee7a210f9f6f6b804d348808cf94d413bad876c9cb654c9d87d5cfb238df6",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980/index.php?page=search&sCategory=9&sOrder=i_price&iOrderType=asc&iPage=124&sShowAs=gallery",
+      "start_url_SHA": "a2f9ff48e205cf9683ef464a87d4e8c9e32576c5a2a2a31f9f0af69073d50c09",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 155,
+      "intent": "Explore the \"Computers\" category, and find the oldest listed item whose image shows a Microsoft Windows background.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_155.json",
+      "source_config_sha256": "939d6e321b3f1a0a1fcff2e3a45034f41107cebe04574bce84d960b639c2b25b",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_155.PRIVATE.json",
+      "original_private_SHA": "939d6e321b3f1a0a1fcff2e3a45034f41107cebe04574bce84d960b639c2b25b",
+      "public_intent_SHA": "d3e31caa3c5138aa384c52ec18e21900f576ca5e7de70eef821f08f37247dae4",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 171,
+      "intent": "Navigate to the oldest listing in the \"Cell phones\" category which has a hot pink screen in the image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_171.json",
+      "source_config_sha256": "92d88e1d6aabeb3367b75ec5da94f10a55b8724a81d142a5a4fe4fddb60d5c7a",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_171.PRIVATE.json",
+      "original_private_SHA": "92d88e1d6aabeb3367b75ec5da94f10a55b8724a81d142a5a4fe4fddb60d5c7a",
+      "public_intent_SHA": "c6d5419d9499022c1e8c04b88c1c9f5895cbc4778ab1418d56e5a0ad39412a61",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 187,
+      "intent": "Navigate to the item on the page where Lightning McQueen is in the image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_187.json",
+      "source_config_sha256": "f9f3e60778070c6d68f3e4dd4360bb1253caf4390572f59b6b475d583898c7ae",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_187.PRIVATE.json",
+      "original_private_SHA": "f9f3e60778070c6d68f3e4dd4360bb1253caf4390572f59b6b475d583898c7ae",
+      "public_intent_SHA": "40e3c7d70f5bda77c118e7644bdf1e6e2fe63675d6823dba8dec53d620163045",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980/index.php?page=search&sCategory=9&iPage=6&sShowAs=gallery",
+      "start_url_SHA": "aab3801b577a04e27aabd2604056d27d070dbc4b0570e78d26b32f49502e5569",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 198,
+      "intent": "Navigate to the cheapest watch with hints of faded red and green that costs at least 13,000 dollars.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_198.json",
+      "source_config_sha256": "123160b98e2bab6ec6dce4c19bac3d9f6b284e59554ae4dd51f8f71b6dfe563b",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_198.PRIVATE.json",
+      "original_private_SHA": "123160b98e2bab6ec6dce4c19bac3d9f6b284e59554ae4dd51f8f71b6dfe563b",
+      "public_intent_SHA": "269c93dfff22fe2b18a7a8f53c8749297681e308267eba5f7cd3d799b75fd5b9",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 204,
+      "intent": "Find the cheapest guitar between $1200 and $1500 that is made of lightly-colored wood and comes with a soft guitar case that has blue-colored insides.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_204.json",
+      "source_config_sha256": "7a1bf91d88e6fa0e15532c19a04e2c71fb8ea74ee149cbbec4641af4bfd22b10",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_204.PRIVATE.json",
+      "original_private_SHA": "7a1bf91d88e6fa0e15532c19a04e2c71fb8ea74ee149cbbec4641af4bfd22b10",
+      "public_intent_SHA": "22242b60ffa1cdbcaca036fc518a16d203cf87d24f4cfd171c6b9d82c6a27619",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 58,
+      "intent": "Explore the \"Furniture\" category of Washington, D.C. and find me the most recent blue chair.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_58.json",
+      "source_config_sha256": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_58.PRIVATE.json",
+      "original_private_SHA": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+      "public_intent_SHA": "de296a2e61f47fee471b3032c711edb60d9a7963032f44cc1d5b56bee2b5f61b",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 89,
+      "intent": "Find the most expensive car from Virginia that is neon green.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_89.json",
+      "source_config_sha256": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_89.PRIVATE.json",
+      "original_private_SHA": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+      "public_intent_SHA": "d58dbd484a9322b143058efec4edb25b9d75648c2824e99b4f83c9c1962792a2",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 94,
+      "intent": "Find the animal on this page that has someone riding it in the image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_94.json",
+      "source_config_sha256": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_94.PRIVATE.json",
+      "original_private_SHA": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+      "public_intent_SHA": "90b5a05824b71bd0104224931d51f14717f65f61629431c43e31815f7680bb34",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980/index.php?page=search&sCategory=16",
+      "start_url_SHA": "11dc9f2eb5c1d2e2e8aed96270363335d911455c6a5c26b8febd3132677ce0d5",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 112,
+      "intent": "Search for \"basketball\" and navigate to the cheapest item that has a man in a suit in its image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_112.json",
+      "source_config_sha256": "b2dd3cef7cc6357376b95ef8c64ae4fcad839fd7f705e55afbdeb4a3d6a83603",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_112.PRIVATE.json",
+      "original_private_SHA": "b2dd3cef7cc6357376b95ef8c64ae4fcad839fd7f705e55afbdeb4a3d6a83603",
+      "public_intent_SHA": "4e10fce547e76267810b985fd7423b2ac6900c578d68f0dc570e52c4a9b3d10b",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    }
+  ],
+  "queue": [
+    {
+      "run_id": "paperpair-T171-silent_drop-on",
+      "pair_id": "paperpair-T171-silent_drop",
+      "task_id": 171,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T171-silent_drop-off",
+      "pair_id": "paperpair-T171-silent_drop",
+      "task_id": 171,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T171-buttons_only-off",
+      "pair_id": "paperpair-T171-buttons_only",
+      "task_id": 171,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T171-buttons_only-on",
+      "pair_id": "paperpair-T171-buttons_only",
+      "task_id": 171,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T171-clean_control-off",
+      "pair_id": "paperpair-T171-clean_control",
+      "task_id": 171,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T171-clean_control-on",
+      "pair_id": "paperpair-T171-clean_control",
+      "task_id": 171,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T171-blank_replace-off",
+      "pair_id": "paperpair-T171-blank_replace",
+      "task_id": 171,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T171-blank_replace-on",
+      "pair_id": "paperpair-T171-blank_replace",
+      "task_id": 171,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-buttons_only-on",
+      "pair_id": "paperpair-T187-buttons_only",
+      "task_id": 187,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-buttons_only-off",
+      "pair_id": "paperpair-T187-buttons_only",
+      "task_id": 187,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T187-silent_drop-off",
+      "pair_id": "paperpair-T187-silent_drop",
+      "task_id": 187,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T187-silent_drop-on",
+      "pair_id": "paperpair-T187-silent_drop",
+      "task_id": 187,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-stale_replace-off",
+      "pair_id": "paperpair-T187-stale_replace",
+      "task_id": 187,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T187-stale_replace-on",
+      "pair_id": "paperpair-T187-stale_replace",
+      "task_id": 187,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-blank_replace-on",
+      "pair_id": "paperpair-T187-blank_replace",
+      "task_id": 187,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-blank_replace-off",
+      "pair_id": "paperpair-T187-blank_replace",
+      "task_id": 187,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T187-clean_control-on",
+      "pair_id": "paperpair-T187-clean_control",
+      "task_id": 187,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T187-clean_control-off",
+      "pair_id": "paperpair-T187-clean_control",
+      "task_id": 187,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-silent_drop-on",
+      "pair_id": "paperpair-T198-silent_drop",
+      "task_id": 198,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T198-silent_drop-off",
+      "pair_id": "paperpair-T198-silent_drop",
+      "task_id": 198,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-stale_replace-on",
+      "pair_id": "paperpair-T198-stale_replace",
+      "task_id": 198,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T198-stale_replace-off",
+      "pair_id": "paperpair-T198-stale_replace",
+      "task_id": 198,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-buttons_only-off",
+      "pair_id": "paperpair-T198-buttons_only",
+      "task_id": 198,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-buttons_only-on",
+      "pair_id": "paperpair-T198-buttons_only",
+      "task_id": 198,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T198-blank_replace-off",
+      "pair_id": "paperpair-T198-blank_replace",
+      "task_id": 198,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-blank_replace-on",
+      "pair_id": "paperpair-T198-blank_replace",
+      "task_id": 198,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T198-clean_control-off",
+      "pair_id": "paperpair-T198-clean_control",
+      "task_id": 198,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T198-clean_control-on",
+      "pair_id": "paperpair-T198-clean_control",
+      "task_id": 198,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T204-buttons_only-on",
+      "pair_id": "paperpair-T204-buttons_only",
+      "task_id": 204,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T204-buttons_only-off",
+      "pair_id": "paperpair-T204-buttons_only",
+      "task_id": 204,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T204-clean_control-on",
+      "pair_id": "paperpair-T204-clean_control",
+      "task_id": 204,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T204-clean_control-off",
+      "pair_id": "paperpair-T204-clean_control",
+      "task_id": 204,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T204-blank_replace-on",
+      "pair_id": "paperpair-T204-blank_replace",
+      "task_id": 204,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T204-blank_replace-off",
+      "pair_id": "paperpair-T204-blank_replace",
+      "task_id": 204,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T204-silent_drop-off",
+      "pair_id": "paperpair-T204-silent_drop",
+      "task_id": 204,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T204-silent_drop-on",
+      "pair_id": "paperpair-T204-silent_drop",
+      "task_id": 204,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T204-stale_replace-off",
+      "pair_id": "paperpair-T204-stale_replace",
+      "task_id": 204,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T204-stale_replace-on",
+      "pair_id": "paperpair-T204-stale_replace",
+      "task_id": 204,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-silent_drop-on",
+      "pair_id": "paperpair-T058-silent_drop",
+      "task_id": 58,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-silent_drop-off",
+      "pair_id": "paperpair-T058-silent_drop",
+      "task_id": 58,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T058-clean_control-off",
+      "pair_id": "paperpair-T058-clean_control",
+      "task_id": 58,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T058-clean_control-on",
+      "pair_id": "paperpair-T058-clean_control",
+      "task_id": 58,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-blank_replace-off",
+      "pair_id": "paperpair-T058-blank_replace",
+      "task_id": 58,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T058-blank_replace-on",
+      "pair_id": "paperpair-T058-blank_replace",
+      "task_id": 58,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-buttons_only-off",
+      "pair_id": "paperpair-T058-buttons_only",
+      "task_id": 58,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T058-buttons_only-on",
+      "pair_id": "paperpair-T058-buttons_only",
+      "task_id": 58,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-stale_replace-on",
+      "pair_id": "paperpair-T058-stale_replace",
+      "task_id": 58,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T058-stale_replace-off",
+      "pair_id": "paperpair-T058-stale_replace",
+      "task_id": 58,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T089-buttons_only-on",
+      "pair_id": "paperpair-T089-buttons_only",
+      "task_id": 89,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T089-buttons_only-off",
+      "pair_id": "paperpair-T089-buttons_only",
+      "task_id": 89,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T089-silent_drop-off",
+      "pair_id": "paperpair-T089-silent_drop",
+      "task_id": 89,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T089-silent_drop-on",
+      "pair_id": "paperpair-T089-silent_drop",
+      "task_id": 89,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T089-blank_replace-on",
+      "pair_id": "paperpair-T089-blank_replace",
+      "task_id": 89,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T089-blank_replace-off",
+      "pair_id": "paperpair-T089-blank_replace",
+      "task_id": 89,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T089-stale_replace-off",
+      "pair_id": "paperpair-T089-stale_replace",
+      "task_id": 89,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T089-stale_replace-on",
+      "pair_id": "paperpair-T089-stale_replace",
+      "task_id": 89,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T089-clean_control-on",
+      "pair_id": "paperpair-T089-clean_control",
+      "task_id": 89,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T089-clean_control-off",
+      "pair_id": "paperpair-T089-clean_control",
+      "task_id": 89,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T094-clean_control-off",
+      "pair_id": "paperpair-T094-clean_control",
+      "task_id": 94,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T094-clean_control-on",
+      "pair_id": "paperpair-T094-clean_control",
+      "task_id": 94,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T094-buttons_only-off",
+      "pair_id": "paperpair-T094-buttons_only",
+      "task_id": 94,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T094-buttons_only-on",
+      "pair_id": "paperpair-T094-buttons_only",
+      "task_id": 94,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T094-stale_replace-on",
+      "pair_id": "paperpair-T094-stale_replace",
+      "task_id": 94,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T094-stale_replace-off",
+      "pair_id": "paperpair-T094-stale_replace",
+      "task_id": 94,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T094-blank_replace-off",
+      "pair_id": "paperpair-T094-blank_replace",
+      "task_id": 94,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T094-blank_replace-on",
+      "pair_id": "paperpair-T094-blank_replace",
+      "task_id": 94,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T094-silent_drop-on",
+      "pair_id": "paperpair-T094-silent_drop",
+      "task_id": 94,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T094-silent_drop-off",
+      "pair_id": "paperpair-T094-silent_drop",
+      "task_id": 94,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-clean_control-on",
+      "pair_id": "paperpair-T112-clean_control",
+      "task_id": 112,
+      "condition": "clean_control",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T112-clean_control-off",
+      "pair_id": "paperpair-T112-clean_control",
+      "task_id": 112,
+      "condition": "clean_control",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-silent_drop-off",
+      "pair_id": "paperpair-T112-silent_drop",
+      "task_id": 112,
+      "condition": "silent_drop",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-silent_drop-on",
+      "pair_id": "paperpair-T112-silent_drop",
+      "task_id": 112,
+      "condition": "silent_drop",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T112-blank_replace-on",
+      "pair_id": "paperpair-T112-blank_replace",
+      "task_id": 112,
+      "condition": "blank_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T112-blank_replace-off",
+      "pair_id": "paperpair-T112-blank_replace",
+      "task_id": 112,
+      "condition": "blank_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-buttons_only-on",
+      "pair_id": "paperpair-T112-buttons_only",
+      "task_id": 112,
+      "condition": "buttons_only",
+      "gate_enabled": true,
+      "arm": "on"
+    },
+    {
+      "run_id": "paperpair-T112-buttons_only-off",
+      "pair_id": "paperpair-T112-buttons_only",
+      "task_id": 112,
+      "condition": "buttons_only",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-stale_replace-off",
+      "pair_id": "paperpair-T112-stale_replace",
+      "task_id": 112,
+      "condition": "stale_replace",
+      "gate_enabled": false,
+      "arm": "off"
+    },
+    {
+      "run_id": "paperpair-T112-stale_replace-on",
+      "pair_id": "paperpair-T112-stale_replace",
+      "task_id": 112,
+      "condition": "stale_replace",
+      "gate_enabled": true,
+      "arm": "on"
+    }
+  ],
+  "cohort_note": {
+    "first_six_previous_reserve": [
+      146,
+      155,
+      171,
+      187,
+      198,
+      204
+    ],
+    "old_not_started_only": [
+      58,
+      89,
+      94,
+      112
+    ],
+    "selected_without_outcomes_or_private_references": true,
+    "structural_catalog_record_sha256": "ad87d5807df1a96ad01af55998760df7d9cdccccd32e6e9427fda235e9f1a6de",
+    "historical_selection_record_sha256": "885a54ca5d02530df24b9e88a2783d60675a8399942005823cec5bca1a3a3435"
+  },
+  "actor_budget": {
+    "max_steps": 50,
+    "max_calls": 70,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "browser_seed": 20261011,
+  "native_full_history": true,
+  "gate_recapture_wait_seconds": 0.5,
+  "gate_manual_or_yes_only": true,
+  "old_paused_queue_resumed": false,
+  "analysis_checkpoints_seconds_do_not_change_gate": [
+    30,
+    120
+  ],
+  "action_envelope_compatibility": "qwen-observed-action-envelopes-v1"
+}

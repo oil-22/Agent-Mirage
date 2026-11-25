@@ -1,0 +1,475 @@
+{
+  "train:c865c65b2467aab57aac160fd238e95546f418bc403adbd5c7c282a3c162fa8f": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "c865c65b2467aab57aac160fd238e95546f418bc403adbd5c7c282a3c162fa8f",
+    "normal": "666a4857e640624aa9215b8c59df117aa93fa8aa72edfdb3044ea8b54dfbaf9f",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ],
+      [
+        860,
+        216,
+        900,
+        256
+      ],
+      [
+        905,
+        216,
+        945,
+        256
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/batch01/gui-output/T003/clean",
+    "step": 17,
+    "geometry_digest": "41d771698d27b74a03b4c7a1be1a7e49794f5ae0eca18bb0750f7bdea9715d62",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/batch01/gui-output/T003/clean/checkpoint-20000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/batch01/gui-output/T003/clean",
+      "step": 17,
+      "probe_step": 18,
+      "bin": 20000,
+      "condition": "buttons_only",
+      "delivered_sha256": "c865c65b2467aab57aac160fd238e95546f418bc403adbd5c7c282a3c162fa8f",
+      "normal_sha256": "666a4857e640624aa9215b8c59df117aa93fa8aa72edfdb3044ea8b54dfbaf9f",
+      "relative_file": "checkpoint-20000/controls.png",
+      "decision_file": "checkpoint-20000/buttons_only-decision.json",
+      "decision_sha256": "04a588b04926bcf99b7e6296740df11f50ec0925c9e27fd0ea6c605bf05e7950",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/batch01/model-output/requests/00029",
+      "input_ids_sha256": "0813f759685d7b3f73e09f530d96c5175813c41608440a12b45400eac20ce71f",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 14795
+  },
+  "train:3da7a8c3864d17a9101189eb706ba696f8d295bf74fdfe0d5283cad142ce2dc6": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "3da7a8c3864d17a9101189eb706ba696f8d295bf74fdfe0d5283cad142ce2dc6",
+    "normal": "9746a25cba90bf2fb13bea70e34994239de7748f1fe935b8a61c1e5e8f9cb569",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        934,
+        278,
+        1130,
+        328
+      ]
+    ],
+    "run": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean",
+    "step": 1,
+    "geometry_digest": "e82966ae3e37f924c8ae2b7cba25040e9bb0674aac6ce56ae074bff3caad5fc7",
+    "geometry_file": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean/checkpoint-2000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean",
+      "step": 1,
+      "probe_step": 2,
+      "bin": 2000,
+      "condition": "buttons_only",
+      "delivered_sha256": "3da7a8c3864d17a9101189eb706ba696f8d295bf74fdfe0d5283cad142ce2dc6",
+      "normal_sha256": "9746a25cba90bf2fb13bea70e34994239de7748f1fe935b8a61c1e5e8f9cb569",
+      "relative_file": "checkpoint-2000/controls.png",
+      "decision_file": "checkpoint-2000/buttons_only-decision.json",
+      "decision_sha256": "ff9bde382a1321b5a6fe718b9c5551eeeb5c86fa168ad8add2403218d368b37d",
+      "model_receipt": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/model-output/requests/00148",
+      "input_ids_sha256": "ce7293ae46a2a50c633455fcc0a429ed40d7becb6ba74248d45fd629856f39fc",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 13263
+  },
+  "train:7685d53c622520e6003540e31c33af32580847398ddbc45529045ffb4dbe44d7": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "7685d53c622520e6003540e31c33af32580847398ddbc45529045ffb4dbe44d7",
+    "normal": "ad2b5d92d79f00c5ac28f6bd01328ba5ae65becd86c892dd55016fb7bbc863d2",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ],
+      [
+        834,
+        144,
+        874,
+        184
+      ],
+      [
+        879,
+        144,
+        919,
+        184
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T067/clean",
+    "step": 8,
+    "geometry_digest": "996b143f674b7dc0e4665533ed2c0eeb2a9773a324809e331d8985a6ec2a61e0",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T067/clean/checkpoint-10000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T067/clean",
+      "step": 8,
+      "probe_step": 9,
+      "bin": 10000,
+      "condition": "buttons_only",
+      "delivered_sha256": "7685d53c622520e6003540e31c33af32580847398ddbc45529045ffb4dbe44d7",
+      "normal_sha256": "ad2b5d92d79f00c5ac28f6bd01328ba5ae65becd86c892dd55016fb7bbc863d2",
+      "relative_file": "checkpoint-10000/controls.png",
+      "decision_file": "checkpoint-10000/buttons_only-decision.json",
+      "decision_sha256": "45c5b76be9485bb467610c6c2107460ddaddb51f4069e2c2927be3cc19ecfea6",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/scale100/model-output/requests/00499",
+      "input_ids_sha256": "17c19788c41346828e7f5e95adc427f657d349228ddfe500a5b12f6b4f3eb953",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 14795
+  },
+  "train:84d48fc18694e1510be8f4e76efcf9399c199149ba6a15097db275f8be6f2372": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "84d48fc18694e1510be8f4e76efcf9399c199149ba6a15097db275f8be6f2372",
+    "normal": "61e187e70ca42fe5fe085f9dab420bb30f2bacf86bcfe6bbc53582025cb7d4b9",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T019/clean",
+    "step": 17,
+    "geometry_digest": "b051f674da9744d0417729804c7bb79d43bce08292c0b1e7d82713f39754e08f",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T019/clean/checkpoint-20000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T019/clean",
+      "step": 17,
+      "probe_step": 18,
+      "bin": 20000,
+      "condition": "buttons_only",
+      "delivered_sha256": "84d48fc18694e1510be8f4e76efcf9399c199149ba6a15097db275f8be6f2372",
+      "normal_sha256": "61e187e70ca42fe5fe085f9dab420bb30f2bacf86bcfe6bbc53582025cb7d4b9",
+      "relative_file": "checkpoint-20000/controls.png",
+      "decision_file": "checkpoint-20000/buttons_only-decision.json",
+      "decision_sha256": "0b7b7ba5c270e0460fcd7e742743d8ef26a044acc1aaa653a81a5483d3304be9",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/scale100/model-output/requests/00133",
+      "input_ids_sha256": "30740a806a7086f52b9f49eccc974c4dc68d9da89f1a75922547b4db3f916c3f",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 12748
+  },
+  "train:81ad4b8992f879b14fdf79696800b5cc47d52abfa1641c029229a09dd9f38dc4": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "81ad4b8992f879b14fdf79696800b5cc47d52abfa1641c029229a09dd9f38dc4",
+    "normal": "530bcc50e79d1a2cd741c7e823b0bb595df3a0d98d27b02a870e7ddb7582131e",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ],
+      [
+        860,
+        144,
+        900,
+        184
+      ],
+      [
+        905,
+        144,
+        945,
+        184
+      ]
+    ],
+    "run": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean",
+    "step": 4,
+    "geometry_digest": "8e81ec222e76f8057af78b5b1fcebb37b30f7051e53b54a6fb6405fee7ad5c76",
+    "geometry_file": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean/checkpoint-5000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/gui-output/T000/clean",
+      "step": 4,
+      "probe_step": 5,
+      "bin": 5000,
+      "condition": "buttons_only",
+      "delivered_sha256": "81ad4b8992f879b14fdf79696800b5cc47d52abfa1641c029229a09dd9f38dc4",
+      "normal_sha256": "530bcc50e79d1a2cd741c7e823b0bb595df3a0d98d27b02a870e7ddb7582131e",
+      "relative_file": "checkpoint-5000/controls.png",
+      "decision_file": "checkpoint-5000/buttons_only-decision.json",
+      "decision_sha256": "d39eb24cdee6750ea174ed62c7e9e63be95ad6b35f2ae1956ea42e01537667bc",
+      "model_receipt": "/data/researcher/context-length-pilot-20261117/quant-nf4-02/model-output/requests/00155",
+      "input_ids_sha256": "3328cef66b19dd2a9dc0521ac7f5e8996072363a9d850aed903f9d05504c07d6",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 14795
+  },
+  "train:57e82e16054e1a0eb26507a17092097323dbf25b69177847ad25bd9c23dde224": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "57e82e16054e1a0eb26507a17092097323dbf25b69177847ad25bd9c23dde224",
+    "normal": "f4faa6927d8855495f44a3ba1b006d078531712cbc84059c8022f28e1374c88d",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T018/clean",
+    "step": 4,
+    "geometry_digest": "b3c5467fcd2eed56ac030887d8577dc47e5ad29a7e5399586688ed7f436a5166",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T018/clean/checkpoint-5000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T018/clean",
+      "step": 4,
+      "probe_step": 5,
+      "bin": 5000,
+      "condition": "buttons_only",
+      "delivered_sha256": "57e82e16054e1a0eb26507a17092097323dbf25b69177847ad25bd9c23dde224",
+      "normal_sha256": "f4faa6927d8855495f44a3ba1b006d078531712cbc84059c8022f28e1374c88d",
+      "relative_file": "checkpoint-5000/controls.png",
+      "decision_file": "checkpoint-5000/buttons_only-decision.json",
+      "decision_sha256": "a8ef302821b30fa2a0686bf2210de277dce4920d5e4a3997e0e885505257d4ca",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/scale100/model-output/requests/00103",
+      "input_ids_sha256": "49ca9b391cd23574040a5d8df9191203a3f1601003d095bc14e3a088226ef403",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 3353
+  },
+  "train:9ab4394a4ccc03a7bd482fd95352b1077a9d0919a37be0107a6119c109416ca3": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "9ab4394a4ccc03a7bd482fd95352b1077a9d0919a37be0107a6119c109416ca3",
+    "normal": "600a33b92edbc87c7e7c7dbf4c1fde3b4a68c3ee786936e8ebd8e815a4cc5905",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ],
+      [
+        831,
+        216,
+        871,
+        256
+      ],
+      [
+        876,
+        216,
+        916,
+        256
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T060/clean",
+    "step": 8,
+    "geometry_digest": "d5e5cf0ca3ea42d0a3b079a8e96e29605efb79e32c2fd6c0897cd73859dbc8e8",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T060/clean/checkpoint-10000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/scale100/gui-output/T060/clean",
+      "step": 8,
+      "probe_step": 9,
+      "bin": 10000,
+      "condition": "buttons_only",
+      "delivered_sha256": "9ab4394a4ccc03a7bd482fd95352b1077a9d0919a37be0107a6119c109416ca3",
+      "normal_sha256": "600a33b92edbc87c7e7c7dbf4c1fde3b4a68c3ee786936e8ebd8e815a4cc5905",
+      "relative_file": "checkpoint-10000/controls.png",
+      "decision_file": "checkpoint-10000/buttons_only-decision.json",
+      "decision_sha256": "fd30a2ebc9176660ee225416a7265cceec65930feed52857fcf6238321b48151",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/scale100/model-output/requests/00368",
+      "input_ids_sha256": "e63c53f9ed29f6d7a673ffa9e156dc458f52f66db76935100c490d92a08bbc3c",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 14795
+  },
+  "train:006113e9562101de4ac718452e0534c3903bebe8b97ffd36082e6588ccf979fd": {
+    "split": "train",
+    "source": "natural_classifieds",
+    "frame": "006113e9562101de4ac718452e0534c3903bebe8b97ffd36082e6588ccf979fd",
+    "normal": "ed63124929f029e3a5486948805e763f7872c01c6ab8c48b8ba3dd208dcdacf3",
+    "rects": [
+      [
+        1023,
+        26,
+        1130,
+        61
+      ],
+      [
+        162,
+        472,
+        248,
+        512
+      ],
+      [
+        162,
+        591,
+        313,
+        631
+      ],
+      [
+        834,
+        216,
+        874,
+        256
+      ],
+      [
+        879,
+        216,
+        919,
+        256
+      ]
+    ],
+    "run": "/data/researcher/context-length-natural-20261117/scale100-resume01/gui-output/T168/clean",
+    "step": 7,
+    "geometry_digest": "9a7a3165a1446079599ea50cea36440b7da1c4579a36fbc0194106a0d726212d",
+    "geometry_file": "/data/researcher/context-length-natural-20261117/scale100-resume01/gui-output/T168/clean/checkpoint-10000/PRIVATE-mask-geometry.json",
+    "probe": {
+      "source_run": "/data/researcher/context-length-natural-20261117/scale100-resume01/gui-output/T168/clean",
+      "step": 7,
+      "probe_step": 8,
+      "bin": 10000,
+      "condition": "buttons_only",
+      "delivered_sha256": "006113e9562101de4ac718452e0534c3903bebe8b97ffd36082e6588ccf979fd",
+      "normal_sha256": "ed63124929f029e3a5486948805e763f7872c01c6ab8c48b8ba3dd208dcdacf3",
+      "relative_file": "checkpoint-10000/controls.png",
+      "decision_file": "checkpoint-10000/buttons_only-decision.json",
+      "decision_sha256": "feccbeccd187f792019bfbac31e28df3b113a2242744a30c655fceef2d603eff",
+      "model_receipt": "/data/researcher/context-length-natural-20261117/scale100-resume01/model-output/requests/00111",
+      "input_ids_sha256": "54d1c814d35015e0bc710540d124ec7682e57f1c3178e0b4d146bc9c8669c564",
+      "same_history_and_message_slot": true
+    },
+    "w": 1280,
+    "h": 720,
+    "nonwhite": 14795
+  },
+  "val:b4fc766b9536c3f6591f21ca3f26a13f25f61a69c82a131fe9c19946963a799f": {
+    "split": "val",
+    "source": "archive_android",
+    "frame": "b4fc766b9536c3f6591f21ca3f26a13f25f61a69c82a131fe9c19946963a799f",
+    "normal": "6d2ea0374bc532662ef47fb82caa73bb6c07cc31f417f08921ef9b5f6719519b",
+    "rects": [
+      [
+        867,
+        2125,
+        993,
+        2290
+      ]
+    ],
+    "run": "mirage-trace/UI-TARS-1.5-7B/AndroidWorld__buttons_only/androidworld-uitars7-2026-10-15/results50-four-injections-v1-attempt4-modem-repaired/020-SystemBluetoothTurnOff/buttons_only",
+    "step": 1,
+    "geometry_digest": "41ceee6c30422a2f732f539e7c697139bb24651abfa5b18e60db42c4b4a47e24",
+    "geometry_record": {
+      "button_regions": [
+        {
+          "bounds": [
+            867,
+            2125,
+            993,
+            2290
+          ],
+          "class": "ImageButton"
+        }
+      ],
+      "capture_sha256": "6d2ea0374bc532662ef47fb82caa73bb6c07cc31f417f08921ef9b5f6719519b",
+      "condition": "buttons_only",
+      "delivered_sha256": "b4fc766b9536c3f6591f21ca3f26a13f25f61a69c82a131fe9c19946963a799f",
+      "injection_fired": true,
+      "stale_source_step": null,
+      "step": 2,
+      "zero_button_regions": false
+    },
+    "before_request": "4ae9687dcc8405d93d88fc158d9b2cbb81c0898d13b1618a4f658bc50e18a43f",
+    "after_request": "7e61321aeb8f6fa6a114126917ba625091bce935e6475fb4117179438744de8a",
+    "source_log_sha256": {
+      "agent_trace.jsonl": "72351ebf98981b52825ff947d0d0053d33fa7f776596035e5c483fd6495d95d1",
+      "intervention/events.jsonl": "60f8e2fad6dd5b8e5cca809b85aabd682544106efcd34bd423f3cccccaa74198",
+      "model_delivery.jsonl": "cd59556e061e62de6cd7d02f1fd11db005249f05fbf53e23f4384b63cbefa221"
+    },
+    "w": 1080,
+    "h": 2400,
+    "nonwhite": 7273
+  }
+}

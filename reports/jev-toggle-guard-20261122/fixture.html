@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Local Settings Evaluation</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:var(--surface);color:#192638;font:17px Arial,sans-serif}
+header{height:72px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:white}
+header b{font-size:25px} header small{font-size:15px} main{max-width:1120px;margin:32px auto 48px}
+h1{font-size:30px;margin:0 0 16px} h2{font-size:23px;margin:0 0 13px} p{line-height:1.4}
+.panel,article{background:white;border-radius:7px;border:1px solid #ccd6e0;padding:19px 22px}
+button{border-radius:5px;height:45px;padding:0 22px;border:0;background:var(--accent);color:#fff;font:bold 17px Arial;cursor:pointer;text-align:left}
+button:focus:not(:focus-visible){outline:none}
+#content{margin-top:22px} .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+article{min-height:78px} article b{display:block;margin-bottom:8px}
+footer{background:var(--foot);padding:22px 56px;color:#29394d}
+.support main{max-width:1055px;margin-top:46px}.support .panel{border-radius:3px}.support h1{font-size:31px}
+.vault main{max-width:995px}.vault .grid{grid-template-columns:repeat(2,1fr)}
+.ledger main{max-width:1040px}.ledger article{min-height:88px}.ledger .grid{grid-template-columns:repeat(2,1fr)}
+.inline{display:flex;gap:22px;align-items:center}
+[role=switch]{min-width:175px} #elsewhere{margin-left:9px} .external{min-height:43px}
+</style>
+<body><header><b id="brand"></b><small id="bar"></small></header>
+<main><h1 id="heading"></h1><div class="panel" id="settings"></div><section id="content"></section></main>
+<footer id="footer"></footer>
+<script>
+'use strict';
+const q=new URLSearchParams(location.search), family=q.get('family'), mode=q.get('mode'), kind=q.get('kind'), delay=Number(q.get('delay'));
+const data={
+  atelier:['North Studio Desk','Workspaces   |   Profile','Workspace preferences','Notifications','Choose whether this workspace should send update alerts.','Draft projects','Saved boards','Recent activity','#172f47','#075b9e','#f5f7fa','#e4edf5'],
+  support:['Beacon Service Hub','Tickets   |   Profile','Support preferences','Notifications','Choose whether to receive updates about your requests.','My tickets','Knowledge base','Service status','#4b252d','#873d48','#fbf7f7','#f1e6e7'],
+  vault:['Records Vault','Archive   |   Access','Archive settings','Auto archive','Archive completed records automatically after review.','Recent records','Review queue','Storage','#32402b','#456c3b','#f7f8f2','#e8ebde'],
+  ledger:['Ledger Team','Reports   |   Account','Report preferences','Email summaries','Choose whether to receive the weekly report summary.','Saved views','Team reports','Billing','#263259','#4754a0','#f4f5fa','#e7e9f5']
+};
+const f=data[family];
+if(!f||kind!=='toggle'||!['quick','delayed','neighbor','elsewhere','unchanged','ordinary'].includes(mode)) throw Error('Invalid case');
+const [brand,bar,heading,label,description,...remainder]=f, cards=remainder.slice(0,3);
+for(const [i,x] of ['ink','accent','surface','foot'].entries())document.body.style.setProperty('--'+x,remainder[i+3]);
+document.body.classList.add(family);
+const $=s=>document.querySelector(s);
+$('#brand').textContent=brand; $('#bar').textContent=bar; $('#heading').textContent=heading; $('#footer').textContent=brand+'  ·  Help  ·  Contact';
+const aria=['vault','ledger'].includes(family)?'role="switch" aria-checked="false"':'aria-pressed="false"';
+$('#settings').innerHTML=`<h2>${label}</h2><p>${description}</p><div class="inline">
+  <button id="target" type="button" ${mode==='ordinary'?'':aria}>${mode==='ordinary'?'Refresh report':label+': Off'}</button>
+  ${mode==='neighbor'?'<button type="button" aria-pressed="false" id="near">Reminders: Off</button>':''}
+  </div>`;
+$('#content').innerHTML='<div class="panel"><h2>Your workspace</h2><div class="grid">'+cards.map(x=>`<article><b>${x}</b><span>Available to members</span></article>`).join('')+'</div>'+
+  (['elsewhere','ordinary'].includes(mode)?'<p id="elsewhere" class="external">System status: Idle</p>':'')+'</div>';
+const target=$('#target'), state={outcome:null}, events=[];
+const mark=(kind,extra={})=>events.push({kind,ms:performance.now(),...extra});
+const painted=fn=>requestAnimationFrame(()=>requestAnimationFrame(fn));
+function flip(button,name){
+  button.textContent=name+': On';
+  button.setAttribute(button.hasAttribute('aria-checked')?'aria-checked':'aria-pressed','true');
+}
+target.addEventListener('click',ev=>{
+  mark('input',{trusted:ev.isTrusted,event_type:ev.type}); if(!ev.isTrusted) return;
+  setTimeout(()=>{
+    if (mode==='quick'||mode==='delayed'){flip(target,label);state.outcome='enabled';}
+    else if(mode==='neighbor'){flip($('#near'),'Reminders');state.outcome='other_switch_changed';}
+    else if(mode==='elsewhere'||mode==='ordinary'){$('#elsewhere').textContent='System status: Synced';state.outcome='other_region_changed';}
+    else state.outcome='unchanged';
+    mark('render_applied');painted(()=>mark('render_painted'));
+  },delay);
+});
+window.fixtureSnapshot=()=>({
+  kind,family,mode,now_ms:performance.now(),events:events.map(e=>({...e})),
+  visual:'normal',outcome:state.outcome,target_text:target.textContent,
+  target_state:target.getAttribute('aria-pressed')??target.getAttribute('aria-checked'),
+  neighbor_text:$('#near')?.textContent??null, elsewhere_text:$('#elsewhere')?.textContent??null
+});
+painted(()=>mark('initial_painted'));
+</script></body></html>

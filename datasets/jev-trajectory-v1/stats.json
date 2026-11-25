@@ -1,0 +1,63 @@
+{
+  "reference_target": 3000,
+  "hard_minimum": false,
+  "total": 1818,
+  "splits": {
+    "train": {
+      "YES": 1120,
+      "NO": 79
+    },
+    "val": {
+      "YES": 171,
+      "NO": 17
+    },
+    "test": {
+      "YES": 417,
+      "NO": 14
+    }
+  },
+  "by_suite": {
+    "archive_android": {
+      "YES": 167,
+      "NO": 13
+    },
+    "archive_vwa": {
+      "YES": 1348,
+      "NO": 56
+    },
+    "guard": {
+      "YES": 5,
+      "NO": 6
+    },
+    "gui": {
+      "YES": 152
+    },
+    "outcome": {
+      "YES": 8,
+      "NO": 7
+    },
+    "scale": {
+      "YES": 28,
+      "NO": 28
+    }
+  },
+  "by_evidence": {
+    "sealed_browser_and_visual_reading": 152,
+    "signed_controlled_capture_and_independent_outcome_audit": 82,
+    "rendered_navigation": 935,
+    "paired_visual_reading": 186,
+    "visible_focus_ring": 139,
+    "visible_typed_text": 126,
+    "reversible_scroll": 24,
+    "directional_scroll": 131,
+    "click_and_back": 14,
+    "returned_to_previous_view": 15,
+    "visually_supported_noop": 14
+  },
+  "supervised_images": 2032,
+  "pending_unique": 5329,
+  "regression_protected": 218,
+  "unique_candidates": 7720,
+  "raw_occurrences": 33551,
+  "visual_or_click_aliases_merged": 355
+}

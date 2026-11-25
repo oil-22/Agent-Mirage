@@ -1,0 +1,45 @@
+{
+  "scope": "NEW four-GPU layout engineering capacity, known old source, not new semantic trial",
+  "source_packet_sha256": "8749ce8cc91d6cfeb26e9e83fd3378c7886ea0859a03cab2e1e74b10aa06a5f0",
+  "source_public_sha256": "adaecffabe0961b03dbcdcf3d9e1816a88b408571e527ad96350aa48ad2b9c76",
+  "source_candidate_sha256": "b1faf0fdc85efd0b81b53270d10621f95582f0c8d8f7a456e5d1dc5cec156d52",
+  "message_count": 43,
+  "image_count": 4,
+  "images": [
+    {
+      "sha256": "f010474ff8699d243ea1bf022f34a55f035f77693579d3f2a89a3adba56d99ab",
+      "role": "current"
+    },
+    {
+      "sha256": "0b570a29c1b201a346f5e708003aee54d2f2bf9a357e0534ed7fca17f3890cc0",
+      "role": "reference"
+    },
+    {
+      "sha256": "59c2609193714b75af1c6a997fd7bfead5151db571ca68a5690b0599af64cafc",
+      "role": "reference"
+    },
+    {
+      "sha256": "b2cd327e62d841f9a96e811d2ea720aeae52074301749d1811aa595cbb453453",
+      "role": "reference"
+    }
+  ],
+  "request_canonical_sha256": "5675eec75a9bb4fc558eda04f4de748db444604d28bf3a69fe99e740b6a30e0e",
+  "system_sha256": "f92fb4820ea68e48423141bfe34843de600d988346aac1816c6ec6761d539657",
+  "max_primary_judge_calls": 1,
+  "max_output_tokens": 4096,
+  "max_format_retries": 0,
+  "original_generation_backend": "BF16/SDPA native current source, original judge grammar",
+  "full_history_unchanged": true,
+  "full_images_unchanged": true,
+  "new_flash_predictions_in_system": false,
+  "not_joint_policy_proof": true,
+  "actor_calls": 0,
+  "GUI_actions": 0,
+  "paid_API_calls": 0,
+  "model_calls_made_while_freezing": 0,
+  "automatic_retry": false,
+  "semantic_pass": null,
+  "linked_parent_seal_sha256": "b4af916474d9f8f9fee7ae356bd2d6d7b859474744e8e8a8a78addc58cbcfe95",
+  "request_wire_sha256": "921d1df12734b116f3a920e6caa769c9b148990c2efb6439febe9c47231e6a92",
+  "transport_binding": "exact raw bytes"
+}

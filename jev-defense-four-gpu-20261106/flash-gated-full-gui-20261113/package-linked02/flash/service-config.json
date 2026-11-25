@@ -1,0 +1,11 @@
+{
+  "repository": "perplexity-ai/pplx-decider-flash-v1.2",
+  "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+  "python": "/home/researcher/jev-defense-four-gpu-20261106/flash-preparation/env-flash-01/bin/python",
+  "model_dir": "/home/researcher/jev-defense-four-gpu-20261106/flash-preparation/download-attempts/1793972286914423476/checkpoint",
+  "receipt": "/home/researcher/jev-defense-four-gpu-20261106/flash-preparation/download-attempts/1793972286914423476/download-complete-receipt.json",
+  "receipt_sha256": "0f9bf26545bc47b941a8094cfe31c794eaeb239960375fce2f9c262b6e3e4cec",
+  "physical_gpu": 7,
+  "port": 18341,
+  "stable_identity_sha256": "af6e6f7214b0e350877e2e1a7fdb5237b83a498ea8bdb83f9fea6bf6b335ae0d"
+}

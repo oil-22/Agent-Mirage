@@ -1,0 +1,247 @@
+{
+  "time": 1794835402.821187,
+  "read_only": true,
+  "prospective_plan_SHA": "02f554e6a93dba25efa5e4cdbba86bd5314354f7d728d603d1a12e7ea1639436",
+  "tasks": [
+    {
+      "task_id": 0,
+      "intent": "Find me the cheapest blue kayak on this site.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_0.json",
+      "source_config_sha256": "39ad86005afebc43a1bc0d828d7ad80d59b4f01058e47c602ea5eb097e442e15",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_0.PRIVATE.json",
+      "original_private_SHA": "39ad86005afebc43a1bc0d828d7ad80d59b4f01058e47c602ea5eb097e442e15",
+      "public_intent_SHA": "fb1b0648cee16957fbdacd0e0aa7af08241abb9e27767df3f1fa824582059e29",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 3,
+      "intent": "Find me the most recently posted item in the \"Photo + video\" category that is not completely black in color. It should be between $1000 to $1200.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_3.json",
+      "source_config_sha256": "a7ecfe79f799ee2da728fff19092354547df281fd84024f235de748095a07551",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_3.PRIVATE.json",
+      "original_private_SHA": "a7ecfe79f799ee2da728fff19092354547df281fd84024f235de748095a07551",
+      "public_intent_SHA": "3113ab3596ed670b4771c88847150c172fed88cfb85af59d56d5db2ebd045d4a",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 17,
+      "intent": "Show me the cheapest bike with red handlebars between $900-950.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_17.json",
+      "source_config_sha256": "c71d29c9202cc96262df84baf8693936eb8b1c13a4faad13f0ddf20121caf8d4",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_17.PRIVATE.json",
+      "original_private_SHA": "c71d29c9202cc96262df84baf8693936eb8b1c13a4faad13f0ddf20121caf8d4",
+      "public_intent_SHA": "9fd17629d603ae82a1e81288f9b54fbcacc492c82541db978929787271f1ad2c",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 58,
+      "intent": "Explore the \"Furniture\" category of Washington, D.C. and find me the most recent blue chair.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_58.json",
+      "source_config_sha256": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_58.PRIVATE.json",
+      "original_private_SHA": "ff04f16a2f78fdc7c9def876c774cd74ca25c46ca1efaa8c2f40fb2fe0859af3",
+      "public_intent_SHA": "de296a2e61f47fee471b3032c711edb60d9a7963032f44cc1d5b56bee2b5f61b",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 89,
+      "intent": "Find the most expensive car from Virginia that is neon green.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_89.json",
+      "source_config_sha256": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_89.PRIVATE.json",
+      "original_private_SHA": "7730fb9cf3e08cd64dd93269129daaa7b938ccc24ed2a5c7c78e01e659d6b084",
+      "public_intent_SHA": "d58dbd484a9322b143058efec4edb25b9d75648c2824e99b4f83c9c1962792a2",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 94,
+      "intent": "Find the animal on this page that has someone riding it in the image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_94.json",
+      "source_config_sha256": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_94.PRIVATE.json",
+      "original_private_SHA": "07d06edd3fc360da9e5ba94074a4a3993d8ebc642f88721559fbcfc6cda779ce",
+      "public_intent_SHA": "90b5a05824b71bd0104224931d51f14717f65f61629431c43e31815f7680bb34",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980/index.php?page=search&sCategory=16",
+      "start_url_SHA": "11dc9f2eb5c1d2e2e8aed96270363335d911455c6a5c26b8febd3132677ce0d5",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 112,
+      "intent": "Search for \"basketball\" and navigate to the cheapest item that has a man in a suit in its image.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_112.json",
+      "source_config_sha256": "b2dd3cef7cc6357376b95ef8c64ae4fcad839fd7f705e55afbdeb4a3d6a83603",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_112.PRIVATE.json",
+      "original_private_SHA": "b2dd3cef7cc6357376b95ef8c64ae4fcad839fd7f705e55afbdeb4a3d6a83603",
+      "public_intent_SHA": "4e10fce547e76267810b985fd7423b2ac6900c578d68f0dc570e52c4a9b3d10b",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    },
+    {
+      "task_id": 131,
+      "intent": "Search for \"dogs\" and navigate to the listing whose image consists of puppies in a basket.",
+      "image": null,
+      "sites": [
+        "classifieds"
+      ],
+      "require_reset": false,
+      "source_member": "mirage-trace/_shared/VisualWebArena__all-configurations/vwa100-2026-10-09/selected100-classifieds-reddit-v2/evaluator_configs_v1/classifieds_131.json",
+      "source_config_sha256": "fe9b3b0d36a69c237a3b4f8adb38783e704de4464845b53c7bb906e116a7c9c0",
+      "original_private_path": "/data/researcher/jev-defense-four-gpu-20261106/evaluation-source-preparation-20261109-01/collection/PRIVATE-evaluator-configs/classifieds_131.PRIVATE.json",
+      "original_private_SHA": "fe9b3b0d36a69c237a3b4f8adb38783e704de4464845b53c7bb906e116a7c9c0",
+      "public_intent_SHA": "9aa68644052a802355fe8e17f325db2aea43deb82d2c99246a3a56a659643bd2",
+      "intent_exactly_matches_preselected_public_source": true,
+      "start_url": "http://192.0.2.10:19980",
+      "start_url_SHA": "6c0ce5d5ab3c816e4f32c1e21c610b6153833daffa370f1db3a99f8725998a62",
+      "eval_types": [
+        "url_match"
+      ],
+      "native_scorer_type": "url_match",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "private_scorer_answers_or_reference_urls_exported": false
+    }
+  ],
+  "native_actor_template_sha256": "b2a0af4ba02e3316cb060cddc2e0a1b20d6e00eabce04358387f5e8f46278add",
+  "native_parser_source": "/data/researcher/jev-defense-validation-20261103/runtime-stage-01/native/run_reddit_internvl_smoke.py",
+  "native_source_SHA": "af825cdf46601f4b12efb8fe614f1eb1c924af750a7fbc85bc6a565119267cf7",
+  "native_AST_SHA": {
+    "SYSTEM": "dba73848814ce328453c63c2e6c32b72170ac0a1991d37298cf314df1c1e5be0",
+    "png": "4a2804f0fbf08a843dec86323f4840cf812ea0649b0e99ecdee91871e99e8f51",
+    "parse": "3f55188031ae264668ee18c473cae7d60b2374b645078b3585b60e0d54557b58",
+    "action": "1583b80b8979b8d7f18592c9097df7e7abec669da0c5c9c6fe0942c2d86f6ae1"
+  },
+  "native_URL_scorer_source_SHA": "00419191831d8a4d5260b7e742b964992acb95c4846864f46b7017ef8ca89f34",
+  "dedicated_site": [
+    {
+      "id": "de6f56798c3c5a278a96d7afe6844e8be2c5673301e44e1c887eecc56118f0dd",
+      "owner": "whz-qwen27-vwa",
+      "running": true,
+      "image_id": "sha256:0dbbdef09dd9ab590b5016b6406cad0bbbfd536647be6644463083c8d5c62617",
+      "port_bindings": {
+        "9980/tcp": [
+          {
+            "HostIp": "192.0.2.10",
+            "HostPort": "29980"
+          }
+        ]
+      },
+      "volumes": []
+    },
+    {
+      "id": "e8fe8dfaa8010a5473c1ebf603859ba04d7d4ac1e8016b347ea8211c03a4c62c",
+      "owner": "whz-qwen27-vwa",
+      "running": true,
+      "image_id": "sha256:ae2502152260b33bfafb9c3e3a1811086317e0236abf83a59503cec0f8980573",
+      "port_bindings": {},
+      "volumes": [
+        "qwen27_vwa_db_data"
+      ]
+    }
+  ],
+  "new_model_GPU_browser_agent_scorer_paid_calls": 0,
+  "site_reset_or_fixture_import": false,
+  "private_scorer_sources_not_exported_or_sent_to_models": true,
+  "task_outcomes_or_reference_answers_not_inspected": true,
+  "same_live_initial_capture_and_recapture_done": false,
+  "native_scorer_transport_exercised": false,
+  "task_browser_lease_acquired": false,
+  "complete_GUI_launcher_ready": false,
+  "operation": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\full-gui-bounded-evidence-20261109-03\\operations\\1794217975856576000-bind-eight-prospective-native-task-sources-no-outcomes",
+  "task_selection_seal_sha256": "eb33d67f8634e811d955706ae430b0bb7c3141c9177f8db388eb301a2530b037",
+  "source_binding_operation": "D:\\MultiModel\\jev-defense-four-gpu-20261106\\flash-four-mode-scale10-20261116-12\\operations\\1794835290537000000-structural-native-task-binding-no-private-answers"
+}

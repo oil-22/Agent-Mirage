@@ -1,0 +1,226 @@
+{
+  "scope": "CPU integration check with the pinned 4B checkpoint, one example per task and label. Not full validation or model-performance evidence.",
+  "config": {
+    "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+    "data_sha256": {
+      "manifest.jsonl": "672de0a4372a49997d06d6cd62e24ea4e36dacc4b77f29076e44e8a4c93d6c6a",
+      "train.jsonl": "d1862fe2495cbd93a58389394b6aa110c22c83914b2d25bb3a038e1480746520",
+      "val.jsonl": "90bde354dd8fd079a50cfbe64817389e201a0a55f4e11c1bf72759609e9df822",
+      "protocol.json": "83a8d7014fe7469ab99076b01ab9d58776553e09a2edf7628042627de2ba15bf"
+    },
+    "checkpoint_lock_sha256": "e5dd385b2bc3da6d24f73b95f39e1458bf2d2006bed922eb522ad3b1877dc506",
+    "torch": "2.14.0+cu126",
+    "transformers": "5.17.0",
+    "settings": {
+      "rank": 8,
+      "alpha": 16.0,
+      "dropout": 0.05,
+      "last_full_layers": 4
+    },
+    "targets": [
+      "language_model.layers.19.self_attn.q_proj",
+      "language_model.layers.19.self_attn.v_proj",
+      "language_model.layers.23.self_attn.q_proj",
+      "language_model.layers.23.self_attn.v_proj",
+      "language_model.layers.27.self_attn.q_proj",
+      "language_model.layers.27.self_attn.v_proj",
+      "language_model.layers.31.self_attn.q_proj",
+      "language_model.layers.31.self_attn.v_proj"
+    ],
+    "adapter_parameters": 458752,
+    "device_type": "cpu",
+    "max_pixels": 65536,
+    "max_length": 8192,
+    "seed": 42,
+    "lr": 0.0001,
+    "warmup": 0.05,
+    "weight_decay": 0.01,
+    "epochs": 1,
+    "microbatch": 2,
+    "accumulation": 2,
+    "checkpoint_gradients": true,
+    "train_per_cell": 1,
+    "val_per_cell": 1,
+    "train_size": 6,
+    "val_size": 6
+  },
+  "baseline": {
+    "overall": {
+      "n": 6,
+      "YES": 3,
+      "NO": 3,
+      "accuracy": 0.8333333333333334,
+      "loss": 0.29398316393295926,
+      "balanced_accuracy": 0.8333333333333334,
+      "false_accept_NO_as_YES": 0,
+      "false_accept_rate": 0.0,
+      "false_reject_YES_as_NO": 1,
+      "false_reject_rate": 0.3333333333333333
+    },
+    "by_task": {
+      "blank_replace": {
+        "n": 2,
+        "YES": 1,
+        "NO": 1,
+        "accuracy": 0.5,
+        "loss": 0.5122779160737991,
+        "balanced_accuracy": 0.5,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 1,
+        "false_reject_rate": 1.0
+      },
+      "stale_replace": {
+        "n": 2,
+        "YES": 1,
+        "NO": 1,
+        "accuracy": 1.0,
+        "loss": 0.15222760289907455,
+        "balanced_accuracy": 1.0,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 0,
+        "false_reject_rate": 0.0
+      },
+      "buttons_only": {
+        "n": 2,
+        "YES": 1,
+        "NO": 1,
+        "accuracy": 1.0,
+        "loss": 0.21744397282600403,
+        "balanced_accuracy": 1.0,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 0,
+        "false_reject_rate": 0.0
+      }
+    },
+    "by_origin": {
+      "observed": {
+        "n": 5,
+        "YES": 3,
+        "NO": 2,
+        "accuracy": 0.8,
+        "loss": 0.2931706517934799,
+        "balanced_accuracy": 0.8333333333333334,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 1,
+        "false_reject_rate": 0.3333333333333333
+      },
+      "constructed": {
+        "n": 1,
+        "YES": 0,
+        "NO": 1,
+        "accuracy": 1.0,
+        "loss": 0.29804572463035583,
+        "balanced_accuracy": null,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 0,
+        "false_reject_rate": null
+      }
+    }
+  },
+  "epoch": {
+    "epoch": 1,
+    "steps": 2,
+    "train_loss": 0.36301074425379437,
+    "val": {
+      "overall": {
+        "n": 6,
+        "YES": 3,
+        "NO": 3,
+        "accuracy": 0.8333333333333334,
+        "loss": 0.29113911588986713,
+        "balanced_accuracy": 0.8333333333333334,
+        "false_accept_NO_as_YES": 0,
+        "false_accept_rate": 0.0,
+        "false_reject_YES_as_NO": 1,
+        "false_reject_rate": 0.3333333333333333
+      },
+      "by_task": {
+        "blank_replace": {
+          "n": 2,
+          "YES": 1,
+          "NO": 1,
+          "accuracy": 0.5,
+          "loss": 0.506044328212738,
+          "balanced_accuracy": 0.5,
+          "false_accept_NO_as_YES": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_YES_as_NO": 1,
+          "false_reject_rate": 1.0
+        },
+        "stale_replace": {
+          "n": 2,
+          "YES": 1,
+          "NO": 1,
+          "accuracy": 1.0,
+          "loss": 0.15045719593763351,
+          "balanced_accuracy": 1.0,
+          "false_accept_NO_as_YES": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_YES_as_NO": 0,
+          "false_reject_rate": 0.0
+        },
+        "buttons_only": {
+          "n": 2,
+          "YES": 1,
+          "NO": 1,
+          "accuracy": 1.0,
+          "loss": 0.2169158235192299,
+          "balanced_accuracy": 1.0,
+          "false_accept_NO_as_YES": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_YES_as_NO": 0,
+          "false_reject_rate": 0.0
+        }
+      },
+      "by_origin": {
+        "observed": {
+          "n": 5,
+          "YES": 3,
+          "NO": 2,
+          "accuracy": 0.8,
+          "loss": 0.2892217218875885,
+          "balanced_accuracy": 0.8333333333333334,
+          "false_accept_NO_as_YES": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_YES_as_NO": 1,
+          "false_reject_rate": 0.3333333333333333
+        },
+        "constructed": {
+          "n": 1,
+          "YES": 0,
+          "NO": 1,
+          "accuracy": 1.0,
+          "loss": 0.3007260859012604,
+          "balanced_accuracy": null,
+          "false_accept_NO_as_YES": 0,
+          "false_accept_rate": 0.0,
+          "false_reject_YES_as_NO": 0,
+          "false_reject_rate": null
+        }
+      }
+    }
+  },
+  "progress": {
+    "completed_epochs": 1,
+    "last": "epoch-001",
+    "best": "epoch-001"
+  },
+  "resume_preserved_adapter_sha256": "a45d723413de93958f17a82b41895db09f34f9fc2c0d05714c6e25ba4b83c4ea",
+  "prediction_from_reloaded_best": {
+    "sample_id": "jev-a8276ef522889379400962a7",
+    "result": {
+      "type": "choice",
+      "probabilities": {
+        "YES": 0.44037454363335277,
+        "NO": 0.5596254563666472
+      },
+      "choice": "NO",
+      "confidence": 0.11925091273329436
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "splits": {
+    "train": {
+      "YES": 1655,
+      "NO": 2185
+    },
+    "val": {
+      "YES": 171,
+      "NO": 76
+    },
+    "test": {
+      "YES": 417,
+      "NO": 14
+    }
+  },
+  "by_origin": {
+    "train": {
+      "constructed": {
+        "NO": 1834
+      },
+      "observed_injection": {
+        "NO": 272
+      },
+      "observed_normal": {
+        "YES": 535
+      },
+      "observed_v1": {
+        "YES": 1120,
+        "NO": 79
+      }
+    },
+    "val": {
+      "observed_android_val": {
+        "NO": 59
+      },
+      "observed_v1": {
+        "YES": 171,
+        "NO": 17
+      }
+    },
+    "test": {
+      "observed_v1": {
+        "YES": 417,
+        "NO": 14
+      }
+    }
+  },
+  "by_evidence": {
+    "train": {
+      "sealed_browser_and_visual_reading": 152,
+      "visible_browser_scroll": 215,
+      "rendered_navigation": 888,
+      "before_replay": 1470,
+      "visible_focus_ring": 142,
+      "signed_controlled_capture_and_independent_outcome_audit": 59,
+      "different_typed_value": 88,
+      "earlier_unchanged_field": 16,
+      "earlier_same_page": 260,
+      "visible_typed_text": 90,
+      "directional_scroll": 74,
+      "delivered_blank": 151,
+      "delivered_stale": 102,
+      "paired_visual_reading": 54,
+      "delivered_partial": 19,
+      "visible_scroll_boundary": 43,
+      "reversible_scroll": 16,
+      "visually_supported_noop": 1
+    },
+    "val": {
+      "signed_controlled_capture_and_independent_outcome_audit": 8,
+      "directional_scroll": 42,
+      "paired_visual_reading": 119,
+      "click_and_back": 9,
+      "returned_to_previous_view": 10,
+      "injected_blank": 7,
+      "injected_fragment": 4,
+      "injected_logged_replay": 4,
+      "normal_controlled_unchanged": 21,
+      "normal_target_unchanged": 9,
+      "normal_query_unverified": 4,
+      "normal_empty_surface": 5,
+      "normal_unrelated_destination": 5
+    },
+    "test": {
+      "signed_controlled_capture_and_independent_outcome_audit": 15,
+      "rendered_navigation": 262,
+      "visible_typed_text": 46,
+      "directional_scroll": 39,
+      "paired_visual_reading": 13,
+      "visible_focus_ring": 25,
+      "visually_supported_noop": 13,
+      "reversible_scroll": 8,
+      "returned_to_previous_view": 5,
+      "click_and_back": 5
+    }
+  },
+  "same_rendering": {
+    "train": {
+      "YES:different": 1611,
+      "NO:same": 1642,
+      "NO:different": 543,
+      "YES:same": 44
+    },
+    "val": {
+      "YES:different": 171,
+      "NO:same": 22,
+      "NO:different": 54
+    },
+    "test": {
+      "YES:different": 404,
+      "NO:different": 4,
+      "NO:same": 10,
+      "YES:same": 13
+    }
+  },
+  "balanced_train": {
+    "YES": 1655,
+    "NO": 1655
+  },
+  "rows": 4518,
+  "observed": 2684,
+  "constructed": 1834,
+  "model_input_pngs": 2782,
+  "audit_only_pngs": 56,
+  "v1_observations": 7372,
+  "cross_split_shared_images": 0,
+  "cross_split_shared_source_groups": 0,
+  "duplicate_inputs": 0,
+  "conflicting_exported_labels": 0,
+  "regression_images_checked": 15,
+  "validation_extension": {
+    "original": {
+      "YES": 171,
+      "NO": 17
+    },
+    "added_NO": 59,
+    "added_by_evidence": {
+      "injected_blank": 7,
+      "injected_fragment": 4,
+      "injected_logged_replay": 4,
+      "normal_controlled_unchanged": 21,
+      "normal_target_unchanged": 9,
+      "normal_query_unverified": 4,
+      "normal_empty_surface": 5,
+      "normal_unrelated_destination": 5
+    },
+    "added_constructed": 0,
+    "source_runs": 51,
+    "source_events": 59,
+    "frozen_train_balanced_test_and_original_validation": true,
+    "added_observed": 59,
+    "added_by_delivery": {
+      "blank_replace": 7,
+      "buttons_only": 4,
+      "stale_replace": 4,
+      "normal": 44
+    },
+    "added_by_action": {
+      "scroll": 9,
+      "click": 39,
+      "back": 7,
+      "type": 4
+    },
+    "added_by_family": {
+      "android:SimpleCalendarEventOnDateAtTime": 2,
+      "android:CameraTakeVideo": 2,
+      "android:SystemBrightnessMin": 5,
+      "android:SystemBluetoothTurnOn": 1,
+      "android:CameraTakePhoto": 3,
+      "android:NotesTodoItemCount": 5,
+      "android:TurnOnWifiAndOpenApp": 12,
+      "android:SystemBluetoothTurnOff": 2,
+      "android:SimpleCalendarDeleteEvents": 3,
+      "android:RecipeAddMultipleRecipesFromImage": 2,
+      "android:ContactsAddContact": 2,
+      "android:RecipeAddMultipleRecipes": 2,
+      "android:ClockTimerEntry": 7,
+      "android:BrowserMaze": 1,
+      "android:SimpleCalendarFirstEventAfterStartTime": 8,
+      "android:OpenAppTaskEval": 2
+    },
+    "added_source_runs": 51,
+    "added_source_tasks": 16,
+    "controls": 25,
+    "same_trajectory_next_action_controls": 10,
+    "injected_native_unreplaced_pngs_available": 6,
+    "val_pair_observed": 247,
+    "val_constructed": 0
+  }
+}

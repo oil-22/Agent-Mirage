@@ -1,0 +1,280 @@
+{
+  "purpose": "Seen engineering regression only. Not for optimization, calibration, or independent effectiveness estimates.",
+  "requests_are_not_independent_tasks": true,
+  "training_use": false,
+  "threshold_selection_use": false,
+  "independent_test_use": false,
+  "model_revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+  "same_prompt_code_sha256": "dc6bcbc9c26f86fad259c3d8a3909648766c16c5bacd955292f3848c2214bbcd",
+  "live": {
+    "attempt": "live-1795284570214603700",
+    "source_seal_sha256": "5f45165e1b30f425c022d3eb8385c1f9a90276af75a67782949b3db231749f71",
+    "source_audit_sha256": "e7d99e74b93bab98d5c036ef506a574230cb6d18585aaeabc87ab79e7a7e5d3b",
+    "temporal_requests": 8,
+    "distinct_image_pair_and_action_inputs": 4,
+    "unique_input_groups": [
+      {
+        "input_key": "038bd9a46c8efb5860c52ed9c8bf8a63edb45a88c1f8968df20df3be4cab6b06",
+        "binding": {
+          "previous_image_sha256": "dc26c8b4143a1d0bac74e4f65993d24d615f2535e64a99ce6a9eea66d585c491",
+          "candidate_image_sha256": "dc26c8b4143a1d0bac74e4f65993d24d615f2535e64a99ce6a9eea66d585c491",
+          "executed_action": {
+            "type": "click",
+            "x": 395.84961,
+            "y": 333.33333
+          }
+        },
+        "policy_label": "NO",
+        "observations": [
+          {
+            "trajectory": "search-delayed-temporal",
+            "capture_id": "a5a3a914bef545cf85bbc9cba0020abb",
+            "request_id": "efa5f23b6a994a35ba646301a67663c3",
+            "capture_phase": "early_before_render",
+            "observed_choice": "NO",
+            "p_yes": 0.07918371828234826
+          },
+          {
+            "trajectory": "search-delayed-temporal",
+            "capture_id": "27f8568ba36249a9a4b2a5e0035bb81e",
+            "request_id": "842b7b74ec8b46beaa0dc1cdb64b3dc9",
+            "capture_phase": "early_before_render",
+            "observed_choice": "NO",
+            "p_yes": 0.07918371828234826
+          }
+        ]
+      },
+      {
+        "input_key": "f8db2f346199a249068964df4640799d0ab4343c9427e6b2864d6b5a1b895936",
+        "binding": {
+          "previous_image_sha256": "dc26c8b4143a1d0bac74e4f65993d24d615f2535e64a99ce6a9eea66d585c491",
+          "candidate_image_sha256": "9f0489b32b0e5f33ea45871baac700f439e9863e9e0446e3a4183fcc9f7cf043",
+          "executed_action": {
+            "type": "click",
+            "x": 395.84961,
+            "y": 333.33333
+          }
+        },
+        "policy_label": "YES",
+        "observations": [
+          {
+            "trajectory": "search-delayed-temporal",
+            "capture_id": "5d85acf36c2847a58ea9ee113c5bed31",
+            "request_id": "7756011a865e4f8288fa0f4c39c44475",
+            "capture_phase": "after_visible_render",
+            "observed_choice": "YES",
+            "p_yes": 0.8900742066612881
+          },
+          {
+            "trajectory": "search-fast-temporal",
+            "capture_id": "548c6e3367c3459bb8ecd33d3081e89b",
+            "request_id": "182ebb0df4f641eb99e21ff1d6e05e7a",
+            "capture_phase": "after_visible_render",
+            "observed_choice": "YES",
+            "p_yes": 0.8900742066612881
+          }
+        ]
+      },
+      {
+        "input_key": "fc8ba9e820c42de737ae0d3d7781f63a50201532f31116af4e1dfa0ba77a0d5a",
+        "binding": {
+          "previous_image_sha256": "73859618034b941174a8f9db14589ddd288cb9490204f18711c6335f1ab66ec9",
+          "candidate_image_sha256": "73859618034b941174a8f9db14589ddd288cb9490204f18711c6335f1ab66ec9",
+          "executed_action": {
+            "text": "Virginia",
+            "type": "type"
+          }
+        },
+        "policy_label": "NO",
+        "observations": [
+          {
+            "trajectory": "type-delayed-temporal",
+            "capture_id": "a9775bddcc774364bd4335935d1d3cf6",
+            "request_id": "af5ccdcf088740d0956fb23cfd42474d",
+            "capture_phase": "early_before_render",
+            "observed_choice": "NO",
+            "p_yes": 0.07082053537743298
+          },
+          {
+            "trajectory": "type-delayed-temporal",
+            "capture_id": "2b63a0d74a7b478e978d013e95a6ebdd",
+            "request_id": "00013e4066bd413ea098469da617a0d7",
+            "capture_phase": "early_before_render",
+            "observed_choice": "NO",
+            "p_yes": 0.07082053537743298
+          }
+        ]
+      },
+      {
+        "input_key": "5970f49186fdc065e81019566591cbbb9c9e727f2bd5496719bc56dce02c6259",
+        "binding": {
+          "previous_image_sha256": "73859618034b941174a8f9db14589ddd288cb9490204f18711c6335f1ab66ec9",
+          "candidate_image_sha256": "39b9c92414a49d6dd7e790e29ae4ae50a66495c46ba8008d09e28055210af803",
+          "executed_action": {
+            "text": "Virginia",
+            "type": "type"
+          }
+        },
+        "policy_label": "YES",
+        "observations": [
+          {
+            "trajectory": "type-delayed-temporal",
+            "capture_id": "c32a8cad8f5946c8b505581f3b12b30c",
+            "request_id": "38a0165f31aa4e37a3a3f8f6d3a88b8d",
+            "capture_phase": "after_visible_render",
+            "observed_choice": "YES",
+            "p_yes": 0.9861215262084119
+          },
+          {
+            "trajectory": "type-fast-temporal",
+            "capture_id": "d7f55fc65538427db2b18c6ac8ab3c00",
+            "request_id": "3c124472d2024ab1b3e1a8f942c59cd8",
+            "capture_phase": "after_visible_render",
+            "observed_choice": "YES",
+            "p_yes": 0.9861215262084119
+          }
+        ]
+      }
+    ]
+  },
+  "offline": {
+    "attempt": "shadow-1795283017165610600",
+    "source_seal_sha256": "023a8eea1d0ddbb8b03dfcd80c18adc73a2f7b1dda9b93d470dbe871dc7e7caa",
+    "source_distinct_trajectories": 1,
+    "requests": [
+      {
+        "case": "search-genuine",
+        "source_kind": "archived_post_action_capture",
+        "ordered_image_sha256": [
+          "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d",
+          "f2b3993ccd59858ac1e831d9cc023ece8f7a531fc5357374d3fa10d54f8999d4"
+        ],
+        "executed_action": {
+          "type": "click",
+          "x": 803,
+          "y": 419
+        },
+        "policy_label": "YES",
+        "interpretation": "Visible results page",
+        "observed_choice": "YES",
+        "p_yes": 0.6909196766936876
+      },
+      {
+        "case": "search-early-replay",
+        "source_kind": "offline_replay_of_pre_action_pixels",
+        "ordered_image_sha256": [
+          "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d",
+          "c60034d3e995b28eb7a5b68fe1ab31589b6ebcfc474296d176844e2c1cebe41d"
+        ],
+        "executed_action": {
+          "type": "click",
+          "x": 803,
+          "y": 419
+        },
+        "policy_label": "NO",
+        "interpretation": "Previous homepage replay",
+        "observed_choice": "NO",
+        "p_yes": 0.06093724344390229
+      },
+      {
+        "case": "type-genuine",
+        "source_kind": "archived_post_action_capture",
+        "ordered_image_sha256": [
+          "37b8cb4df11d77ae08836e75953ce80e7c2b4b863147ef2cd5bc64fe3bce0dec",
+          "2c5bceefb477c55a7a76df85a447bcca967328dac8eb5d512c21c00a6f4fe749"
+        ],
+        "executed_action": {
+          "text": "Virginia",
+          "type": "type"
+        },
+        "policy_label": "YES",
+        "interpretation": "The requested text is visible in City",
+        "observed_choice": "YES",
+        "p_yes": 0.9317809661692092
+      },
+      {
+        "case": "type-early-replay",
+        "source_kind": "offline_replay_of_pre_action_pixels",
+        "ordered_image_sha256": [
+          "37b8cb4df11d77ae08836e75953ce80e7c2b4b863147ef2cd5bc64fe3bce0dec",
+          "37b8cb4df11d77ae08836e75953ce80e7c2b4b863147ef2cd5bc64fe3bce0dec"
+        ],
+        "executed_action": {
+          "text": "Virginia",
+          "type": "type"
+        },
+        "policy_label": "NO",
+        "interpretation": "The field is still blank",
+        "observed_choice": "NO",
+        "p_yes": 0.10992579333871191
+      },
+      {
+        "case": "type-other-change",
+        "source_kind": "offline_comparison_with_a_different_screen",
+        "ordered_image_sha256": [
+          "37b8cb4df11d77ae08836e75953ce80e7c2b4b863147ef2cd5bc64fe3bce0dec",
+          "f2b3993ccd59858ac1e831d9cc023ece8f7a531fc5357374d3fa10d54f8999d4"
+        ],
+        "executed_action": {
+          "text": "Virginia",
+          "type": "type"
+        },
+        "policy_label": "NO",
+        "interpretation": "Focus/other UI differs, but City is still blank",
+        "observed_choice": "NO",
+        "p_yes": 0.23029708862304688
+      },
+      {
+        "case": "pagination-genuine",
+        "source_kind": "archived_post_action_capture",
+        "ordered_image_sha256": [
+          "daf2dd5abe2bea0d3085d78f02513705e3cdb8d7e9e69e70d0758cb1115d1406",
+          "3d76cf7086bcb7762bbdfaf73e5638734016abd6f5972b83f3d999117a83044e"
+        ],
+        "executed_action": {
+          "type": "click",
+          "x": 672,
+          "y": 678
+        },
+        "policy_label": "YES",
+        "interpretation": "The actual last page is visible; original temporal false hold",
+        "observed_choice": "NO",
+        "p_yes": 0.22324490547180176
+      },
+      {
+        "case": "pagination-early-replay",
+        "source_kind": "offline_replay_of_pre_action_pixels",
+        "ordered_image_sha256": [
+          "daf2dd5abe2bea0d3085d78f02513705e3cdb8d7e9e69e70d0758cb1115d1406",
+          "daf2dd5abe2bea0d3085d78f02513705e3cdb8d7e9e69e70d0758cb1115d1406"
+        ],
+        "executed_action": {
+          "type": "click",
+          "x": 672,
+          "y": 678
+        },
+        "policy_label": "NO",
+        "interpretation": "Previous page replay",
+        "observed_choice": "NO",
+        "p_yes": 0.08216652029256462
+      },
+      {
+        "case": "escape-genuine",
+        "source_kind": "archived_post_action_capture",
+        "ordered_image_sha256": [
+          "eb922b7a88654af77f394e6dfc8a2d8e83e6f06928d706e41e1b703d433ad111",
+          "eb922b7a88654af77f394e6dfc8a2d8e83e6f06928d706e41e1b703d433ad111"
+        ],
+        "executed_action": {
+          "key": "Escape",
+          "type": "press"
+        },
+        "policy_label": null,
+        "interpretation": "New capture with identical pixels; the inputs alone do not certify no-op or pending",
+        "observed_choice": "NO",
+        "p_yes": 0.0657063970605432
+      }
+    ]
+  },
+  "additional_model_calls": 0
+}

@@ -1,0 +1,14 @@
+{
+  "study": "96 immutable, new Chromium episodes from one private fixture; not a random benchmark sample",
+  "primary_metrics": {
+    "first_interception": "Observed first post-action candidate is a confirmed fault and has a recorded NO withhold for that capture. A study cutoff alone is not a model NO.",
+    "effective_recovery": "First confirmed fault was withheld; one or more fresh captures followed the same single dispatch; independently confirmed current good image entered the real 27B first forward and produced a recorded result. No faulty or ambiguous current candidate was delivered.",
+    "normal_false_hold": "A confirmed usable initial, or ready post-action, candidate has a recorded NO. Report first post-action fast, legitimate sparse, and certified scroll-boundary controls separately, as well as any ready frame held during recovery. Count a no-delivery normal episode as failure in intended episodes.",
+    "wrong_delivery": "A confirmed problematic candidate was passed as current image to the main model. Report ambiguous captures separately.",
+    "unresolved": "Window ended, an operator stopped, or a technical failure prevented a decision or delivery. Keep planned denominators; label timing ambiguity, missing injection, incomplete inference, and unattempted separately."
+  },
+  "independent_labels": "Signed acquisition PNG, actual trusted input, timestamps of before/after Chromium snapshots and independently scheduled paint, with RGB pixel checks for intended white and residual-button images. These labels never enter model requests. Certified stable scroll is proved by the measured browser boundary, not scored as Flash YES.",
+  "paired_analysis": "Report original and temporal by all 24 family-action pairs, including confirmed exact first-early-PNG matches; the fixed cases have shared layouts and cannot estimate a population Mirage rate. Repeated captures and replies are not separate episodes.",
+  "timing": "Elapsed from actual browser action acknowledgment to gate acceptance, with first capture separately. Report completed sample size along with median and upper quantile; separate 27B inference latency and study censors. 18 seconds is the observation window per stage, not a new production timeout or retry budget.",
+  "unchanged_scope": "No prompt tuning, no subsequent GUI action, no scorer, no paid calls. Main-model interpretation or parser errors are outside screenshot effectiveness. The v3 single-image contract can allow a readable isolated button; challenge capture origin and temporal outcome separately."
+}

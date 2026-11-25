@@ -1,0 +1,45 @@
+"""Frozen offline readings of the numbered receipt-bound contact sheets. No actor/Jev outputs used."""
+DESKTOP = {}
+ANDROID = {}
+def add(dst, label, codes, reason):
+    for code in codes.split():
+        assert code not in dst
+        dst[code] = (label, reason)
+
+add(DESKTOP, 'YES', 'P017', 'The click is on the GIMP launcher. The candidate preserves its newly visible drawing and selection toolbox in the upper left.')
+add(DESKTOP, 'YES', 'P050 P051', 'The click is on the Thunderbird launcher. New Message, Read messages and address book controls now identify the mail application.')
+add(DESKTOP, 'YES', 'P033 P034', 'The clicked spreadsheet menu is visibly open: named menu entries now appear immediately below it, even in the partial frame.')
+add(DESKTOP, 'NO', 'P010 P015', 'Activities was clicked on the desktop. The surviving dock and unchanged system controls do not show an overview or a response to the click.')
+add(DESKTOP, 'NO', 'P004', 'The browser overflow control was clicked. Isolated toolbar buttons do not establish that its menu opened or show an error.')
+add(DESKTOP, 'NO', 'P007', 'The click is in the browser address bar. The candidate omits the address field and its focus or selection state.')
+add(DESKTOP, 'NO', 'P025', 'The spreadsheet header was clicked. Toolbar fragments do not show the target header or a resulting column selection.')
+add(DESKTOP, 'NO', 'P026 P027 P035 P037 P038', 'The click is in the spreadsheet grid or header. The candidate omits the target cell/header and its selection or content; unrelated toolbar controls remain.')
+add(DESKTOP, 'NO', 'P046 P047 P048', 'The click is in the document area. The candidate omits the document text and target area; toolbar fragments do not establish caret placement or another outcome.')
+add(DESKTOP, 'NO', 'S004', 'The browser overflow button was clicked; the replay shows that button with its menu still closed.')
+add(DESKTOP, 'NO', 'S005', 'The close control on the browser update bubble was clicked. The replay still shows the same open bubble with no feedback.')
+add(DESKTOP, 'NO', 'S011 S012 S013 S015 S017 S042 S043 S049 S053 S055', 'The click targets a launcher in the dock. The logged pre-action replay still shows the desktop with no resulting application, window, or error.')
+add(DESKTOP, 'NO', 'S014 S018 S022', 'Activities was clicked. The pre-action replay shows the original desktop, with neither an overview nor feedback.')
+add(DESKTOP, 'NO', 'S031 S033 S034 S047', 'A named menu in the office application was clicked; the replay still shows the same menu bar with its menu closed.')
+add(DESKTOP, 'YES', 'Y002', 'Clicking the location field opens a list of destination suggestions immediately below it.')
+add(DESKTOP, 'YES', 'Y003', 'The calendar changes from November to October when the previous-month arrow is clicked.')
+add(DESKTOP, 'YES', 'Y005', 'The location suggestion selected by the click is retained in the field and its suggestion list closes.')
+add(DESKTOP, 'YES', 'Y008', 'The settings action opens a confirmation dialog over the dimmed settings page.')
+add(DESKTOP, 'YES', 'Y013 Y017 Y020', 'The clicked browser address field now visibly highlights its URL.')
+add(DESKTOP, 'YES', 'Y015', 'The Show Applications button opens the application grid.')
+add(DESKTOP, 'YES', 'Y018', 'The clicked maximum-price input gains the blue focus outline and caret.')
+add(DESKTOP, 'YES', 'Y024', 'Clicking More settings reveals paper-size and other print settings underneath.')
+add(DESKTOP, 'YES', 'Y031', 'Clicking a file in the GIMP chooser selects its row and displays the video file preview.')
+add(DESKTOP, 'YES', 'Y032', 'Clicking Select File Type expands the list of file formats in the chooser.')
+add(DESKTOP, 'YES', 'Y035', 'Clicking the modal button dismisses the small message and reveals the file chooser beneath it.')
+add(DESKTOP, 'YES', 'Y041', 'The Layer menu action opens the new-layer dialog over the GIMP canvas.')
+add(DESKTOP, 'YES', 'Y042', 'The click on Cancel dismisses the layer dialog and returns to the canvas.')
+add(DESKTOP, 'YES', 'Y045', 'Clicking the fill option opens the list containing Background color, White, Transparency and Pattern.')
+add(DESKTOP, 'YES', 'Y047', 'Clicking Colors opens its named menu entries.')
+add(DESKTOP, 'YES', 'Y049', 'The clicked preset control opens the preset naming dialog over Brightness-Contrast.')
+add(DESKTOP, 'YES', 'Y050', 'Clicking Saturation in the menu opens the Saturation panel.')
+add(DESKTOP, 'YES', 'Y054', 'The clicked toolbar dropdown opens a list of document types.')
+add(DESKTOP, 'YES', 'Y056 Y060', 'Clicking Sheet opens the spreadsheet menu with insert commands.')
+add(DESKTOP, 'YES', 'Y057', 'The clicked column header is now highlighted; the former selected column is no longer highlighted.')
+add(DESKTOP, 'YES', 'Y059', 'Clicking the new-sheet control adds and selects Sheet2 and displays its empty grid.')
+
+add(ANDROID, 'YES', 'P002 P003 P007 P022', 'The scroll from the launcher reveals named Internet, Bluetooth, Flashlight and Do Not Disturb tiles: the quick-settings panel is visibly open despite the buttons-only mask.')
